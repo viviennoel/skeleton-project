@@ -15,7 +15,6 @@ export function HeaderMenu() {
     const pathname = usePathname();
     const locale = pathname.split("/")[1] as Locale;
     const dictionary = useDictionary()
-    console.log(dictionary)
 
     const metaHeader = getHeaderItems(dictionary.header.metaHeader, 'sm');
     const mainHeader = getHeaderItems(dictionary.header.header);

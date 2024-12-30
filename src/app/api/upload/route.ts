@@ -34,13 +34,41 @@ export const POST = async (req: Request) => {
             return NextResponse.json({ error: 'No file uploaded' }, { status: 400 });
         }
 
+        // Check file type (image or video)
+        const isImage = file.type.startsWith('image/');
+        const isVideo = file.type.startsWith('video/');
+
+        if (!isImage && !isVideo) {
+            return NextResponse.json({ error: 'Invalid file type' }, { status: 400 });
+        }
+
         // Convert ReadableStream to Node.js Readable
         const nodeStream = readableStreamToNodeStream(file.stream());
+
+        // Cloudinary transformation options
+        const transformationOptions = isImage
+            ? {
+                folder: 'blog-media',
+                resource_type: 'image' as 'image',
+                format: 'webp', // Convert to webp
+                quality: 'auto',
+                fetch_format: 'auto',
+                width: 900, // Resize to max 1400px width
+                crop: 'limit',
+                transformation: [{ quality: "auto:eco" }],
+            }
+            : {
+                folder: 'blog-media',
+                resource_type: 'video' as 'video',
+                format: 'mp4', // Use mp4 for videos
+                quality: 'auto',
+                fetch_format: 'auto',
+            };
 
         // Upload to Cloudinary
         const result = await new Promise((resolve, reject) => {
             const uploadStream = cloudinary.uploader.upload_stream(
-                { folder: 'blog-images' },
+                transformationOptions,
                 (error, result) => {
                     if (error) reject(error);
                     resolve(result);

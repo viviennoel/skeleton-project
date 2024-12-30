@@ -18,7 +18,7 @@ import { Modal } from '@mantine/core';
 import { DropzoneCloudinary } from './Dropzone';
 import { useEffect, useState } from 'react';
 
-export const Editor = ({ setEditorContent }: { setEditorContent: (content: string) => void }) => {
+export const Editor = ({ setEditorContent, content }: { setEditorContent?: (content: string) => void, content?: any }) => {
     const [opened, { open, close }] = useDisclosure(false);
     const [editorImageUrl, setEditorImageUrl] = useState<string | null>(null);
 
@@ -34,15 +34,14 @@ export const Editor = ({ setEditorContent }: { setEditorContent: (content: strin
             ListItem,
             Mention,
         ],
-        content: '',
+        content: content ?? '',
         onUpdate: ({ editor }) => {
             // Call setEditorContent when the editor's content changes
-            setEditorContent(editor.getHTML());
+            setEditorContent && setEditorContent(editor.getHTML());
         },
     });
 
     useEffect(() => {
-        console.log(editorImageUrl);
         if (editorImageUrl && editor) {
             editor.chain().focus().setImage({ src: editorImageUrl }).run();
         }
