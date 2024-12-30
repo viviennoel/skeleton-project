@@ -1,0 +1,12 @@
+.box {
+    width: 100vw;
+    height: 100vh;
+    overflow: 'hidden';
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.background {
+    position: relative !important;
+}

@@ -1,0 +1,66 @@
+{
+    "compagnyName": "hestia innovation web developpeur",
+    "logoUrl": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735340153/logo_eltt6f.webp",
+    "header": {
+        "metaHeader": [
+            {
+                "link": "/about",
+                "label": "Livraison gratuite à partir de 50€"
+            }
+        ],
+        "header": [
+            {
+                "link": "/about",
+                "label": "A propos"
+            },
+            {
+                "link": "#1",
+                "label": "Learn",
+                "links": [
+                    {
+                        "link": "/docs",
+                        "label": "Documentation"
+                    },
+                    {
+                        "link": "/resources",
+                        "label": "Resources"
+                    },
+                    {
+                        "link": "/community",
+                        "label": "Community"
+                    },
+                    {
+                        "link": "/blog",
+                        "label": "Blog"
+                    }
+                ]
+            },
+            {
+                "link": "/about",
+                "label": "About"
+            },
+            {
+                "link": "/pricing",
+                "label": "Pricing"
+            },
+            {
+                "link": "#2",
+                "label": "Support",
+                "links": [
+                    {
+                        "link": "/faq",
+                        "label": "FAQ"
+                    },
+                    {
+                        "link": "/demo",
+                        "label": "Book a demo"
+                    },
+                    {
+                        "link": "/forums",
+                        "label": "Forums"
+                    }
+                ]
+            }
+        ]
+    }
+}
