@@ -62,5 +62,29 @@
                 ]
             }
         ]
+    },
+    "pages": {
+        "contact": {
+            "link": "/contact",
+            "label": "Contact us",
+            "title": "Contact form"
+        },
+        "about": {
+            "link": "/about-us",
+            "label": "About us",
+            "title": "Three generations of expertise"
+        },
+        "home": {
+            "link": "/",
+            "label": "Homepage",
+            "title": "Home sweet home",
+            "slices": [
+                {
+                    "type": "homepage-banner",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1712310743/KOA_Nassau_2697x1517_ije5xx.jpg",
+                    "alt": "Web developpeur in paris de confiance"
+                }
+            ]
+        }
     }
 }
