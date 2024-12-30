@@ -1,16 +1,13 @@
 import FullscreenImage from "./FullScreenImage/FullScreenImage";
+import VerticalCardList from "./VerticalCardList/VerticalCardList";
 
 export const SliceMachine = ({ data }: { data: { type: string, src: string, alt: string }[] }) => {
-    console.log(data)
-
     return data.map(slice => {
-        console.log(slice)
-
         switch (slice.type) {
             case 'homepage-banner':
-                return (
-                    <FullscreenImage src={slice.src} alt={slice.alt} />
-                );
+                return <FullscreenImage src={slice.src} alt={slice.alt} />
+            case 'vertical-card-list':
+                return <VerticalCardList />
 
             default:
                 console.log('pas banner')

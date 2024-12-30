@@ -1,12 +1,16 @@
 .box {
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     overflow: 'hidden';
-    position: absolute;
     top: 0;
     z-index: -1;
+    background-color: lightgrey;
 }
 
 .background {
     position: relative !important;
+}
+
+.grid {
+    background-color: white;
 }

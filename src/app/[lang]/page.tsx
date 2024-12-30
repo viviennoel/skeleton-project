@@ -8,7 +8,7 @@ export default async function HomePage({
   const { lang } = await params;
   const dictionary = await getDictionary(lang);
 
-  return <div>My Post: {dictionary.pages.home.title}
+  return <div>
     <SliceMachine data={dictionary.pages.home.slices} />
   </div>
 }

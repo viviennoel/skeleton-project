@@ -24,8 +24,8 @@ export const LanguageSelector = () => {
     };
 
     const supportedLanguage = {
-        fr: { label: 'français', img: 'https://res.cloudinary.com/djlwtz7qw/image/upload/v1712310743/KOA_Nassau_2697x1517_ije5xx.jpg' },
-        en: { label: 'english', img: 'https://res.cloudinary.com/djlwtz7qw/image/upload/v1690797545/tejj-o8iXJVAahUc-unsplash_ooqspi.jpg' }
+        fr: { label: 'français', img: 'https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp' },
+        en: { label: 'english', img: 'https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp' }
     }
 
     return (
