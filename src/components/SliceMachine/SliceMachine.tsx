@@ -1,11 +1,12 @@
+import { Slice } from "@/src/types/dictionaries";
 import FullscreenImage from "./FullScreenImage/FullScreenImage";
 import VerticalCardList from "./VerticalCardList/VerticalCardList";
 
-export const SliceMachine = ({ data }: { data: { type: string, src: string, alt: string }[] }) => {
+export const SliceMachine = ({ data }: { data: Slice[] }) => {
     return data.map(slice => {
         switch (slice.type) {
             case 'homepage-banner':
-                return <FullscreenImage src={slice.src} alt={slice.alt} />
+                return <FullscreenImage src={slice.src ?? ''} alt={slice.alt ?? ''} />
             case 'vertical-card-list':
                 return <VerticalCardList />
 
