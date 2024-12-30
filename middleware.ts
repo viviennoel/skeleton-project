@@ -27,6 +27,8 @@ function getLocale(request: NextRequest): string | undefined {
 export function middleware(request: NextRequest) {
     const pathname = request.nextUrl.pathname;
 
+    console.log('pathname', pathname);
+
     // // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
     // // If you have one
     // if (
@@ -47,6 +49,8 @@ export function middleware(request: NextRequest) {
     // Redirect if there is no locale
     if (pathnameIsMissingLocale) {
         const locale = getLocale(request);
+
+        console.log('locale', locale);
 
         // e.g. incoming request is /products
         // The new URL is now /en-US/products
