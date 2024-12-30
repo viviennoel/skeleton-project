@@ -1,6 +1,6 @@
 import { Button, Group } from "@mantine/core";
 
-export const CustomMenu = ({ editor }: { editor: any }) => {
+export const CustomMenu = ({ editor, open }: { editor: any, open: any }) => {
     return (
         <div style={{ marginBottom: '16px' }}>
             <Group p="xs">
@@ -64,12 +64,7 @@ export const CustomMenu = ({ editor }: { editor: any }) => {
                 {/* Image Button */}
                 <Button
                     variant="outline"
-                    onClick={() => {
-                        const imageUrl = prompt('Enter image URL');
-                        if (imageUrl) {
-                            editor.chain().focus().setImage({ src: imageUrl }).run();
-                        }
-                    }}
+                    onClick={open}
                 >
                     Add Image
                 </Button>

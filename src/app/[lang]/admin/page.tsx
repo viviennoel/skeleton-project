@@ -1,21 +1,11 @@
-'use client'
+'use client';
 
-import React, { useState, useEffect } from 'react';
-import { EditorContent, useEditor, BubbleMenu } from '@tiptap/react';
-import { StarterKit } from '@tiptap/starter-kit';
-import { Image } from '@tiptap/extension-image';
-import { Blockquote } from '@tiptap/extension-blockquote';
-import { Underline } from '@tiptap/extension-underline';
-import { ListItem } from '@tiptap/extension-list-item';
-import { HardBreak } from '@tiptap/extension-hard-break';
-import { BulletList } from '@tiptap/extension-bullet-list';
-import { OrderedList } from '@tiptap/extension-ordered-list';
-import { Mention } from '@tiptap/extension-mention';
-import { Table } from '@tiptap/extension-table';
+import React, { useState } from 'react';
 import { Dropzone, FileWithPath } from '@mantine/dropzone';
-import { Button, Input, Textarea, Group, Container } from '@mantine/core';
+import { Button, Input, Group, Container } from '@mantine/core';
 import { useRouter } from 'next/navigation';
 import { Editor } from '@/src/components/EditorText/Editor';
+import { DropzoneCloudinary } from '@/src/components/EditorText/Dropzone';
 
 type BlogArticleData = {
     title: string;
@@ -26,22 +16,38 @@ type BlogArticleData = {
 
 const BlogEditorPage = () => {
     const [title, setTitle] = useState<string>('');
-    const [mainImage, setMainImage] = useState<File | null>(null);
     const [imageUrl, setImageUrl] = useState<string | null>(null);
     const [date, setDate] = useState<string>(new Date().toISOString().split('T')[0]);
     const [editorContent, setEditorContent] = useState<string>('');
     const router = useRouter();
 
-    // Handle image upload for the main image
-    const handleDrop = (acceptedFiles: FileWithPath[]) => {
-        const file = acceptedFiles[0];
-        setMainImage(file);
-        setImageUrl(URL.createObjectURL(file)); // Preview the uploaded image
-    };
-
     // Handle form submission
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        const articleData: BlogArticleData = {
+            title,
+            date,
+            content: editorContent,
+            mainImage: imageUrl || '',
+        };
+
+        try {
+            const response = await fetch('/api/articles', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(articleData),
+            });
+
+            if (response.ok) {
+                console.log('Article saved successfully');
+                router.push('/');
+            } else {
+                console.error('Failed to save the article');
+            }
+        } catch (error) {
+            console.error('Error submitting the article:', error);
+        }
     };
 
     return (
@@ -60,29 +66,7 @@ const BlogEditorPage = () => {
                 />
 
                 {/* Main Image Upload (using Mantine's Dropzone) */}
-                <Dropzone
-                    onDrop={handleDrop}
-                    accept={["image/*"]}
-                    multiple={false}
-                    style={{
-                        border: '2px dashed #0070f3',
-                        borderRadius: '5px',
-                        padding: '20px',
-                        marginBottom: '20px',
-                    }}
-                >
-                    <div style={{ textAlign: 'center' }}>
-                        {!imageUrl ? (
-                            <p>Drag & drop your main image here, or click to select</p>
-                        ) : (
-                            <img
-                                src={imageUrl}
-                                alt="Main Image"
-                                style={{ maxWidth: '100%', maxHeight: '200px', objectFit: 'cover' }}
-                            />
-                        )}
-                    </div>
-                </Dropzone>
+                <DropzoneCloudinary setImageUrl={setImageUrl} imageUrl={imageUrl} />
 
                 {/* Date Input */}
                 <Input
@@ -94,7 +78,8 @@ const BlogEditorPage = () => {
                     mb="md"
                 />
 
-                <Editor />
+                {/* Text Editor */}
+                <Editor setEditorContent={setEditorContent} />
 
                 {/* Submit Button */}
                 <Group>
