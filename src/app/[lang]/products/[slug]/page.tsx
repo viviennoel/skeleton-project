@@ -5,7 +5,7 @@ import { Image } from '@mantine/core';
 import { EditionModale } from '@/src/components/EditionModale/EditionModale';
 import useRouter from 'next/navigation';
 
-async function getArticleBySlug(slug: any) {
+async function getProductBySlug(slug: any) {
     const uri = process.env.MONGODB_URI ?? "";
     if (!uri) {
         console.error("MongoDB URI is not defined in environment variables.");
@@ -19,20 +19,20 @@ async function getArticleBySlug(slug: any) {
         const db = client.db('blogDB');
         const title = slug.replace(/-/g, ' ');
 
-        const article = await db.collection('articles').findOne({ title: title });
+        const product = await db.collection('products').findOne({ title: title });
 
-        if (!article) {
-            console.warn("No article found with the title:", title);
+        if (!product) {
+            console.warn("No product found with the title:", title);
             return null;
         }
 
         return {
-            ...article,
-            _id: article._id.toString(),
-            createdAt: article.createdAt.toString(),
+            ...product,
+            _id: product._id.toString(),
+            createdAt: product.createdAt.toString(),
         };
     } catch (error) {
-        console.error("Error connecting to MongoDB or fetching article:", error);
+        console.error("Error connecting to MongoDB or fetching product:", error);
         return null;
     } finally {
         if (client) {
@@ -42,32 +42,32 @@ async function getArticleBySlug(slug: any) {
     }
 }
 
-export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
     const router = useRouter;
-    const article = await getArticleBySlug(slug) as any;
+    const product = await getProductBySlug(slug) as any;
 
-    if (!article) {
-        router.redirect('/articles')
+    if (!product) {
+        router.redirect('/products')
     }
 
     return (
         <Container my='md'>
-            <EditionModale content={article.content} id={article._id} />
-            <h1>{article.title}</h1>
-            <p>{new Date(article.date).toLocaleDateString()}</p>
-            {article.mainImage && (
+            <EditionModale content={product.content} id={product._id} />
+            <h1>{product.title}</h1>
+            <p>{new Date(product.date).toLocaleDateString()}</p>
+            {product.mainImage && (
                 <Image
                     radius="md"
                     h={300}
-                    src={article.mainImage}
-                    alt={article.title}
+                    src={product.mainImage}
+                    alt={product.title}
                     fit='cover'
                 />
             )}
 
 
-            <div dangerouslySetInnerHTML={{ __html: article.content }} />
+            <div dangerouslySetInnerHTML={{ __html: product.content }} />
         </Container>
     );
 }
@@ -76,11 +76,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 //     const client = await MongoClient.connect(process.env.MONGODB_URI ?? '');
 //     const db = client.db();
 
-//     const articles = await db.collection('articles').find({}, { projection: { title: 1 } }).toArray();
+//     const products = await db.collection('products').find({}, { projection: { title: 1 } }).toArray();
 
 //     client.close();
 
-//     return articles.map((article) => ({
-//         slug: article.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+//     return products.map((product) => ({
+//         slug: product.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
 //     }));
 // }

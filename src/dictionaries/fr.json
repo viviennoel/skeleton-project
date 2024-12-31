@@ -19,55 +19,55 @@
         "header": [
             {
                 "link": "/about",
-                "label": "A propos"
+                "label": "Notre expertise"
             },
             {
                 "link": "#1",
-                "label": "Learn",
+                "label": "Nos Produits",
                 "links": [
                     {
-                        "link": "/docs",
-                        "label": "Documentation"
+                        "link": "/products/modern",
+                        "label": "Moderne"
                     },
                     {
-                        "link": "/resources",
-                        "label": "Resources"
+                        "link": "/products/traditions",
+                        "label": "Traditionnels"
                     },
                     {
-                        "link": "/community",
-                        "label": "Community"
+                        "link": "/products/personnalisés",
+                        "label": "Personnalisés"
                     },
                     {
-                        "link": "/blog",
-                        "label": "Blog"
+                        "link": "/products",
+                        "label": "Tous les produits"
                     }
                 ]
             },
             {
-                "link": "/about",
-                "label": "About"
-            },
-            {
-                "link": "/pricing",
-                "label": "Pricing"
-            },
-            {
                 "link": "#2",
-                "label": "Support",
+                "label": "Nos services",
                 "links": [
+                    {
+                        "link": "/services/cleaning",
+                        "label": "Nettoyage de tapis"
+                    },
+                    {
+                        "link": "/services/restauration",
+                        "label": "Restauration de tapis"
+                    },
                     {
                         "link": "/faq",
                         "label": "FAQ"
                     },
                     {
-                        "link": "/demo",
-                        "label": "Book a demo"
-                    },
-                    {
-                        "link": "/forums",
-                        "label": "Forums"
+                        "link": "/contact",
+                        "label": "Prendre un RDV"
                     }
                 ]
+            },
+            {
+                "link": "/articles",
+                "label": "Nos Conseils"
             }
         ]
     },
@@ -97,5 +97,27 @@
                 }
             ]
         }
-    }
+    },
+    "articles": {
+        "readMore": "Lire l'article",
+        "label": "Article"
+    },
+    "products": {
+        "label": "Produit",
+        "readMore": "Découvrir",
+        "priceLabel": "€"
+    },
+    "error404": {
+        "title": "Cette page n'existe pas",
+        "subtitle": "Mais pas d'inquiétude, nous en avons pleins d'autres!",
+        "returnArticles": "Voir les articles",
+        "returnHomepage": "Retour à l'accueil",
+        "returnProducts": "Voir les produits"
+    },
+    "seoTags": [
+        "tapis",
+        "nettoyage de tapis",
+        "restauration de tapis",
+        "vente de tapis"
+    ]
 }

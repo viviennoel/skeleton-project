@@ -24,11 +24,10 @@ clientPromise = global._mongoClientPromise;
 export async function POST(req: Request) {
     const body = await req.json();
     const { title,
-        date,
+        price,
+        dimentions,
         mainImage,
         description,
-        content,
-        author,
         category,
         tags,
         seoTitle,
@@ -39,16 +38,15 @@ export async function POST(req: Request) {
     try {
         const client = await clientPromise;
         const db = client.db('blogDB'); // Remplacez `blogDB` par le nom de votre base
-        const collection = db.collection('articles'); // Remplacez `articles` par le nom de votre collection
+        const collection = db.collection('products'); // Remplacez `products` par le nom de votre collection
 
         const result = await collection.insertOne({
             title,
-            date,
-            content,
             mainImage,
+            price,
+            dimentions,
             createdAt: new Date(),
             description,
-            author,
             category,
             tags,
             seoTitle,
@@ -56,9 +54,9 @@ export async function POST(req: Request) {
             seoKeywords,
         });
 
-        return NextResponse.json({ message: 'Article added successfully', data: result });
+        return NextResponse.json({ message: 'product added successfully', data: result });
     } catch (error) {
-        console.error('Error saving article:', error);
+        console.error('Error saving product:', error);
         return NextResponse.json({ message: 'An error occurred', error }, { status: 500 });
     }
 }
@@ -71,7 +69,7 @@ export async function GET(req) {
     try {
         const client = await clientPromise;
         const db = client.db('blogDB'); // Remplacez `blogDB` par le nom de votre base
-        const collection = db.collection('articles'); // Remplacez `articles` par le nom de votre collection
+        const collection = db.collection('products'); // Remplacez `products` par le nom de votre collection
 
 
         // Build the search query
@@ -87,8 +85,8 @@ export async function GET(req) {
         // Count total documents matching the query
         const totalDocuments = await collection.countDocuments(searchQuery);
 
-        // Fetch paginated articles
-        const articles = await collection
+        // Fetch paginated products
+        const products = await collection
             .find(searchQuery)
             .sort({ createdAt: -1 }) // Sort by creation date, newest first
             .skip((page - 1) * PAGE_SIZE)
@@ -96,14 +94,14 @@ export async function GET(req) {
             .toArray();
 
         return NextResponse.json({
-            articles: articles.map((article) => ({
-                ...article,
-                _id: article._id.toString(), // Convert ObjectId to string
+            products: products.map((product) => ({
+                ...product,
+                _id: product._id.toString(), // Convert ObjectId to string
             })),
             totalPages: Math.ceil(totalDocuments / PAGE_SIZE),
         });
     } catch (error) {
-        console.error("Error fetching articles:", error);
+        console.error("Error fetching products:", error);
         return NextResponse.json({ error: "An error occurred" }, { status: 500 });
     }
 }

@@ -13,7 +13,6 @@ import { useDictionary } from '@/src/dictionaries/dictionary-provider';
 
 export function HeaderMenu() {
     const pathname = usePathname();
-    const locale = pathname.split("/")[1] as Locale;
     const dictionary = useDictionary()
 
     const metaHeader = getHeaderItems(dictionary.header.metaHeader, 'sm');

@@ -1,10 +1,14 @@
 .card {
     background-color: var(--mantine-color-body);
+    box-shadow: #8080809c 0px 4px 6px 0px;
+    border: none;
+    ;
 }
 
 .imageSection {
-    padding: var(--mantine-spacing-md);
-    display: flex;
+    height: 190px;
+    overflow: hidden;
+    position: relative;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
@@ -27,4 +31,15 @@
 .icon {
     margin-right: 5px;
     color: light-dark(var(--mantine-color-gray-5), var(--mantine-color-dark-2));
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: var(--mantine-font-size-md);
+    font-weight: 500;
+
+    @mixin hover {
+        background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+    }
 }

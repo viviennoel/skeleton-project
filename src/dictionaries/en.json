@@ -97,5 +97,8 @@
                 }
             ]
         }
+    },
+    "products": {
+        "readMore": "Read this article"
     }
 }

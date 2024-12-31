@@ -22,7 +22,7 @@ export async function PUT(req, { params }) {
     try {
         const client = await clientPromise;
         const db = client.db('blogDB'); // Remplacez `blogDB` par le nom de votre base
-        const collection = db.collection('articles'); // Remplacez `articles` par le nom de votre collection
+        const collection = db.collection('products'); // Remplacez `products` par le nom de votre collection
 
         const result = await collection.updateOne(
             { _id: ObjectId.createFromHexString(id) },
@@ -30,12 +30,12 @@ export async function PUT(req, { params }) {
         );
 
         if (result.modifiedCount === 0) {
-            NextResponse.json("Failed to update article, no result", { status: 500 });
+            NextResponse.json("Failed to update product, no result", { status: 500 });
         }
 
-        return NextResponse.json({ message: 'Article added successfully', data: result });
+        return NextResponse.json({ message: 'product added successfully', data: result });
     } catch (error) {
-        console.error('Error saving article:', error);
+        console.error('Error saving product:', error);
         return NextResponse.json({ message: 'An error occurred', error }, { status: 500 });
     }
 }
