@@ -1,9 +1,8 @@
-import { notFound } from 'next/navigation';
 import { MongoClient } from 'mongodb';
 import { Container } from '@mantine/core';
 import { Image } from '@mantine/core';
 import { EditionModale } from '@/src/components/EditionModale/EditionModale';
-import { useRouter } from 'next/navigation';
+import Error404 from '@/src/components/Error/Error404';
 
 async function getArticleBySlug(slug: any) {
     const uri = process.env.MONGODB_URI ?? "";
@@ -44,11 +43,10 @@ async function getArticleBySlug(slug: any) {
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
-    const router = useRouter;
     const article = await getArticleBySlug(slug) as any;
 
     if (!article) {
-        router.redirect('/articles')
+        <Error404 />
     }
 
     return (
