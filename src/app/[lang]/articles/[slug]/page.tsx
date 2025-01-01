@@ -3,7 +3,7 @@ import { MongoClient } from 'mongodb';
 import { Container } from '@mantine/core';
 import { Image } from '@mantine/core';
 import { EditionModale } from '@/src/components/EditionModale/EditionModale';
-import useRouter from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 async function getArticleBySlug(slug: any) {
     const uri = process.env.MONGODB_URI ?? "";
