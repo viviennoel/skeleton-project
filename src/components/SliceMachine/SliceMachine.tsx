@@ -8,6 +8,7 @@ import { HorizontalTextCard } from "./HorizontalTextCard/HorizontalTextCard";
 import { TextCard } from "./TextCard/TextCard";
 
 export const SliceMachine = ({ data, articles, products }: { data: Slice[], articles?: any, products?: any }) => {
+    console.log(articles);
     return data.map(slice => {
         switch (slice.type) {
             case 'homepage-banner':

@@ -17,9 +17,10 @@
 .label {
     margin-bottom: var(--mantine-spacing-xs);
     line-height: 1;
-    font-weight: 700;
+    font-weight: 500;
     font-size: var(--mantine-font-size-xs);
     letter-spacing: -0.25px;
+    text-transform: none;
 }
 
 .section {

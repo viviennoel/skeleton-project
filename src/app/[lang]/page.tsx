@@ -42,9 +42,10 @@ export default async function HomePage({
     }
   }
 
+  // Await the result of getLatestArticles
   const articles = await getLatestArticles();
 
-  if (!articles || articles.length === 0) {
+  if (!articles) {
     return <Error404 />;
   }
 

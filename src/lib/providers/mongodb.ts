@@ -15,6 +15,6 @@ export async function connect() {
     return await client.connect();
 }
 
-export async function close(client: { close: () => any; }) {
+export async function close(client: MongoClient) {
     await client.close();
 }
