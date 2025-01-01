@@ -61,7 +61,7 @@ export async function POST(req: Request) {
     }
 }
 
-export async function GET(req) {
+export async function GET(req: any) {
     const { searchParams } = new URL(req.url);
     const page = parseInt(searchParams.get("page") || "1", 10);
     const query = searchParams.get("query") || "";

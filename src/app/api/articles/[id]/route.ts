@@ -40,7 +40,7 @@ export async function PUT(req, { params }) {
     }
 }
 
-export async function DELETE(req, { params }) {
+export async function DELETE(req: any, { params }: any) {
     const uri = process.env.MONGODB_URI || '';
     let client;
 

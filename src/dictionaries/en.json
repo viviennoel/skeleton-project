@@ -19,55 +19,55 @@
         "header": [
             {
                 "link": "/about",
-                "label": "A propos"
+                "label": "Notre expertise"
             },
             {
                 "link": "#1",
-                "label": "Learn",
+                "label": "Nos Produits",
                 "links": [
                     {
-                        "link": "/docs",
-                        "label": "Documentation"
+                        "link": "/products/modern",
+                        "label": "Moderne"
                     },
                     {
-                        "link": "/resources",
-                        "label": "Resources"
+                        "link": "/products/traditions",
+                        "label": "Traditionnels"
                     },
                     {
-                        "link": "/community",
-                        "label": "Community"
+                        "link": "/products/personnalisés",
+                        "label": "Personnalisés"
                     },
                     {
-                        "link": "/blog",
-                        "label": "Blog"
+                        "link": "/products",
+                        "label": "Tous les produits"
                     }
                 ]
             },
             {
-                "link": "/about",
-                "label": "About"
-            },
-            {
-                "link": "/pricing",
-                "label": "Pricing"
-            },
-            {
                 "link": "#2",
-                "label": "Support",
+                "label": "Nos services",
                 "links": [
+                    {
+                        "link": "/services/cleaning",
+                        "label": "Nettoyage de tapis"
+                    },
+                    {
+                        "link": "/services/restauration",
+                        "label": "Restauration de tapis"
+                    },
                     {
                         "link": "/faq",
                         "label": "FAQ"
                     },
                     {
-                        "link": "/demo",
-                        "label": "Book a demo"
-                    },
-                    {
-                        "link": "/forums",
-                        "label": "Forums"
+                        "link": "/contact",
+                        "label": "Prendre un RDV"
                     }
                 ]
+            },
+            {
+                "link": "/articles",
+                "label": "Nos Conseils"
             }
         ]
     },
@@ -93,12 +93,92 @@
                     "alt": "Web developpeur in paris de confiance"
                 },
                 {
+                    "type": "text-card"
+                },
+                {
+                    "type": "square-card-list",
+                    "data": [
+                        {
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp",
+                            "title": "Custom Carpet Design",
+                            "description": "Create unique carpets tailored to your space.",
+                            "link": "/services/custom-carpet-design"
+                        },
+                        {
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp",
+                            "title": "Carpet Restoration",
+                            "description": "Expert restoration services for your precious carpets.",
+                            "link": "/services/carpet-restoration"
+                        },
+                        {
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp",
+                            "title": "Carpet Cleaning",
+                            "description": "Professional cleaning for all types of carpets.",
+                            "link": "/services/carpet-cleaning"
+                        }
+                    ]
+                },
+                {
+                    "type": "horizontal-text-card"
+                },
+                {
+                    "type": "grid-presentation",
+                    "services": [
+                        {
+                            "title": "Custom Carpet Design",
+                            "description": "Create unique carpets tailored to your space."
+                        },
+                        {
+                            "title": "Carpet Restoration",
+                            "description": "Expert restoration services for your precious carpets."
+                        },
+                        {
+                            "title": "Carpet Cleaning",
+                            "description": "Professional cleaning for all types of carpets."
+                        }
+                    ],
+                    "contactInfo": {
+                        "address": "123 Main Street, Paris, France",
+                        "phone": "+33 1 23 45 67 89",
+                        "email": "contact@carpets.fr",
+                        "mapImage": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp"
+                    }
+                },
+                {
                     "type": "vertical-card-list"
+                },
+                {
+                    "type": "horizontal-text-card"
+                },
+                {
+                    "type": "cards-carousel"
                 }
             ]
         }
     },
+    "articles": {
+        "readMore": "Lire l'article",
+        "label": "Article"
+    },
     "products": {
-        "readMore": "Read this article"
-    }
+        "label": "Produit",
+        "readMore": "Découvrir",
+        "priceLabel": "€",
+        "redirectionTitle": "Vous ne trouvez pas votre bonheur?",
+        "redirectionSubtitle": "Repassez voir notre collection de tapis et trouvez la perle rare!",
+        "qualityFranckSabet": "Les tapis Franck Sabet sont fait à la main et respectent de hauts standards de qualité"
+    },
+    "error404": {
+        "title": "Cette page n'existe pas",
+        "subtitle": "Mais pas d'inquiétude, nous en avons pleins d'autres!",
+        "returnArticles": "Voir les articles",
+        "returnHomepage": "Retour à l'accueil",
+        "returnProducts": "Voir les produits"
+    },
+    "seoTags": [
+        "tapis",
+        "nettoyage de tapis",
+        "restauration de tapis",
+        "vente de tapis"
+    ]
 }

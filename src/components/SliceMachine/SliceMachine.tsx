@@ -23,10 +23,12 @@ export const SliceMachine = ({ data, articles, products }: { data: Slice[], arti
                 return null; // Fallback if neither articles nor products are provided
 
             case 'square-card-list':
+                // @ts-ignore
                 return <SquareCardList services={slice.data} />;
 
             case 'grid-presentation':
                 console.log(slice)
+                // @ts-ignore
                 return <GridPresentation services={slice.services} contactInfo={slice.contactInfo} />;
 
             case 'cards-carousel':

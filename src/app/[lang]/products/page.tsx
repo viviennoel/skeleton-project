@@ -10,6 +10,8 @@ interface Product {
     tags: string[];
     mainImage: string;
     createdAt: string;
+    dimentions: { width: number, length: number };
+    price: number;
     description: string;
     content: string;
     author?: string;
@@ -37,7 +39,7 @@ const ProductsPage = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await fetchProducts(page, searchQuery);
+            const result: any = await fetchProducts(page, searchQuery);
             setProducts(result.products);
             setTotalPages(result.totalPages);
         };
@@ -57,6 +59,7 @@ const ProductsPage = () => {
 
             <Group mt="lg">
                 <Pagination
+                    // @ts-ignore
                     page={page}
                     onChange={setPage}
                     total={totalPages}

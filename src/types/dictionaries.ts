@@ -36,8 +36,9 @@ interface Pages {
 export interface WebsiteData {
     compagnyName: string;
     logoUrl: string;
-    seoTags: string[];
     header: Header;
     pages: Pages;
+    seoTags: string[];
+    products: any;
 }
 

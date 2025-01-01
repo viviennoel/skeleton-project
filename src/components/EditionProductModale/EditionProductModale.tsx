@@ -40,6 +40,7 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
             seoKeywords,
         };
 
+        // @ts-ignore
         const response = await fetch(`/api/products/${product._id}`, {
             method: 'PUT',
             headers: {
@@ -58,6 +59,7 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
     };
 
     const deleteProduct = async () => {
+        // @ts-ignore
         const response = await fetch(`/api/products/${product._id}`, {
             method: 'DELETE',
         });

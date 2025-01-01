@@ -5,7 +5,7 @@ import { VerticalCard } from "./VerticalCard/VerticalCard";
 import { Article, Product } from "@/src/types/Header";
 import classes from './VerticalCardList.module.scss'
 
-export default function VerticalCardList({ articles, products, type }: { articles: Article[], products?: Product[], type: 'article' | 'product' }) {
+export default function VerticalCardList({ articles, products, type }: { articles?: Article[], products?: Product[], type: 'article' | 'product' }) {
     return (<section className={classes.section}>
         <Container>
             <h1>Nos produits</h1>

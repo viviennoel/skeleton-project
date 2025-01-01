@@ -37,7 +37,7 @@ const ArticlesPage = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await fetchArticles(page, searchQuery);
+            const result: any = await fetchArticles(page, searchQuery);
             setArticles(result.articles);
             setTotalPages(result.totalPages);
         };
@@ -55,8 +55,9 @@ const ArticlesPage = () => {
 
             <VerticalCardList articles={articles} type="article" />
 
-            <Group position="center" mt="lg">
+            <Group mt="lg">
                 <Pagination
+                    // @ts-ignore
                     page={page}
                     onChange={setPage}
                     total={totalPages}
