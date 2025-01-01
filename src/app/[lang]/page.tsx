@@ -2,6 +2,7 @@ import { WebsiteData } from "@/src/types/dictionaries";
 import { getDictionary } from "./dictionaries";
 import { SliceMachine } from "@/src/components/SliceMachine/SliceMachine";
 import { MongoClient } from "mongodb";
+import Error404 from "@/src/components/Error/Error404";
 
 export default async function HomePage({
   params }: {
@@ -43,6 +44,10 @@ export default async function HomePage({
   }
 
   const articles = await getLatestArticles();
+
+  if (!articles) {
+    return <Error404 />
+  }
 
   return <div>
     <SliceMachine data={dictionary.pages.home.slices!} articles={articles} />

@@ -43,7 +43,7 @@ export async function POST(req: Request) {
         const result = await collection.insertOne({
             title,
             mainImage,
-            price,
+            price: Number(price),
             dimentions,
             createdAt: new Date(),
             description,

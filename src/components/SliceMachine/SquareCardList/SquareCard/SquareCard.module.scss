@@ -1,0 +1,52 @@
+.card {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #f0f0f0;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 1px 0px 8px 0px #0000007d;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover .cardContent {
+    opacity: 0;
+}
+
+.cardContent {
+    color: white;
+    text-align: center;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #0000007d;
+    transition: opacity 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    /* Align the content vertically */
+    justify-content: center;
+    /* Vertically center the content */
+    align-items: center;
+    /* Horizontally center the content */
+    padding: 20px;
+    /* Adjust padding if needed */
+}
+
+.cardContent h3 {
+    font-size: 1.8rem;
+    font-family: "Bilbo Swash Caps", cursive;
+    font-weight: 500;
+}
+
+.cardContent p {
+    font-size: 1rem;
+    font-family: "Mate", serif;
+}
+
+.link {
+    text-decoration: none;
+}

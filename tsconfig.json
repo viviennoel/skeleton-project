@@ -39,7 +39,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/HeaderMenu/LanguageSelector"
+    "components/HeaderMenu/LanguageSelector",
+    "src/components/EditionModale/EditionProductModale"
   ],
   "exclude": [
     "node_modules"

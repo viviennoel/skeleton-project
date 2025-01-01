@@ -93,7 +93,65 @@
                     "alt": "Web developpeur in paris de confiance"
                 },
                 {
+                    "type": "text-card"
+                },
+                {
+                    "type": "square-card-list",
+                    "data": [
+                        {
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp",
+                            "title": "Custom Carpet Design",
+                            "description": "Create unique carpets tailored to your space.",
+                            "link": "/services/custom-carpet-design"
+                        },
+                        {
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp",
+                            "title": "Carpet Restoration",
+                            "description": "Expert restoration services for your precious carpets.",
+                            "link": "/services/carpet-restoration"
+                        },
+                        {
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp",
+                            "title": "Carpet Cleaning",
+                            "description": "Professional cleaning for all types of carpets.",
+                            "link": "/services/carpet-cleaning"
+                        }
+                    ]
+                },
+                {
+                    "type": "horizontal-text-card"
+                },
+                {
+                    "type": "grid-presentation",
+                    "services": [
+                        {
+                            "title": "Custom Carpet Design",
+                            "description": "Create unique carpets tailored to your space."
+                        },
+                        {
+                            "title": "Carpet Restoration",
+                            "description": "Expert restoration services for your precious carpets."
+                        },
+                        {
+                            "title": "Carpet Cleaning",
+                            "description": "Professional cleaning for all types of carpets."
+                        }
+                    ],
+                    "contactInfo": {
+                        "address": "123 Main Street, Paris, France",
+                        "phone": "+33 1 23 45 67 89",
+                        "email": "contact@carpets.fr",
+                        "mapImage": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp"
+                    }
+                },
+                {
                     "type": "vertical-card-list"
+                },
+                {
+                    "type": "horizontal-text-card"
+                },
+                {
+                    "type": "cards-carousel"
                 }
             ]
         }
@@ -105,7 +163,10 @@
     "products": {
         "label": "Produit",
         "readMore": "Découvrir",
-        "priceLabel": "€"
+        "priceLabel": "€",
+        "redirectionTitle": "Vous ne trouvez pas votre bonheur?",
+        "redirectionSubtitle": "Repassez voir notre collection de tapis et trouvez la perle rare!",
+        "qualityFranckSabet": "Les tapis Franck Sabet sont fait à la main et respectent de hauts standards de qualité"
     },
     "error404": {
         "title": "Cette page n'existe pas",

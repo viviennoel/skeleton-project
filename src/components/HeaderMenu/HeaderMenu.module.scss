@@ -1,6 +1,9 @@
 .header {
     background-color: var(--mantine-color-body);
     border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+    box-shadow: 1px 0px 8px 0px #0000007d;
+    position: sticky;
+    z-index: 1;
 
     @media (max-width: 48em) {
         padding: 16px;

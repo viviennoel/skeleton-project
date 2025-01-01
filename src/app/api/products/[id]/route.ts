@@ -17,7 +17,8 @@ export async function PUT(req, { params }) {
     // @ts-ignore
     clientPromise = global._mongoClientPromise;
     const { id } = await params;
-    const { content } = await req.json();
+    const productData = await req.json();
+    delete productData._id;
 
     try {
         const client = await clientPromise;
@@ -26,7 +27,7 @@ export async function PUT(req, { params }) {
 
         const result = await collection.updateOne(
             { _id: ObjectId.createFromHexString(id) },
-            { $set: { content } }
+            { $set: productData }
         );
 
         if (result.modifiedCount === 0) {
@@ -51,18 +52,18 @@ export async function DELETE(req, { params }) {
 
         const { id } = params; // Extract the ID from the route parameters
         const db = client.db('blogDB'); // Replace with your database name
-        const collection = db.collection('articles'); // Replace with your collection name
+        const collection = db.collection('products'); // Replace with your collection name
 
         // Perform the deletion
-        const result = await collection.deleteOne({ _id: new ObjectId(id) });
+        const result = await collection.deleteOne({ _id: ObjectId.createFromHexString(id) });
 
         if (result.deletedCount === 0) {
-            return NextResponse.json({ message: "Failed to delete article, no match found" }, { status: 404 });
+            return NextResponse.json({ message: "Failed to delete product, no match found" }, { status: 404 });
         }
 
-        return NextResponse.json({ message: "Article deleted successfully" }, { status: 200 });
+        return NextResponse.json({ message: " deleted successfully" }, { status: 200 });
     } catch (error) {
-        console.error("Error deleting article:", error);
+        console.error("Error deleting product:", error);
         return NextResponse.json({ message: "An error occurred", error }, { status: 500 });
     } finally {
         // Ensure the client is closed

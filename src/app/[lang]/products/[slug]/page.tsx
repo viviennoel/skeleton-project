@@ -1,9 +1,12 @@
-import { notFound } from 'next/navigation';
 import { MongoClient } from 'mongodb';
-import { Container } from '@mantine/core';
+import { Badge, Button, Container, Divider, Group, List, Rating, Space, Text } from '@mantine/core';
 import { Image } from '@mantine/core';
-import { EditionModale } from '@/src/components/EditionModale/EditionModale';
-import useRouter from 'next/navigation';
+import Error404 from '@/src/components/Error/Error404';
+import Link from 'next/link';
+import { WebsiteData } from '@/src/types/dictionaries';
+import { getDictionary } from '../../dictionaries';
+import { Locale } from '@/src/types/Header';
+import { EditionProductModale } from '@/src/components/EditionProductModale/EditionProductModale';
 
 async function getProductBySlug(slug: any) {
     const uri = process.env.MONGODB_URI ?? "";
@@ -42,45 +45,78 @@ async function getProductBySlug(slug: any) {
     }
 }
 
-export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
-    const { slug } = await params;
-    const router = useRouter;
+export default async function ProductPage({ params }: { params: Promise<{ slug: string, lang: Locale }> }) {
+    const { slug, lang } = await params;
     const product = await getProductBySlug(slug) as any;
+    const dictionary: WebsiteData = await getDictionary(lang);
+
 
     if (!product) {
-        router.redirect('/products')
+        return <Error404 />
     }
 
     return (
-        <Container my='md'>
-            <EditionModale content={product.content} id={product._id} />
-            <h1>{product.title}</h1>
-            <p>{new Date(product.date).toLocaleDateString()}</p>
+        <Container my="md">
+            <EditionProductModale product={product} />
+            <Group justify="space-between">
+                <h1>{product.seoTitle || product.title}</h1>
+                <Badge color="grey">{product.category || 'Uncategorized'}</Badge>
+                <Text c="dimmed">{dictionary.products.qualityFranckSabet}</Text>
+            </Group>
+            <Space h="lg" />
+            <Divider />
+
             {product.mainImage && (
-                <Image
-                    radius="md"
-                    h={300}
-                    src={product.mainImage}
-                    alt={product.title}
-                    fit='cover'
-                />
+                <>
+                    <Space h="lg" />
+                    <Image
+                        radius="md"
+                        height={300}
+                        style={{ boxShadow: 'black 0 0 0 0' }}
+                        src={product.mainImage}
+                        alt={product.title}
+                        fit="contain"
+                        mb="xl"
+                        mt="xl" />
+                    <Space h="lg" />
+                    <Divider /></>
             )}
 
+            <p>{product.description}</p>
 
-            <div dangerouslySetInnerHTML={{ __html: product.content }} />
+            <Group gap="xs">
+                <Text size="sm">Dimensions:</Text>
+                <Badge color="lightgrey" style={{ color: 'black' }}>
+                    {product.dimentions.length} x {product.dimentions.width} cm
+                </Badge>
+            </Group>
+
+            {product.stock !== undefined && (
+                <Text size="sm" color={product.stock > 0 ? 'green' : 'red'}>
+                    {product.stock > 0 ? `${product.stock} in stock` : 'Out of stock'}
+                </Text>
+            )}
+
+            <Text size="lg" fw={700} mb="md">
+                {product.price}€
+            </Text>
+
+            {product.rating !== undefined && (
+                <Group mt="sm">
+                    <Rating value={product.rating} readOnly />
+                    <Text size="sm">({product.rating} stars)</Text>
+                </Group>
+            )}
+
+            {/* TODO USE THE SEO TAGS */}
+            {/* TODO ADD PAYMENT HERE */}
+            <Space h="lg" />
+            <Divider />
+            <h3>{dictionary.products.redirectionTitle}</h3>
+            <Text size="md" c="dimmed" mb="md">
+                {dictionary.products.redirectionSubtitle}
+            </Text>
+            <Button mt="xl" color="grey" component={Link} href="/products">Back to Products</Button>
         </Container>
     );
 }
-
-// export async function generateStaticParams() {
-//     const client = await MongoClient.connect(process.env.MONGODB_URI ?? '');
-//     const db = client.db();
-
-//     const products = await db.collection('products').find({}, { projection: { title: 1 } }).toArray();
-
-//     client.close();
-
-//     return products.map((product) => ({
-//         slug: product.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
-//     }));
-// }

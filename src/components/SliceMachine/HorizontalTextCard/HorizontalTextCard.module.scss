@@ -1,0 +1,52 @@
+.fullWidthWrapper {
+    box-shadow: 1px 0px 8px 0px #0000007d;
+    margin: 70px 0;
+}
+
+.horizontalSection {
+    position: relative;
+    padding: 50px;
+    text-align: center;
+}
+
+.horizontalSection p {
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    padding: 0 60px;
+}
+
+.horizontalSectionDivider {
+    height: 40px;
+}
+
+.horizontalSection::before,
+.horizontalSection::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    /* The width of the lines */
+    background-color: #c7a657;
+    /* A subtle, classy color (adjust for your design) */
+    transform: scaleY(0);
+    /* Start with the lines collapsed (for animation) */
+    transition: transform 1s ease-in-out;
+    /* Animation for line appearance */
+}
+
+.horizontalSection::before {
+    left: 0px;
+    /* Left line */
+}
+
+.horizontalSection::after {
+    right: 0px;
+    /* Right line */
+}
+
+.horizontalSection:hover::before,
+.horizontalSection:hover::after {
+    transform: scaleY(1);
+    /* Animate the lines to full height on hover */
+}

@@ -7,7 +7,7 @@ export default async function Page({ params }: { params: Promise<{ lang: Locale;
     const { lang, slug } = await params;
     const dictionary: Record<string, any> = await getDictionary(lang);
 
-    if (!dictionary.pages[slug]) {
+    if (!dictionary.pages[slug]?.slices) {
         return <Error404 />
     }
 
