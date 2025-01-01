@@ -27,7 +27,6 @@ export const SliceMachine = ({ data, articles, products }: { data: Slice[], arti
                 return <SquareCardList services={slice.data} />;
 
             case 'grid-presentation':
-                console.log(slice)
                 // @ts-ignore
                 return <GridPresentation services={slice.services} contactInfo={slice.contactInfo} />;
 

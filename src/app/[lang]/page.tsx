@@ -27,9 +27,9 @@ export default async function HomePage({
 
       // Fetch the 3 latest articles with only required fields
       const articles = await db.collection('articles')
-        .find({}, { projection: { title: 1, createdAt: 1, _id: 1, mainImage: 1 } }) // Fetch only these fields
+        .find({}) // Fetch only these fields
         .sort({ createdAt: -1 }) // Sort by `createdAt` in descending order
-        .limit(6) // Limit to 3 results
+        .limit(3) // Limit to 3 results
         .toArray();
 
       return articles.map(article => ({
@@ -43,7 +43,7 @@ export default async function HomePage({
     }
   }
 
-  const articles = await getLatestArticles();
+  const articles = getLatestArticles();
 
   if (!articles) {
     return <Error404 />
