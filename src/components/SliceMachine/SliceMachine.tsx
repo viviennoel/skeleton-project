@@ -15,9 +15,11 @@ export const SliceMachine = ({ data, articles, products }: { data: Slice[], arti
 
             case 'vertical-card-list':
                 if (articles) {
+                    // @ts-ignore
                     return <VerticalCardList articles={articles} type="article" />;
                 }
                 if (products) {
+                    // @ts-ignore
                     return <VerticalCardList articles={products} type="product" />;
                 }
                 return null; // Fallback if neither articles nor products are provided

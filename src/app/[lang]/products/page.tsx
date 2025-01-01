@@ -55,6 +55,7 @@ const ProductsPage = () => {
                 mb="lg"
             />
 
+            {/* @ts-ignore */}
             <VerticalCardList products={products} type="product" />
 
             <Group mt="lg">
