@@ -5,11 +5,11 @@ import { Button, Container, Group, Paper, Text, Title, useMantineTheme } from '@
 import { useMediaQuery } from '@mantine/hooks';
 import classes from './CardsCarousel.module.scss';
 import '@mantine/carousel/styles.css';
-import { fetchProducts } from '@/src/app/[lang]/products/page';
 import { useEffect, useState } from 'react';
 import { Product } from '@/src/types/Header';
 import Link from 'next/link';
 import { useDictionary } from '@/src/dictionaries/dictionary-provider';
+import { fetchProducts } from '@/src/helpers/fetch-products';
 
 interface CardData {
     image: string;
