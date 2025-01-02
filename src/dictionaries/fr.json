@@ -29,15 +29,15 @@
                 "label": "Produits",
                 "links": [
                     {
-                        "link": "/products/modern",
+                        "link": "/products/category/contemporains",
                         "label": "Moderne"
                     },
                     {
-                        "link": "/products/traditions",
+                        "link": "/products/category/traditional",
                         "label": "Traditionnels"
                     },
                     {
-                        "link": "/products/personnalisés",
+                        "link": "/products/category/personalised",
                         "label": "Personnalisés"
                     },
                     {
@@ -57,10 +57,6 @@
                     {
                         "link": "/services/restauration",
                         "label": "Restauration de tapis"
-                    },
-                    {
-                        "link": "/faq",
-                        "label": "FAQ"
                     },
                     {
                         "link": "/contact",
@@ -104,6 +100,10 @@
                     {
                         "label": "Contact",
                         "link": "/contact"
+                    },
+                    {
+                        "label": "CGU - CGV",
+                        "link": "/cgu"
                     }
                 ]
             },
@@ -112,15 +112,15 @@
                 "links": [
                     {
                         "label": "Traditionnels",
-                        "link": "/products/traditionnels"
+                        "link": "/products/category/traditional"
                     },
                     {
                         "label": "Contemporains",
-                        "link": "/products/contemporains"
+                        "link": "/products/category/modern"
                     },
                     {
-                        "label": "Unis",
-                        "link": "/products/unis"
+                        "label": "Personnalisés",
+                        "link": "/products/category/personnalised"
                     }
                 ]
             },
@@ -150,9 +150,86 @@
             "title": "Formulaire de contact"
         },
         "about": {
-            "link": "/about-us",
-            "label": "Notre expertise",
-            "title": "Three generations of expertise"
+            "link": "/about",
+            "label": "About Us",
+            "title": "À propos",
+            "slices": [
+                {
+                    "type": "homepage-banner",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "alt": "Franck Sabet - Tradition et Excellence",
+                    "title": "À propos de nous",
+                    "subtitle": "Héritage, savoir-faire et passion"
+                },
+                {
+                    "type": "text-card",
+                    "title": "Notre histoire",
+                    "description": "La Galerie Franck Sabet incarne une riche histoire familiale ancrée dans l’univers du luxe et du savoir-faire artisanal. Depuis trente ans, cette entreprise se consacre à la création et à la restauration de tapis haut de gamme. Installée sur la prestigieuse rue du Faubourg Saint-Honoré, la galerie se distingue par ses créations sur mesure et ses restaurations de haute précision.",
+                    "button": "Lire notre histoire",
+                    "buttonColor": "black",
+                    "buttonHref": "/about#heritage"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "horizontal-image-card",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Pourquoi nous choisir?",
+                    "description": "Depuis deux générations, notre maison incarne l’excellence dans l’art du tapis. Forts d’un héritage familial et d’un amour profond pour l’artisanat, nous avons su allier tradition et modernité pour offrir à notre clientèle des tapis uniques, véritables œuvres d'art.",
+                    "button": "Découvrir nos services",
+                    "buttonColor": "black",
+                    "buttonHref": "/services",
+                    "position": "right"
+                },
+                {
+                    "type": "horizontal-text-card",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Pourquoi nous choisir?",
+                    "description": "Depuis deux générations, notre maison incarne l’excellence dans l’art du tapis. Forts d’un héritage familial et d’un amour profond pour l’artisanat, nous avons su allier tradition et modernité pour offrir à notre clientèle des tapis uniques, véritables œuvres d'art.",
+                    "button": "Découvrir nos services",
+                    "buttonColor": "black",
+                    "buttonHref": "/services"
+                },
+                {
+                    "type": "quote"
+                },
+                {
+                    "type": "droping-items"
+                },
+                {
+                    "type": "horizontal-image-card",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Pourquoi nous choisir?",
+                    "description": "Depuis deux générations, notre maison incarne l’excellence dans l’art du tapis. Forts d’un héritage familial et d’un amour profond pour l’artisanat, nous avons su allier tradition et modernité pour offrir à notre clientèle des tapis uniques, véritables œuvres d'art.",
+                    "button": "Découvrir nos services",
+                    "buttonColor": "black",
+                    "buttonHref": "/services",
+                    "position": "right"
+                },
+                {
+                    "type": "horizontal-image-card",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Pourquoi nous choisir?",
+                    "description": "Depuis deux générations, notre maison incarne l’excellence dans l’art du tapis. Forts d’un héritage familial et d’un amour profond pour l’artisanat, nous avons su allier tradition et modernité pour offrir à notre clientèle des tapis uniques, véritables œuvres d'art.",
+                    "button": "Découvrir nos services",
+                    "buttonColor": "black",
+                    "buttonHref": "/services",
+                    "position": "left"
+                },
+                {
+                    "type": "horizontal-text-card",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Notre héritage",
+                    "description": "Depuis trente ans, la Galerie Franck Sabet allie tradition et modernité pour offrir des tapis uniques, véritables œuvres d'art. Chaque pièce est minutieusement sélectionnée pour son raffinement, son élégance et sa qualité exceptionnelle.",
+                    "button": "En savoir plus",
+                    "buttonColor": "black",
+                    "buttonHref": "/about#heritage"
+                }
+            ]
         },
         "products": {
             "title": "Décrouvrez tous nos produits",

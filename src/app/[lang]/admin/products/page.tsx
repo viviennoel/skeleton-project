@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { DropzoneCloudinary } from '@/src/components/EditorText/Dropzone';
 import { Editor } from '@/src/components/EditorText/Editor';
-import { Button, Input, Group, Container, MultiSelect, Textarea } from '@mantine/core';
+import { Button, Input, Group, Container, MultiSelect, Textarea, Select } from '@mantine/core';
 import { useRouter } from 'next/navigation';
 import { Product } from '@/src/types/Header';
 import { useDictionary } from '@/src/dictionaries/dictionary-provider';
@@ -120,10 +120,11 @@ const ProductEditorPage = () => {
                 </Group>
 
                 {/* Category Input */}
-                <Input
+                <Select
                     name="Category"
                     value={category}
-                    onChange={(e) => setCategory(e.target.value)}
+                    data={['traditional', 'modern', 'personalised']}
+                    onChange={setCategory}
                     placeholder="Enter product category"
                     mb="md"
                 />

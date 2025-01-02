@@ -6,9 +6,10 @@ import { GridPresentation } from "./GridPresentation/GridPresentation";
 import { CardsCarousel } from "./CardsCarousel/CardsCarousel";
 import { HorizontalTextCard } from "./HorizontalTextCard/HorizontalTextCard";
 import { TextCard } from "./TextCard/TextCard";
+import { HorizontalImageCard } from "./HorizontalImageCard/HorizontalImageCard";
+import { Divider } from "@mantine/core";
 
 export const SliceMachine = ({ data, articles, products }: { data: Slice[], articles?: any, products?: any }) => {
-    console.log(articles);
     return data.map(slice => {
         switch (slice.type) {
             case 'homepage-banner':
@@ -42,9 +43,17 @@ export const SliceMachine = ({ data, articles, products }: { data: Slice[], arti
                 // @ts-ignore
                 return <HorizontalTextCard data={slice} />
 
+            case 'horizontal-image-card':
+                console.log(slice);
+                // @ts-ignore
+                return <HorizontalImageCard data={slice} />
+
             case 'text-card':
                 // @ts-ignore
                 return <TextCard data={slice} />
+
+            case 'divider':
+                return <Divider />
 
             default:
                 console.log('pas banner')

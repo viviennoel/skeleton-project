@@ -8,11 +8,9 @@ import { HeaderLinks, Locale } from '@/src/types/Header';
 import Image from 'next/image';
 import { ResponsiveBurger } from './ResponsiveBurger/ResponsiveBurger';
 import { LanguageSelector } from './LanguageSelector/LanguageSelector';
-import { usePathname } from 'next/navigation';
 import { useDictionary } from '@/src/dictionaries/dictionary-provider';
 
 export function HeaderMenu() {
-    const pathname = usePathname();
     const dictionary = useDictionary()
 
     const metaHeader = getHeaderItems(dictionary.header.metaHeader, 'sm');
@@ -44,7 +42,7 @@ export function HeaderMenu() {
 
 const getHeaderItems = (links: HeaderLinks, size?: 'sm') => links.map((link) => {
     const menuItems = link.links?.map((item) => (
-        <Menu.Item key={item.link}><Link href={item.link} className={classes.link}>{item.label}</Link></Menu.Item>
+        <Menu.Item key={item.label}><Link href={item.link} className={classes.link}>{item.label}</Link></Menu.Item>
     ));
 
     if (menuItems) {
@@ -70,7 +68,7 @@ const getHeaderItems = (links: HeaderLinks, size?: 'sm') => links.map((link) => 
     return (
         <Link
             key={link.label}
-            href={link.link}
+            href={link.query ? { pathname: link.link, query: link.query } : link.link}
             className={`${classes.link} ${size ? classes.smallLink : ''}`}
         >
             {/* @ts-ignore */}

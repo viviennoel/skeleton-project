@@ -77,7 +77,7 @@ export async function GET(req: any) {
             ? {
                 $or: [
                     { title: { $regex: query, $options: "i" } },
-                    { tags: { $regex: query, $options: "i" } },
+                    { category: { $regex: query, $options: "i" } },
                 ],
             }
             : {};
