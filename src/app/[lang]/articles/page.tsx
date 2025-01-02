@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Input, Pagination, Group } from '@mantine/core';
 import VerticalCardList from '@/src/components/SliceMachine/VerticalCardList/VerticalCardList';
+import { useDictionary } from '@/src/dictionaries/dictionary-provider';
+import Image from 'next/image';
 
 interface Article {
     id: string;
@@ -34,6 +36,7 @@ const ArticlesPage = () => {
     const [page, setPage] = useState(1);
     const [searchQuery, setSearchQuery] = useState('');
     const [totalPages, setTotalPages] = useState(1);
+    const dictionary = useDictionary();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -46,6 +49,12 @@ const ArticlesPage = () => {
 
     return (
         <Container my="md">
+            {/* TODO: Refactor to use the same component in article and product */}
+            <Group align='center'>
+                <Image src="https://img.icons8.com/c9a456/ios-filled/50/search--v1.png" alt="search" height={20} width={20} />
+                {/* @ts-ignore */}
+                <p>{dictionary.pages.products.search}</p>
+            </Group>
             <Input
                 placeholder="Search by title or tag"
                 value={searchQuery}
@@ -54,7 +63,7 @@ const ArticlesPage = () => {
             />
 
             {/* @ts-ignore */}
-            <VerticalCardList articles={articles} type="article" />
+            <VerticalCardList articles={articles} data={dictionary.pages.articles} />
 
             <Group mt="lg">
                 <Pagination

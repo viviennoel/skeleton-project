@@ -20,6 +20,12 @@ export default withBundleAnalyzer({
         pathname: '/djlwtz7qw/**',
         search: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'img.icons8.com',
+        pathname: '/**',
+        search: '',
+      }
     ],
   },
 });

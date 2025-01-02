@@ -6,6 +6,7 @@ import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/c
 import { theme } from '../../../theme';
 import { HeaderMenu } from '@/src/components/HeaderMenu/HeaderMenu';
 import DictionaryProvider from '@/src/dictionaries/dictionary-provider';
+import { Footer } from '@/src/components/Footer/Footer';
 
 export const metadata = {
   title: 'Mantine Next.js template',
@@ -26,10 +27,10 @@ export default async function RootLayout({ children, params }: { children: React
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
       </head>
-      <body>
+      <body style={{ backgroundImage: 'linear-gradient(to right, #cdc8c8, white, white, white, white, white, white, white, white, #cdc8c8);' }}>
         <DictionaryProvider dictionary={dictionary}>
           <MantineProvider theme={theme}>
-            <HeaderMenu />{children}
+            <HeaderMenu />{children}<Footer />
           </MantineProvider>
         </DictionaryProvider>
       </body>

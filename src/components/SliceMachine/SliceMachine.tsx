@@ -12,16 +12,17 @@ export const SliceMachine = ({ data, articles, products }: { data: Slice[], arti
     return data.map(slice => {
         switch (slice.type) {
             case 'homepage-banner':
-                return <FullscreenImage src={slice.src ?? ''} alt={slice.alt ?? ''} />;
+                // @ts-ignore
+                return <FullscreenImage data={slice} />;
 
             case 'vertical-card-list':
                 if (articles) {
                     // @ts-ignore
-                    return <VerticalCardList articles={articles} type="article" />;
+                    return <VerticalCardList articles={articles} data={slice} />;
                 }
                 if (products) {
                     // @ts-ignore
-                    return <VerticalCardList articles={products} type="product" />;
+                    return <VerticalCardList articles={products} data={slice} />;
                 }
                 return null; // Fallback if neither articles nor products are provided
 
@@ -34,13 +35,16 @@ export const SliceMachine = ({ data, articles, products }: { data: Slice[], arti
                 return <GridPresentation services={slice.services} contactInfo={slice.contactInfo} />;
 
             case 'cards-carousel':
-                return <CardsCarousel />;
+                // @ts-ignore
+                return <CardsCarousel data={slice} />;
 
             case 'horizontal-text-card':
-                return <HorizontalTextCard />
+                // @ts-ignore
+                return <HorizontalTextCard data={slice} />
 
             case 'text-card':
-                return <TextCard />
+                // @ts-ignore
+                return <TextCard data={slice} />
 
             default:
                 console.log('pas banner')

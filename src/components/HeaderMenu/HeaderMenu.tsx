@@ -73,6 +73,8 @@ const getHeaderItems = (links: HeaderLinks, size?: 'sm') => links.map((link) => 
             href={link.link}
             className={`${classes.link} ${size ? classes.smallLink : ''}`}
         >
+            {/* @ts-ignore */}
+            {link.icon && <Image width="15" height="15" src={link.icon} alt={link.label} className={classes.icon} />}
             {link.label}
         </Link>
     );

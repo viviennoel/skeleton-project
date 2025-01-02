@@ -5,6 +5,16 @@
     height: 100%;
 }
 
+.title {
+    width: 100%;
+}
+
+.date {
+    z-index: 1;
+    position: relative;
+    margin-right: 5px;
+}
+
 .imageSection {
     height: 190px;
     overflow: hidden;
@@ -12,6 +22,7 @@
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+    text-align: end;
 }
 
 .label {
@@ -38,8 +49,15 @@
     color: white;
     font-size: var(--mantine-font-size-md);
     font-weight: 500;
+    width: 100%;
 
     @mixin hover {
         background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
     }
+}
+
+.bottomCard {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
 }

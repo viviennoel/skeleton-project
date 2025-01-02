@@ -1,21 +1,72 @@
 .section {
     text-align: center;
+}
 
-    h1 {
-        margin: 50px;
-    }
+.titleWrapper {
+    margin: 50px;
+}
+
+.horizontalSectionDivider {
+    height: 40px;
 }
 
 .card {
-    height: 440px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    position: relative;
     background-size: cover;
     background-position: center;
-    box-shadow: 1px 0px 8px 0px #0000007d;
+    color: white; // Ensure text is readable
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    min-height: 400px;
+
+    // Add dark filter overlay
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); // Dark overlay for better text contrast
+        z-index: 1; // Ensure it is above the image but below the content
+        transition: background 0.5s ease;
+    }
+
+    // On hover, remove the filter
+    &:hover::before {
+        background: rgba(0, 0, 0, 0); // Transparent on hover
+    }
+
+    &:hover .content {
+        color: transparent;
+
+        button {
+            display: none;
+        }
+    }
+
+    .content {
+        position: relative;
+        z-index: 2; // Keep the text above the filter
+        text-align: center;
+        padding: 20px;
+        margin: auto;
+        height: 100%;
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            padding-top: 30px;
+        }
+
+        p {
+            font-size: 1rem;
+            text-overflow: ellipsis;
+        }
+    }
 }
+
 
 .title {
     font-family:
@@ -33,4 +84,13 @@
     opacity: 0.7;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.link {
+    text-decoration: none;
+}
+
+
+.bottomCard {
+    padding-top: 60px;
 }

@@ -1,103 +1,122 @@
 'use client'
 
 import { Carousel } from '@mantine/carousel';
-import { Button, Container, Paper, Text, Title, useMantineTheme } from '@mantine/core';
+import { Button, Container, Group, Paper, Text, Title, useMantineTheme } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import classes from './CardsCarousel.module.scss';
 import '@mantine/carousel/styles.css';
+import { fetchProducts } from '@/src/app/[lang]/products/page';
+import { useEffect, useState } from 'react';
+import { Product } from '@/src/types/Header';
+import Link from 'next/link';
+import { useDictionary } from '@/src/dictionaries/dictionary-provider';
 
-interface CardProps {
+interface CardData {
     image: string;
     title: string;
     category: string;
 }
 
-function Card({ image, title, category }: CardProps) {
+interface CardProps {
+    title: string,
+    cardData: CardData[];
+}
+
+function Card({ cardData }: { cardData: CardData }) {
+    const dictionary = useDictionary();
+
     return (
         <Paper
             shadow="md"
             p="xl"
             radius="md"
-            style={{ backgroundImage: `url(${image})` }}
+            // @ts-ignore
+            style={{ backgroundImage: `url(${cardData?.image ?? cardData?.mainImage})` }}
             className={classes.card}
         >
-            <div>
-                <Text className={classes.category} size="xs">
-                    {category}
-                </Text>
-                <Title order={3} className={classes.title}>
-                    {title}
-                </Title>
+            <div className={classes.content}>
+                <h2>{cardData.title}</h2>
+                {/* @ts-ignore */}
+
+                <p>{cardData.description}</p>
+
+                <div className={`${classes.section} ${classes.bottomCard}`}>
+                    <Group gap={30}>
+                        {/* @ts-ignore */}
+                        {cardData?.price && (
+                            <div>
+                                <Text fz="xl" fw={700} style={{ lineHeight: 1 }}>
+                                    {/* @ts-ignore */}
+                                    {cardData?.price} {dictionary.products.priceLabel}
+                                </Text>
+                            </div>
+                        )}
+
+                        {/* @ts-ignore */}
+                        <Button radius="sm" color='white' variant="outline" fullWidth={!cardData?.price} style={{ flex: 1 }}>
+                            {/* @ts-ignore */}
+                            {cardData?.price ? dictionary.products.readMore : dictionary.articles.readMore}
+                        </Button>
+                    </Group>
+                </div>
             </div>
-            <Button variant="white" color="dark">
-                Read article
-            </Button>
         </Paper>
     );
 }
 
-const data = [
-    {
-        image:
-            'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-        title: 'Best forests to visit in North America',
-        category: 'nature',
-    },
-    {
-        image:
-            'https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-        title: 'Hawaii beaches review: better than you think',
-        category: 'beach',
-    },
-    {
-        image:
-            'https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-        title: 'Mountains at night: 12 best locations to enjoy the view',
-        category: 'nature',
-    },
-    {
-        image:
-            'https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-        title: 'Aurora in Norway: when to visit for best experience',
-        category: 'nature',
-    },
-    {
-        image:
-            'https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-        title: 'Best places to visit this winter',
-        category: 'tourism',
-    },
-    {
-        image:
-            'https://images.unsplash.com/photo-1582721478779-0ae163c05a60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-        title: 'Active volcanos reviews: travel at your own risk',
-        category: 'nature',
-    },
-];
-
-export function CardsCarousel() {
+export function CardsCarousel({ data }: { data: CardProps }) {
     const theme = useMantineTheme();
     const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
-    const slides = data.map((item) => (
-        <Carousel.Slide key={item.title}>
-            <Card {...item} />
-        </Carousel.Slide>
+    const [dataToDisplay, setDataToDisplay] = useState<Product[] | CardData[]>([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result: any = await getDataFromCardData(data.cardData);
+            setDataToDisplay(result.products);
+        };
+        fetchData();
+    }, []);
+
+
+    const slides = dataToDisplay.map((item) => (
+        // @ts-ignore
+        <Link href={item.url ?? item.title.replaceAll(' ', '-')} className={classes.link}>
+            <Carousel.Slide key={item.title}>
+                {/* @ts-ignore */}
+                <Card cardData={item} />
+            </Carousel.Slide>
+        </Link>
     ));
 
     return (
         <section className={classes.section}>
             <Container>
-                <h1>Nos articles</h1>
+                <div className={classes.titleWrapper}>
+                    <h1>{data.title}</h1>
+                    <img
+                        src='https://lesthesdemilie.com/assets/IMAGES/HOME/Separation.png'
+                        alt='Separation'
+                        className={`${classes.horizontalSectionDivider} mb-5`}
+                    />
+                </div>
                 <Carousel
                     withIndicators
-                    slideSize={{ base: '100%', sm: '50%' }}
-                    slideGap={{ base: 2, sm: 'xl' }}
+                    slideSize={{ base: '100%', sm: '33%' }}
+                    slideGap={{ base: 3, sm: 'xl' }}
                     align="start"
-                    slidesToScroll={mobile ? 1 : 2}
+                    slidesToScroll={mobile ? 1 : 3}
                 >
                     {slides}
                 </Carousel>
             </Container>
         </section>
     );
+}
+
+const getDataFromCardData = async (cardData: CardData[] | 'products' | 'articles') => {
+    if (cardData === 'products') {
+        const fetchedProducts = await fetchProducts(1, '')
+
+        return fetchedProducts;
+    }
 }

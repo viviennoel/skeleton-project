@@ -1,17 +1,26 @@
 import { Button, Container } from "@mantine/core";
 import classes from './HorizontalTextCard.module.scss';
+import Link from "next/link";
 
-export const HorizontalTextCard = () => {
-    const buttonColor = 'black';
-    const textColor = 'black';
-    const backgroundGradient = "linear-gradient(to right, white, white)"
+type HorizontalTextCardProps = {
+    title: string,
+    description: string,
+    backgroundGradient: string,
+    button: string,
+    buttonColor: string,
+    buttonHref: string
+}
+
+
+export const HorizontalTextCard = ({ data }: { data: HorizontalTextCardProps }) => {
+    const { title, description, backgroundGradient, button, buttonColor, buttonHref } = data;
 
     return (
         <div style={{ backgroundImage: backgroundGradient }} className={classes.fullWidthWrapper}>
             <Container>
                 <section className={classes.horizontalSection}>
                     <h1 className='mt-1 text-center text-white'>
-                        Deux générations de savoir-faire
+                        {title}
                     </h1>
                     <img
                         src='https://lesthesdemilie.com/assets/IMAGES/HOME/Separation.png'
@@ -19,18 +28,10 @@ export const HorizontalTextCard = () => {
                         className={`${classes.horizontalSectionDivider} mb-5`}
                     />
                     <p>
-                        Depuis deux générations, notre maison incarne l’excellence dans
-                        l’art du tapis. Chaque pièce de notre collection est minutieusement
-                        sélectionnée pour son raffinement, son élégance et sa qualité
-                        exceptionnelle. Forts d’un héritage familial et d’un amour profond
-                        pour l’artisanat, nous avons su allier tradition et modernité pour
-                        offrir à notre clientèle des tapis uniques, véritables œuvres d'art,
-                        qui rehaussent la beauté de chaque intérieur. Chez nous, chaque
-                        tapis raconte une histoire, tissée à travers le temps et les
-                        cultures.
+                        {description}
                     </p>
-                    <Button color={buttonColor}>
-                        En savoir plus
+                    <Button color={buttonColor} component={Link} href={buttonHref}>
+                        {button}
                     </Button>
                 </section>
             </Container>

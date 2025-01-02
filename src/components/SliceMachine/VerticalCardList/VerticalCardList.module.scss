@@ -1,7 +1,11 @@
 .section {
     text-align: center;
 
-    h1 {
+    .title {
         margin: 50px;
     }
+}
+
+.horizontalSectionDivider {
+    height: 40px;
 }

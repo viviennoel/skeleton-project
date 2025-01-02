@@ -10,6 +10,7 @@ export default async function HomePage({
   params: Promise<{ lang: 'en' | 'fr' }>;
 }) {
   const { lang } = await params;
+  //@ts-ignore
   const dictionary: WebsiteData = await getDictionary(lang);
 
   async function getLatestArticles() {
@@ -50,8 +51,6 @@ export default async function HomePage({
   }
 
   return (
-    <div>
-      <SliceMachine data={dictionary.pages.home.slices!} articles={articles} />
-    </div>
+    <SliceMachine data={dictionary.pages.home.slices!} articles={articles} />
   );
 }

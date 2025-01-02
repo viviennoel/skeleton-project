@@ -1,7 +1,18 @@
-.section {
-    text-align: center;
+.card {
+    box-shadow: 1px 0px 8px 0px #0000007d;
+    height: 100%;
+    background-color: #f8f8f870;
+}
 
-    h1 {
-        margin: 50px;
-    }
+.section h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cardWrapper:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.link {
+    text-decoration: none;
 }

@@ -13,6 +13,7 @@ export interface Slice {
     type: string;
     src?: string;
     alt?: string;
+    title: string, subtitle: string
 }
 
 interface PageInfo {

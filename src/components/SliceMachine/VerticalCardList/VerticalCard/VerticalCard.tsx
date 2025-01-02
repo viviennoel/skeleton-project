@@ -1,23 +1,23 @@
 'use client'
 
-import { IconGasStation, IconGauge, IconManualGearbox, IconUsers } from '@tabler/icons-react';
-import { Badge, Button, Card, Center, Group, Text } from '@mantine/core';
+import { Badge, Button, Card, Center, Group, Space, Text } from '@mantine/core';
 import classes from './VerticalCard.module.scss';
 import Image from 'next/image';
 import { useDictionary } from '@/src/dictionaries/dictionary-provider';
 import Link from 'next/link';
 import { Article, Product } from '@/src/types/Header';
 
-const mockdata = [
-    { label: '4 passengers', icon: IconUsers },
-    { label: '100 km/h in 4 seconds', icon: IconGauge },
-    { label: 'Automatic gearbox', icon: IconManualGearbox },
-    { label: 'Electric', icon: IconGasStation },
-];
-
-export function VerticalCard({ article, product }: { article?: Article, product?: Product, type: 'article' | 'product' }) {
+export function VerticalCard({ article, product }: { article?: Article, product?: Product }) {
     const dictionary = useDictionary();
     const cardData = article ? article : product;
+    const date = new Date(article ? (cardData as Article)?.createdAt : '');
+
+    const formattedDate = article ? new Intl.DateTimeFormat('en-GB', {
+        day: '2-digit',  // Two-digit day
+        month: 'long',   // Full month name
+        year: 'numeric', // Full year
+    }).format(date) : '';
+
     const link = article
         ? `/articles/${article?.title.replaceAll(' ', '-')}`
         : `/products/${product?.title?.replaceAll(' ', '-')}`;
@@ -25,18 +25,17 @@ export function VerticalCard({ article, product }: { article?: Article, product?
     return (
         <Card withBorder radius="md" className={classes.card}>
             <Card.Section className={classes.imageSection}>
+                {article && <Badge color='grey' className={classes.date}>{formattedDate}</Badge>}
                 <Image src={cardData?.mainImage ?? ''} alt={cardData?.title ?? ''} fill={true} style={{ objectFit: "cover" }} />
             </Card.Section>
 
-            <Group justify="space-between" mt="md">
-                <div>
+            <Group justify="space-between" mt="md" w='100%'>
+                <div className={classes.title}>
                     <Text fw={500}>{cardData?.title ?? ''}</Text>
                     <Text fz="xs" c="dimmed">
                         {article ? dictionary.articles.label : dictionary.products.label}
                     </Text>
                 </div>
-                {/* @ts-ignore */}
-                {article && <Badge variant="outline" color='black'>{cardData?.createdAt ?? ''}</Badge>}
             </Group>
 
             <Card.Section className={classes.section} mt="md">
@@ -45,7 +44,11 @@ export function VerticalCard({ article, product }: { article?: Article, product?
                 </Text>
             </Card.Section>
 
-            <Card.Section className={classes.section}>
+            <Space h='lg' />
+            <Space h='lg' />
+            <Space h='lg' />
+
+            <Card.Section className={`${classes.section} ${classes.bottomCard}`}>
                 <Group gap={30}>
                     {product && (
                         <div>
@@ -60,8 +63,8 @@ export function VerticalCard({ article, product }: { article?: Article, product?
                     )}
 
 
-                    <Link href={link} className={classes.link}>
-                        <Button radius="sm" color='black' style={{ flex: 1 }}>
+                    <Link href={link} className={!product ? classes.link : ''}>
+                        <Button radius="sm" color='black' fullWidth={!product} style={{ flex: 1 }}>
                             {article ? dictionary.articles.readMore : dictionary.products.readMore}
                         </Button>
                     </Link>

@@ -10,8 +10,7 @@ export const SquareCardList = ({ services }: { services: any[] }) => {
             <Container my="md">
                 <Grid gutter="lg">
                     {services.map((service: any) => (
-                        // @ts-ignore
-                        <Grid.Col span={4} sm={12} key={service.title}>
+                        <Grid.Col span={{ base: 12, sm: 4 }} key={service.title}>
                             <SquareCard data={service} />
                         </Grid.Col>
                     ))}

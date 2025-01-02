@@ -1,15 +1,24 @@
 import { Button, Container } from "@mantine/core";
 import classes from './TextCard.module.scss';
+import Link from "next/link";
 
-export const TextCard = () => {
-    const buttonColor = 'black';
+type TextCardProps = {
+    title: string,
+    description: string,
+    button: string,
+    buttonColor: string,
+    buttonHref: string
+}
+
+export const TextCard = ({ data }: { data: TextCardProps }) => {
+    const { title, description, button, buttonColor, buttonHref } = data;
 
     return (
         <div>
             <Container>
                 <section className={classes.horizontalSection}>
                     <h1>
-                        Trois générations de savoir-faire et d'excellence
+                        {title}
                     </h1>
                     <img
                         src='https://lesthesdemilie.com/assets/IMAGES/HOME/Separation.png'
@@ -17,12 +26,10 @@ export const TextCard = () => {
                         className={`${classes.horizontalSectionDivider} mb-5`}
                     />
                     <p>
-                        Depuis trois générations, notre maison incarne l’excellence dans
-                        l’art du tapis. Du conseil à l'entretien, nous vous accompagnons
-                        pour sublimer vos intérieurs
+                        {description}
                     </p>
-                    <Button color={buttonColor}>
-                        En savoir plus
+                    <Button color={buttonColor} component={Link} href={buttonHref}>
+                        {button}
                     </Button>
                 </section>
             </Container>

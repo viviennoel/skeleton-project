@@ -24,8 +24,8 @@ export const LanguageSelector = () => {
     };
 
     const supportedLanguage = {
-        fr: { label: 'français', img: 'https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp' },
-        en: { label: 'english', img: 'https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp' }
+        fr: { label: 'français', img: 'https://res.cloudinary.com/djlwtz7qw/image/upload/v1735777019/DALL_E_2025-01-02_01.15.52_-_A_square_image_of_the_French_flag_designed_with_a_satin-like_draped_texture._The_flag_s_colors_muted_blue_white_and_red_flow_softly_with_elegant_f_kfhi8i.webp' },
+        en: { label: 'english', img: 'https://res.cloudinary.com/djlwtz7qw/image/upload/v1735777019/DALL_E_2025-01-02_01.16.40_-_A_square_image_of_the_British_flag_Union_Jack_designed_with_a_satin-like_draped_texture._The_flag_s_colors_muted_red_white_and_blue_flow_softly_lkzcgg.webp' }
     }
 
     return (

@@ -48,6 +48,7 @@ async function getProductBySlug(slug: any) {
 export default async function ProductPage({ params }: { params: Promise<{ slug: string, lang: Locale }> }) {
     const { slug, lang } = await params;
     const product = await getProductBySlug(slug) as any;
+    // @ts-ignore
     const dictionary: WebsiteData = await getDictionary(lang);
 
 

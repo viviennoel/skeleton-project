@@ -1,19 +1,22 @@
 {
     "compagnyName": "hestia innovation web developpeur",
-    "logoUrl": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735340153/logo_eltt6f.webp",
+    "logoUrl": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735756439/logo_franck_sabet_jwqadt.webp",
     "header": {
         "metaHeader": [
             {
+                "icon": "https://img.icons8.com/c9a456/ios/50/delivery--v1.png",
                 "link": "/about",
                 "label": "Livraison gratuite à partir de 50€"
             },
             {
+                "icon": "https://img.icons8.com/c9a456/ios/50/phone--v1.png",
                 "link": "/contact",
-                "label": "01 00 00 00 00"
+                "label": "(+33) 1 45 61 12 95"
             },
             {
+                "icon": "https://img.icons8.com/c9a456/ios/50/marker--v1.png",
                 "link": "/contact",
-                "label": "21 avenue du raincy, 75016 Paris"
+                "label": "217 rue du Faubourg Saint Honoré, 75008 Paris"
             }
         ],
         "header": [
@@ -23,7 +26,7 @@
             },
             {
                 "link": "#1",
-                "label": "Nos Produits",
+                "label": "Produits",
                 "links": [
                     {
                         "link": "/products/modern",
@@ -45,7 +48,7 @@
             },
             {
                 "link": "#2",
-                "label": "Nos services",
+                "label": "Services",
                 "links": [
                     {
                         "link": "/services/cleaning",
@@ -71,87 +74,196 @@
             }
         ]
     },
+    "footer": {
+        "description": "L’histoire de la galerie commence avec une ambition : préserver et transmettre un savoir-faire ancestral, tout en répondant aux attentes d’une clientèle exigeante et internationale. Depuis ses débuts, la maison a collaboré avec des designers de renom pour offrir des tapis uniques, intégrant des matériaux de qualité supérieure et un style contemporain. Aujourd’hui, elle continue de s’imposer comme une référence dans le domaine des tapis de luxe, en alliant tradition, modernité et responsabilité éthique",
+        "copyright": "© 2024 Hestia-innovation. Tous droits réservés.",
+        "instagram": "https://www.instagram.com/francksabet",
+        "twitter": "",
+        "tiktok": "",
+        "facebook": "",
+        "links": [
+            {
+                "title": "A propos",
+                "links": [
+                    {
+                        "label": "Notre histoire",
+                        "link": "/about"
+                    },
+                    {
+                        "label": "Expertise",
+                        "link": "/expertise"
+                    },
+                    {
+                        "label": "Produits",
+                        "link": "/products"
+                    },
+                    {
+                        "label": "Articles",
+                        "link": "/articles"
+                    },
+                    {
+                        "label": "Contact",
+                        "link": "/contact"
+                    }
+                ]
+            },
+            {
+                "title": "Produits",
+                "links": [
+                    {
+                        "label": "Traditionnels",
+                        "link": "/products/traditionnels"
+                    },
+                    {
+                        "label": "Contemporains",
+                        "link": "/products/contemporains"
+                    },
+                    {
+                        "label": "Unis",
+                        "link": "/products/unis"
+                    }
+                ]
+            },
+            {
+                "title": "Services",
+                "links": [
+                    {
+                        "label": "Restauration",
+                        "link": "/services/restauration"
+                    },
+                    {
+                        "label": "Entretien",
+                        "link": "/services/cleaning"
+                    },
+                    {
+                        "label": "Follow on Instagram",
+                        "link": "https://www.instagram.com/francksabet"
+                    }
+                ]
+            }
+        ]
+    },
     "pages": {
         "contact": {
             "link": "/contact",
-            "label": "Contact us",
-            "title": "Contact form"
+            "label": "Contactez-nous",
+            "title": "Formulaire de contact"
         },
         "about": {
             "link": "/about-us",
-            "label": "About us",
+            "label": "Notre expertise",
             "title": "Three generations of expertise"
+        },
+        "products": {
+            "title": "Décrouvrez tous nos produits",
+            "search": "Trouvez le tapis de vos rêves en recherchant un produit"
+        },
+        "articles": {
+            "title": "Décrouvrez tous nos articles & conseils",
+            "search": "Vous cherchez un conseil d'expert? Utilisez notre recherche!"
         },
         "home": {
             "link": "/",
             "label": "Homepage",
-            "title": "Home sweet home",
+            "title": "Accueil",
             "slices": [
                 {
                     "type": "homepage-banner",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp",
-                    "alt": "Web developpeur in paris de confiance"
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "alt": "Franck sabet - tapis restauration - nettoyage - luxe",
+                    "title": "Tapis uniques et d'exception",
+                    "subtitle": "Tradition, expertise et excellence"
                 },
                 {
-                    "type": "text-card"
+                    "type": "text-card",
+                    "title": "Trois générations de savoir-faire et d'excellence",
+                    "description": "Depuis trois générations, notre maison incarne l’excellence dans l’art du tapis. Du conseil à l'entretien, nous vous accompagnons dans toutes vos démarches pour sublimer vos intérieurs.",
+                    "button": "En savoir plus",
+                    "buttonColor": "black",
+                    "buttonHref": "/about"
                 },
                 {
                     "type": "square-card-list",
                     "data": [
                         {
                             "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp",
-                            "title": "Custom Carpet Design",
-                            "description": "Create unique carpets tailored to your space.",
-                            "link": "/services/custom-carpet-design"
+                            "title": "Vente de tapis",
+                            "description": "Vente de tapis d'exception, du moderne au traditonnel.",
+                            "link": "/products"
                         },
                         {
                             "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp",
-                            "title": "Carpet Restoration",
-                            "description": "Expert restoration services for your precious carpets.",
+                            "title": "Restauration",
+                            "description": "Expert de la restauration pour les tapis de luxe.",
                             "link": "/services/carpet-restoration"
                         },
                         {
                             "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp",
-                            "title": "Carpet Cleaning",
-                            "description": "Professional cleaning for all types of carpets.",
+                            "title": "Nettoyage",
+                            "description": "Nettoyage et entretien des tapis",
                             "link": "/services/carpet-cleaning"
                         }
                     ]
                 },
                 {
-                    "type": "horizontal-text-card"
+                    "type": "horizontal-text-card",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Pourquoi nous faire confiance?",
+                    "description": "Depuis deux générations, notre maison incarne l’excellence dans l’art du tapis. Chaque pièce de notre collection est minutieusement sélectionnée pour son raffinement, son élégance et sa qualité exceptionnelle. Forts d’un héritage familial et d’un amour profond pour l’artisanat, nous avons su allier tradition et modernité pour offrir à notre clientèle des tapis uniques, véritables œuvres d'art, qui rehaussent la beauté de chaque intérieur. Chez nous, chaquetapis raconte une histoire, tissée à travers le temps et les cultures.",
+                    "button": "En savoir plus",
+                    "buttonColor": "black",
+                    "buttonHref": "/about"
                 },
                 {
                     "type": "grid-presentation",
                     "services": [
                         {
-                            "title": "Custom Carpet Design",
-                            "description": "Create unique carpets tailored to your space."
+                            "icon": "https://img.icons8.com/c9a456/dotty/80/consultation.png",
+                            "title": "Conseil",
+                            "description": "Nous mettons à votre disposition notre expertise sur la vente de tapis de luxe, sur leur entretien ou leur estimation.",
+                            "link": "/contact"
                         },
                         {
-                            "title": "Carpet Restoration",
-                            "description": "Expert restoration services for your precious carpets."
+                            "icon": "https://img.icons8.com/c9a456/ios/50/needle.png",
+                            "title": "Restoration",
+                            "description": "Expert dans la restoration de tapis anciens et de qualité, nos artisants restent à votre écoute. Prenez rendez-vous dès maintenant!",
+                            "link": "/contact"
                         },
                         {
-                            "title": "Carpet Cleaning",
-                            "description": "Professional cleaning for all types of carpets."
+                            "icon": "https://img.icons8.com/c9a456/ios/50/cleaning-a-surface.png",
+                            "title": "Entretien",
+                            "description": "Nettoyage professionel pour tous types de tapis, à domicile ou en boutique. Un service rapide et de qualité!",
+                            "link": "/contact"
                         }
                     ],
                     "contactInfo": {
+                        "icon": "https://img.icons8.com/c9a456/ios-filled/50/phone-message.png",
+                        "title": "Contactez-nous",
                         "address": "123 Main Street, Paris, France",
                         "phone": "+33 1 23 45 67 89",
                         "email": "contact@carpets.fr",
-                        "mapImage": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp"
+                        "mapImage": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735765506/contactBg_fhcloz.webp",
+                        "href": "/contact",
+                        "button": "Nous contacter"
                     }
                 },
                 {
-                    "type": "vertical-card-list"
+                    "type": "vertical-card-list",
+                    "title": "Nos articles & conseils"
                 },
                 {
-                    "type": "horizontal-text-card"
+                    "type": "horizontal-text-card",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Notre héritage",
+                    "description": "La Galerie Franck Sabet incarne une riche histoire familiale ancrée dans l’univers du luxe et du savoir-faire artisanal. Depuis trente ans, cette entreprise se consacre à la création et à la restauration de tapis haut de gamme. Installée sur la prestigieuse rue du Faubourg Saint-Honoré, la galerie se distingue par ses créations sur mesure et ses restaurations de haute précision, La galerie Franck Sabet offre une large gamme de tapis contemporains noués main choisis dans la meilleure qualité de laine de Yak, laine des montagnes en provenance de différentes régions : Népal, Tibet, Inde, entre autres.",
+                    "button": "En savoir plus",
+                    "buttonColor": "black",
+                    "buttonHref": "/about"
                 },
                 {
-                    "type": "cards-carousel"
+                    "type": "cards-carousel",
+                    "title": "Produits en vue cette saison",
+                    "cardData": "products"
                 }
             ]
         }

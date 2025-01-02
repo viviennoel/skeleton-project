@@ -1,69 +1,72 @@
+'use client'
 
 import React from 'react';
 import {
     Container,
-    SimpleGrid,
-    Stack,
     Card,
     Text,
     Group,
     Button,
+    Grid,
 } from '@mantine/core';
 import styles from './GridPresentation.module.scss';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export const GridPresentation = ({ services, contactInfo }: { services: any[]; contactInfo: any }) => {
     return (
         <section className={styles.section}>
-            <Container>
+            <Container my="md">
                 <h1>Nos services</h1>
-                {/* @ts-ignore */}
-                <SimpleGrid cols={2} spacing="lg" breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
-                    {/* Services Section */}
-                    {/* @ts-ignore */}
-                    <Stack spacing="lg">
+                <Grid gutter="lg">
+                    <Grid.Col span={{ base: 12, sm: 6, lg: 7 }}>
+                        {/* Services Section */}
                         {services.map((service, index) => (
-                            <Card key={index} shadow="md" radius="md" p="lg" className={styles.serviceCard}>
-                                {/* @ts-ignore */}
-                                <Text weight={700} size="lg" mb="sm">
-                                    {service.title}
-                                </Text>
-                                <Text size="sm" color="dimmed">
-                                    {service.description}
-                                </Text>
-                            </Card>
+                            <div className={styles.cardWrapper} key={index} >
+                                <Link href={service.link} className={styles.link}>
+                                    <Card shadow="md" radius="md" p="lg" className={styles.card}>
+                                        <Group>
+                                            <Image src={service.icon} alt={service.title} width='50' height='50' />
+                                            <h2>{service.title}</h2>
+                                        </Group>
+                                        <Text size="sm" c="dimmed">
+                                            {service.description}
+                                        </Text>
+                                    </Card>
+                                </Link>
+                            </div>
                         ))}
-                    </Stack>
+                    </Grid.Col>
 
                     {/* Contact Section */}
-                    <Card shadow="md" radius="md" p="lg" className={styles.contactCard}>
-                        {/* @ts-ignore */}
-                        <Text weight={700} size="lg" mb="sm">
-                            Contactez-nous
-                        </Text>
-                        <Text size="sm" mb="md">
-                            {contactInfo.address}
-                        </Text>
-                        <Text size="sm" mb="md">
-                            Téléphone: {contactInfo.phone}
-                        </Text>
-                        <Text size="sm" mb="lg">
-                            Email: {contactInfo.email}
-                        </Text>
-
-                        {/* Map */}
-                        <img
-                            src={contactInfo.mapImage}
-                            alt="Map showing our location"
-                            style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '8px' }}
-                        />
-                        {/* @ts-ignore */}
-                        <Group position="center" mt="lg">
-                            <Button color="blue" radius="md">
-                                Envoyer un message
-                            </Button>
-                        </Group>
-                    </Card>
-                </SimpleGrid>
+                    <Grid.Col span={{ base: 12, sm: 6, lg: 5 }}>
+                        <Card shadow="md" radius="md" p="lg" className={styles.card}>
+                            <Group>
+                                <Image src={contactInfo.icon} alt={contactInfo.title} width='50' height='50' />
+                                <h2>{contactInfo.title}</h2>
+                            </Group>
+                            <Text size="sm" mb="md">
+                                {contactInfo.address}
+                            </Text>
+                            <Text size="sm" mb="md">
+                                {contactInfo.phone}
+                            </Text>
+                            <Text size="sm" mb="lg">
+                                {contactInfo.email}
+                            </Text>
+                            <img
+                                src={contactInfo.mapImage}
+                                alt="Map showing our location"
+                                style={{ width: '100%', height: '220px', objectFit: 'cover', borderRadius: '8px' }}
+                            />
+                            <Group align="center" mt="lg">
+                                <Button color="black" radius="md" component={Link} href={contactInfo.href}>
+                                    {contactInfo.button}
+                                </Button>
+                            </Group>
+                        </Card>
+                    </Grid.Col>
+                </Grid>
             </Container>
         </section>
     );
