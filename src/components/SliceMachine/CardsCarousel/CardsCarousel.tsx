@@ -1,7 +1,7 @@
 'use client'
 
 import { Carousel } from '@mantine/carousel';
-import { Button, Container, Group, Paper, Text, Title, useMantineTheme } from '@mantine/core';
+import { Button, Container, Group, Paper, Space, Text, Title, useMantineTheme } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import classes from './CardsCarousel.module.scss';
 import '@mantine/carousel/styles.css';
@@ -50,6 +50,7 @@ function Card({ cardData }: { cardData: CardData }) {
                             </Text>
                         </div>
                     )}
+                    <Space />
 
                     {/* @ts-ignore */}
                     <Button radius="sm" color='white' variant="outline" fullWidth={!cardData?.price} style={{ flex: 1 }}>
