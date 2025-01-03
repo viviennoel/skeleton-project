@@ -80,8 +80,8 @@ export function CardsCarousel({ data }: { data: CardProps }) {
 
     const slides = dataToDisplay.map((item) => (
         // @ts-ignore
-        <Link href={item.url ?? item.title.replaceAll(' ', '-')} className={classes.link}>
-            <Carousel.Slide key={item.title}>
+        <Link href={item.url ?? item.title.replaceAll(' ', '-')} className={classes.link} key={item.title}>
+            <Carousel.Slide>
                 {/* @ts-ignore */}
                 <Card cardData={item} />
             </Carousel.Slide>

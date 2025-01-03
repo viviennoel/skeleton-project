@@ -33,6 +33,7 @@ const ProductsPage = () => {
 
     useEffect(() => {
         const fetchData = async () => {
+            //@ts-ignore
             const result: any = await fetchProducts(page, searchQuery);
             setProducts(result.products);
             setTotalPages(result.totalPages);

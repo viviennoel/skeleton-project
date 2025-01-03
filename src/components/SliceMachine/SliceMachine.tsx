@@ -7,7 +7,8 @@ import { CardsCarousel } from "./CardsCarousel/CardsCarousel";
 import { HorizontalTextCard } from "./HorizontalTextCard/HorizontalTextCard";
 import { TextCard } from "./TextCard/TextCard";
 import { HorizontalImageCard } from "./HorizontalImageCard/HorizontalImageCard";
-import { Divider } from "@mantine/core";
+import { Container, Divider, Space, Text } from "@mantine/core";
+import { Quote } from "./Quote/Quote";
 
 export const SliceMachine = ({ data, articles, products }: { data: Slice[], articles?: any, products?: any }) => {
     return data.map(slice => {
@@ -53,8 +54,23 @@ export const SliceMachine = ({ data, articles, products }: { data: Slice[], arti
                 return <TextCard data={slice} />
 
             case 'divider':
-                return <Divider />
+                return <Container><Divider /></Container>
 
+            case 'quote':
+                return <Quote data={slice} />
+
+            case 'title':
+                // @ts-ignore
+                return <Container align='center'><h2>{slice.title}</h2></Container>
+
+            case 'paragraph':
+                // @ts-ignore
+                return <Container align={slice.justify}><Text c={slice.size === 'small' ? 'dimmed' : ''}>{slice.paragraph}</Text></Container>
+
+            case 'space':
+                return <Space h='lg' />
+
+            // TODO: ADD testimonial-carousel
             default:
                 console.log('pas banner')
                 return

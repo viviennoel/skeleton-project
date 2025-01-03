@@ -14,15 +14,13 @@ export function Footer() {
     const groups = dictionary.footer.links.map((group) => {
         // @ts-ignore
         const links = group.links.map((link, index) => (
-            <Text<'a'>
+            <Link
                 key={index}
                 className={classes.link}
-                component="a"
                 href={link.link}
-                onClick={(event) => event.preventDefault()}
             >
                 {link.label}
-            </Text>
+            </Link>
         ));
 
         return (

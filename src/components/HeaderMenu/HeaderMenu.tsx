@@ -29,7 +29,9 @@ export function HeaderMenu() {
                             {mainHeader}
                         </Group>
                         <Group>
-                            <Button color='black' visibleFrom="sm" component={Link} href={dictionary.pages.contact.link}>{dictionary.pages.contact.label}</Button>
+                            <Button color='#94783b' visibleFrom="sm" component={Link} href={dictionary.pages.contact.link} className={classes.contact}>
+                                {dictionary.pages.contact.label}
+                            </Button>
                             <LanguageSelector />
                             <ResponsiveBurger />
                         </Group>
@@ -68,6 +70,7 @@ const getHeaderItems = (links: HeaderLinks, size?: 'sm') => links.map((link) => 
     return (
         <Link
             key={link.label}
+            //@ts-ignore
             href={link.query ? { pathname: link.link, query: link.query } : link.link}
             className={`${classes.link} ${size ? classes.smallLink : ''}`}
         >

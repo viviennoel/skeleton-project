@@ -1,11 +1,12 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Container, Input, Pagination, Group } from '@mantine/core';
+import { Container, Input, Pagination, Group, Divider } from '@mantine/core';
 import VerticalCardList from '@/src/components/SliceMachine/VerticalCardList/VerticalCardList';
 import { useDictionary } from '@/src/dictionaries/dictionary-provider';
 import Image from 'next/image';
 import { fetchProducts } from '@/src/helpers/fetch-products';
+import { HorizontalImageCard } from '@/src/components/SliceMachine/HorizontalImageCard/HorizontalImageCard';
 
 interface Product {
     id: string;
@@ -39,6 +40,9 @@ const ProductsPage = () => {
 
     return (
         <Container my="md">
+            {/* @ts-ignore */}
+            <HorizontalImageCard data={dictionary.pages.products.headerCard} />
+            <Divider />
             <Group align='center'>
                 <Image src="https://img.icons8.com/c9a456/ios-filled/50/search--v1.png" alt="search" height={20} width={20} />
                 {/* @ts-ignore */}

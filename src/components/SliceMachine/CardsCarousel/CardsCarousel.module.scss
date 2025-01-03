@@ -41,7 +41,10 @@
         color: transparent;
 
         button {
-            display: none;
+            background-color: transparent;
+            color: rgba(0, 0, 0, 0);
+            border: 1px solid rgba(0, 0, 0, 0);
+            ;
         }
     }
 

@@ -124,6 +124,7 @@ const ProductEditorPage = () => {
                     name="Category"
                     value={category}
                     data={['traditional', 'modern', 'personalised']}
+                    //@ts-ignore
                     onChange={setCategory}
                     placeholder="Enter product category"
                     mb="md"

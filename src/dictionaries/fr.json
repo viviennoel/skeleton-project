@@ -29,7 +29,7 @@
                 "label": "Produits",
                 "links": [
                     {
-                        "link": "/products/category/contemporains",
+                        "link": "/products/category/modern",
                         "label": "Moderne"
                     },
                     {
@@ -51,11 +51,15 @@
                 "label": "Services",
                 "links": [
                     {
-                        "link": "/services/cleaning",
+                        "link": "/services",
+                        "label": "Tous nos services"
+                    },
+                    {
+                        "link": "/cleaning",
                         "label": "Nettoyage de tapis"
                     },
                     {
-                        "link": "/services/restauration",
+                        "link": "/restoration",
                         "label": "Restauration de tapis"
                     },
                     {
@@ -82,11 +86,7 @@
                 "title": "A propos",
                 "links": [
                     {
-                        "label": "Notre histoire",
-                        "link": "/about"
-                    },
-                    {
-                        "label": "Expertise",
+                        "label": "Notre Expertise",
                         "link": "/expertise"
                     },
                     {
@@ -129,11 +129,11 @@
                 "links": [
                     {
                         "label": "Restauration",
-                        "link": "/services/restauration"
+                        "link": "/restoration"
                     },
                     {
                         "label": "Entretien",
-                        "link": "/services/cleaning"
+                        "link": "/cleaning"
                     },
                     {
                         "label": "Follow on Instagram",
@@ -144,10 +144,446 @@
         ]
     },
     "pages": {
+        "services": {
+            "link": "/services",
+            "label": "Services",
+            "title": "Nos Services",
+            "slices": [
+                {
+                    "type": "homepage-banner",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "alt": "Services Franck Sabet",
+                    "title": "Découvrez nos Services",
+                    "subtitle": "Expertise, tradition et excellence"
+                },
+                {
+                    "type": "text-card",
+                    "title": "Notre Engagement",
+                    "description": "Franck Sabet vous accompagne avec passion pour la vente, le nettoyage et la restauration de vos tapis. Nous mettons un point d'honneur à préserver leur éclat et leur authenticité grâce à notre savoir-faire unique.",
+                    "button": "Contactez-nous",
+                    "buttonColor": "black",
+                    "buttonHref": "/contact"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "grid-presentation",
+                    "services": [
+                        {
+                            "icon": "https://img.icons8.com/c9a456/dotty/80/consultation.png",
+                            "title": "Vente de Tapis",
+                            "description": "Un large choix de tapis modernes, traditionnels et d'exception pour tous les goûts.",
+                            "link": "/products"
+                        },
+                        {
+                            "icon": "https://img.icons8.com/c9a456/ios/50/needle.png",
+                            "title": "Restauration",
+                            "description": "Redonnez vie à vos tapis anciens avec nos techniques de restauration artisanales.",
+                            "link": "/restoration"
+                        },
+                        {
+                            "icon": "https://img.icons8.com/c9a456/ios/50/cleaning-a-surface.png",
+                            "title": "Nettoyage",
+                            "description": "Nettoyage professionnel pour préserver la beauté et la longévité de vos tapis.",
+                            "link": "/cleaning"
+                        }
+                    ],
+                    "contactInfo": {
+                        "icon": "https://img.icons8.com/c9a456/ios-filled/50/phone-message.png",
+                        "title": "Contactez-nous",
+                        "address": "217 rue du Faubourg Saint-Honoré, 75008 Paris",
+                        "phone": "+33 1 23 45 67 89",
+                        "email": "contact@francksabet.fr",
+                        "mapImage": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735765506/contactBg_fhcloz.webp",
+                        "href": "/contact",
+                        "button": "Nous contacter"
+                    }
+                },
+                {
+                    "type": "horizontal-image-card",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_carpeting_dvxzoq.webp",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "La Restauration de Tapis",
+                    "description": "Nos artisans restaurent vos tapis avec soin et précision pour qu'ils retrouvent leur éclat d'origine.",
+                    "button": "En savoir plus",
+                    "buttonColor": "black",
+                    "buttonHref": "/restoration",
+                    "position": "right"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "square-card-list",
+                    "data": [
+                        {
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_rugs_gvrqh4.webp",
+                            "title": "Vente de tapis d'exception",
+                            "description": "Découvrez notre collection de tapis d'exception.",
+                            "link": "/products"
+                        },
+                        {
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859307/optimized_image_restoration_htozwa.webp",
+                            "title": "Restauration",
+                            "description": "Nous redonnons vie à vos tapis anciens.",
+                            "link": "/restoration"
+                        },
+                        {
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859307/optimized_image_vacuum_f04kck.webp",
+                            "title": "Nettoyage",
+                            "description": "Un nettoyage professionnel pour des tapis comme neufs.",
+                            "link": "/cleaning"
+                        }
+                    ]
+                },
+                {
+                    "type": "horizontal-text-card",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Pourquoi choisir nos services?",
+                    "description": "Chez Franck Sabet, chaque service est réalisé avec le plus grand soin pour répondre à vos attentes. Notre équipe d'experts s'assure que chaque tapis reçoive l'attention qu'il mérite.",
+                    "button": "Découvrir notre histoire",
+                    "buttonColor": "black",
+                    "buttonHref": "/about"
+                },
+                {
+                    "type": "title",
+                    "title": "Contactez-nous pour en savoir plus"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Notre équipe est à votre disposition pour répondre à toutes vos questions. N'hésitez pas à nous contacter par téléphone ou par email.",
+                    "size": "normal",
+                    "justify": "center"
+                }
+            ]
+        },
+        "restoration": {
+            "link": "/restoration",
+            "label": "Restoration",
+            "title": "Restauration de tapis",
+            "slices": [
+                {
+                    "type": "homepage-banner",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "alt": "Restauration de tapis - Franck Sabet",
+                    "title": "L'art de la restauration",
+                    "subtitle": "Préserver l'authenticité et l'élégance"
+                },
+                {
+                    "type": "text-card",
+                    "title": "Pourquoi restaurer vos tapis?",
+                    "description": "La restauration de tapis est essentielle pour préserver leur beauté et leur valeur. Qu'il s'agisse d'un tapis ancien ou contemporain, notre expertise garantit une réparation minutieuse et fidèle à l'original.",
+                    "button": "Nous contacter",
+                    "buttonColor": "black",
+                    "buttonHref": "/contact"
+                },
+                {
+                    "type": "horizontal-text-card",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Nos techniques de restauration",
+                    "description": "Nous utilisons des techniques artisanales transmises depuis des générations pour réparer les tapis endommagés. Nos services incluent le remplacement de franges, le rapiéçage, la recoloration et la réparation des bords.",
+                    "button": "Prendre rendez-vous",
+                    "buttonColor": "black",
+                    "buttonHref": "/contact"
+                },
+                {
+                    "type": "quote",
+                    "text": "Chaque tapis restauré est une œuvre d'art qui retrouve sa splendeur d'origine."
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "grid-presentation",
+                    "services": [
+                        {
+                            "icon": "https://img.icons8.com/c9a456/ios/50/needle.png",
+                            "title": "Rapiéçage",
+                            "description": "Réparation des trous et déchirures avec des techniques traditionnelles.",
+                            "link": "/contact"
+                        },
+                        {
+                            "icon": "https://img.icons8.com/c9a456/ios/50/paint.png",
+                            "title": "Recoloration",
+                            "description": "Restauration des couleurs pour raviver la beauté originale.",
+                            "link": "/contact"
+                        },
+                        {
+                            "icon": "https://img.icons8.com/c9a456/ios/50/scissors.png",
+                            "title": "Réparation des franges",
+                            "description": "Remplacement ou réparation des franges pour un fini impeccable.",
+                            "link": "/contact"
+                        }
+                    ],
+                    "contactInfo": {
+                        "icon": "https://img.icons8.com/c9a456/ios-filled/50/phone-message.png",
+                        "title": "Prenez rendez-vous",
+                        "address": "217 rue du Faubourg Saint-Honoré, 75008 Paris",
+                        "phone": "+33 1 23 45 67 89",
+                        "email": "contact@francksabet.fr",
+                        "mapImage": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735765506/contactBg_fhcloz.webp",
+                        "href": "/contact",
+                        "button": "Nous contacter"
+                    }
+                },
+                {
+                    "type": "horizontal-image-card",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_colors_kywzxl.webp",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Pourquoi nous faire confiance?",
+                    "description": "Forts de décennies d'expérience, nos artisans maîtrisent toutes les subtilités de la restauration. Chaque intervention est réalisée avec soin pour respecter l'authenticité et l'intégrité du tapis.",
+                    "button": "Voir nos services",
+                    "buttonColor": "black",
+                    "buttonHref": "/services",
+                    "position": "right"
+                },
+                {
+                    "type": "testimonial-carousel",
+                    "testimonials": [
+                        {
+                            "quote": "Mon tapis ancien a été restauré à la perfection. Je suis impressionné par le niveau de détail et le soin apporté.",
+                            "author": "Pierre Lemoine"
+                        },
+                        {
+                            "quote": "Grâce à la recoloration, mon tapis a retrouvé ses couleurs vibrantes d'origine. Merci à l'équipe Franck Sabet!",
+                            "author": "Sophie Martin"
+                        },
+                        {
+                            "quote": "Les franges de mon tapis ont été remplacées avec une précision incroyable. Je suis ravi du résultat!",
+                            "author": "Jacques Dupuis"
+                        }
+                    ]
+                },
+                {
+                    "type": "title",
+                    "title": "Prêt à redonner vie à votre tapis?"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "N'attendez plus! Contactez-nous dès aujourd'hui pour un diagnostic personnalisé et un devis gratuit.",
+                    "size": "normal",
+                    "justify": "center"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Par téléphone : +33 1 23 45 67 89 ou en boutique : 217 rue du Faubourg Saint-Honoré, Paris",
+                    "size": "small",
+                    "justify": "center"
+                }
+            ]
+        },
+        "cleaning": {
+            "link": "/cleaning",
+            "label": "Cleaning Services",
+            "title": "Nettoyage des tapis",
+            "slices": [
+                {
+                    "type": "homepage-banner",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "alt": "Nettoyage professionnel des tapis",
+                    "title": "Nettoyage professionnel",
+                    "subtitle": "Préservez la beauté et la durabilité de vos tapis"
+                },
+                {
+                    "type": "text-card",
+                    "title": "Pourquoi nettoyer vos tapis avec nous ?",
+                    "description": "Avec des années d'expérience, nous utilisons des techniques de nettoyage adaptées aux fibres et matériaux de vos tapis. Notre processus garantit une propreté en profondeur tout en préservant leur éclat et leur structure.",
+                    "button": "Nous contacter",
+                    "buttonColor": "black",
+                    "buttonHref": "/contact"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "horizontal-image-card",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859307/optimized_image_vacuum_f04kck.webp",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Techniques modernes et traditionnelles",
+                    "description": "Nous combinons les techniques traditionnelles de nettoyage manuel avec des innovations modernes. Chaque tapis est traité individuellement pour assurer un résultat optimal.",
+                    "button": "Découvrir nos techniques",
+                    "buttonColor": "black",
+                    "buttonHref": "/articles",
+                    "position": "right"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Un tapis bien entretenu est essentiel pour préserver sa durée de vie et son éclat. Nous offrons un service de nettoyage sur mesure pour chaque type de tapis, qu'il soit ancien, en laine ou en soie.",
+                    "size": "normal",
+                    "justify": "center"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Nous utilisons des produits doux et non agressifs pour éliminer les taches, la poussière et les allergènes tout en préservant la qualité des fibres.",
+                    "size": "normal",
+                    "justify": "center"
+                },
+                {
+                    "type": "quote",
+                    "text": "Un nettoyage professionnel redonne vie à vos tapis et sublime votre intérieur."
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "grid-presentation",
+                    "services": [
+                        {
+                            "icon": "https://img.icons8.com/c9a456/ios/50/cleaning-a-surface.png",
+                            "title": "Nettoyage en profondeur",
+                            "description": "Élimination des taches tenaces et des allergènes grâce à des techniques éprouvées.",
+                            "link": "/contact"
+                        },
+                        {
+                            "icon": "https://img.icons8.com/external-others-pike-picture/c9a456/50/external-Bubbles-oxygen-others-pike-picture-2.png",
+                            "title": "Entretien régulier",
+                            "description": "Préservez la qualité de vos tapis avec un entretien professionnel périodique.",
+                            "link": "/contact"
+                        },
+                        {
+                            "icon": "https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/c9a456/96/external-feather-thanksgiving-tanah-basah-basic-outline-tanah-basah-2.png",
+                            "title": "Nettoyage délicat",
+                            "description": "Adapté aux tapis en soie ou anciens nécessitant une attention particulière.",
+                            "link": "/contact"
+                        }
+                    ],
+                    "contactInfo": {
+                        "icon": "https://img.icons8.com/c9a456/ios-filled/50/phone-message.png",
+                        "title": "Contactez-nous",
+                        "address": "217 rue du Faubourg Saint-Honoré, 75008 Paris",
+                        "phone": "+33 1 23 45 67 89",
+                        "email": "contact@francksabet.fr",
+                        "mapImage": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735765506/contactBg_fhcloz.webp",
+                        "href": "/contact",
+                        "button": "Prendre rendez-vous"
+                    }
+                },
+                {
+                    "type": "horizontal-text-card",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Nos engagements",
+                    "description": "Nous garantissons un service de nettoyage respectueux de l'environnement, efficace et adapté à tous types de tapis.",
+                    "button": "En savoir plus",
+                    "buttonColor": "black",
+                    "buttonHref": "/about#engagements"
+                },
+                {
+                    "type": "horizontal-image-card",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859307/optimized_image_pattern_bbsocz.webp",
+                    "backgroundGradient": "linear-gradient(to right, #f3f4f6, #ffffff)",
+                    "title": "Un processus de nettoyage en cinq étapes",
+                    "description": "Notre méthode combine l'expertise manuelle et les outils modernes pour garantir un nettoyage en profondeur. Chaque tapis est soigneusement inspecté, dépoussiéré, lavé et séché avec précision pour préserver sa beauté et sa durabilité.",
+                    "button": "Découvrez nos méthodes",
+                    "buttonColor": "black",
+                    "buttonHref": "/cleaning#process",
+                    "position": "right"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "Prêt à redonner vie à vos tapis ?"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Confiez-nous vos tapis pour un nettoyage professionnel et sur mesure. Contactez-nous dès aujourd'hui pour un rendez-vous ou des conseils personnalisés.",
+                    "size": "normal",
+                    "justify": "center"
+                }
+            ]
+        },
         "contact": {
             "link": "/contact",
-            "label": "Contactez-nous",
-            "title": "Formulaire de contact"
+            "label": "Contact",
+            "title": "Contactez-nous",
+            "slices": [
+                {
+                    "type": "homepage-banner",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "alt": "Contactez Franck Sabet - Luxe et Expertise",
+                    "title": "Nous sommes à votre écoute",
+                    "subtitle": "Un conseil ? Une question ? Nous sommes là pour vous aider."
+                },
+                {
+                    "type": "text-card",
+                    "title": "Notre engagement envers vous",
+                    "description": "Chez Franck Sabet, chaque client est unique. Que vous souhaitiez obtenir des conseils sur le choix d'un tapis, en savoir plus sur nos services, ou prendre rendez-vous pour un nettoyage ou une restauration, notre équipe est prête à vous accompagner.",
+                    "button": "Prenez rendez-vous",
+                    "buttonColor": "black",
+                    "buttonHref": "/appointment"
+                },
+                {
+                    "type": "horizontal-image-card",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1689929637/hestia/adobe13Compressed_bfrbxj.webp",
+                    "backgroundGradient": "linear-gradient(to right, white, #f9f9f9)",
+                    "title": "Un service client à votre écoute",
+                    "description": "Notre équipe d'experts est disponible pour répondre à toutes vos questions, que ce soit par téléphone, par email ou directement en boutique. Faites-nous part de vos besoins, nous trouverons la solution idéale pour vous.",
+                    "button": "Nous contacter",
+                    "buttonColor": "black",
+                    "buttonHref": "/contact",
+                    "position": "right"
+                },
+                {
+                    "type": "quote",
+                    "text": "Votre satisfaction est notre priorité."
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "horizontal-text-card",
+                    "backgroundGradient": "linear-gradient(to right, white, #f7f7f7)",
+                    "title": "Notre showroom est ouvert",
+                    "description": "Nous serons ravis de vous accueillir dans notre boutique à Paris, située dans le quartier prestigieux du Faubourg Saint-Honoré. Venez découvrir notre collection de tapis et discuter avec nos experts.",
+                    "button": "Nous trouver",
+                    "buttonColor": "black",
+                    "buttonHref": "https://www.google.com/maps?q=217+rue+du+Faubourg+Saint-Honoré,+75008+Paris"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "Nos coordonnées"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "217 rue du Faubourg Saint-Honoré, 75008 Paris",
+                    "size": "normal",
+                    "justify": "center"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Téléphone : +33 1 23 45 67 89",
+                    "size": "normal",
+                    "justify": "center"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "contact@francksabet.fr",
+                    "size": "normal",
+                    "justify": "center"
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "text-card",
+                    "title": "Une équipe d'experts passionnés",
+                    "description": "Chez Franck Sabet, notre mission est de vous offrir un service personnalisé et de qualité. Nos experts sont là pour vous guider à chaque étape, qu'il s'agisse de choisir le tapis parfait pour votre intérieur ou de restaurer une pièce précieuse.",
+                    "button": "En savoir plus",
+                    "buttonColor": "black",
+                    "buttonHref": "/about"
+                }
+            ]
         },
         "about": {
             "link": "/about",
@@ -164,76 +600,129 @@
                 {
                     "type": "text-card",
                     "title": "Notre histoire",
-                    "description": "La Galerie Franck Sabet incarne une riche histoire familiale ancrée dans l’univers du luxe et du savoir-faire artisanal. Depuis trente ans, cette entreprise se consacre à la création et à la restauration de tapis haut de gamme. Installée sur la prestigieuse rue du Faubourg Saint-Honoré, la galerie se distingue par ses créations sur mesure et ses restaurations de haute précision.",
-                    "button": "Lire notre histoire",
+                    "description": "Depuis trois générations, Franck Sabet préserve et transmet un héritage unique dans l'univers des tapis de luxe. Chaque pièce est le fruit d'un artisanat d'excellence, tissé à travers les siècles et les cultures. Installés au cœur de Paris, nous collaborons avec des designers et artisans renommés pour vous offrir des tapis d'exception.",
+                    "button": "En savoir plus",
                     "buttonColor": "black",
-                    "buttonHref": "/about#heritage"
+                    "buttonHref": "/contact"
                 },
                 {
                     "type": "divider"
                 },
                 {
                     "type": "horizontal-image-card",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_carpeting_dvxzoq.webp",
                     "backgroundGradient": "linear-gradient(to right, white, white)",
                     "title": "Pourquoi nous choisir?",
-                    "description": "Depuis deux générations, notre maison incarne l’excellence dans l’art du tapis. Forts d’un héritage familial et d’un amour profond pour l’artisanat, nous avons su allier tradition et modernité pour offrir à notre clientèle des tapis uniques, véritables œuvres d'art.",
-                    "button": "Découvrir nos services",
+                    "description": "Chez Franck Sabet, nous combinons traditions séculaires et innovations modernes pour répondre aux attentes d'une clientèle exigeante. Que vous recherchiez un tapis sur mesure ou des conseils pour préserver vos pièces, nous vous garantissons un service exceptionnel.",
+                    "button": "Voir nos services",
                     "buttonColor": "black",
                     "buttonHref": "/services",
                     "position": "right"
                 },
                 {
-                    "type": "horizontal-text-card",
-                    "backgroundGradient": "linear-gradient(to right, white, white)",
-                    "title": "Pourquoi nous choisir?",
-                    "description": "Depuis deux générations, notre maison incarne l’excellence dans l’art du tapis. Forts d’un héritage familial et d’un amour profond pour l’artisanat, nous avons su allier tradition et modernité pour offrir à notre clientèle des tapis uniques, véritables œuvres d'art.",
-                    "button": "Découvrir nos services",
-                    "buttonColor": "black",
-                    "buttonHref": "/services"
+                    "type": "text-section",
+                    "title": "Un héritage transmis de génération en génération",
+                    "content": "Depuis ses débuts, la maison Franck Sabet se distingue par sa passion pour l'artisanat de qualité. Nos tapis, qu'ils soient anciens ou contemporains, racontent une histoire unique. Nous croyons fermement que chaque détail, chaque fibre, mérite une attention particulière pour garantir une œuvre intemporelle.",
+                    "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp"
                 },
                 {
-                    "type": "quote"
+                    "type": "divider"
                 },
                 {
-                    "type": "droping-items"
+                    "type": "quote",
+                    "text": "Chaque tapis raconte une histoire, tissée à travers le temps et les cultures."
                 },
                 {
-                    "type": "horizontal-image-card",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
-                    "backgroundGradient": "linear-gradient(to right, white, white)",
-                    "title": "Pourquoi nous choisir?",
-                    "description": "Depuis deux générations, notre maison incarne l’excellence dans l’art du tapis. Forts d’un héritage familial et d’un amour profond pour l’artisanat, nous avons su allier tradition et modernité pour offrir à notre clientèle des tapis uniques, véritables œuvres d'art.",
-                    "button": "Découvrir nos services",
-                    "buttonColor": "black",
-                    "buttonHref": "/services",
-                    "position": "right"
+                    "type": "divider"
                 },
                 {
-                    "type": "horizontal-image-card",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
-                    "backgroundGradient": "linear-gradient(to right, white, white)",
-                    "title": "Pourquoi nous choisir?",
-                    "description": "Depuis deux générations, notre maison incarne l’excellence dans l’art du tapis. Forts d’un héritage familial et d’un amour profond pour l’artisanat, nous avons su allier tradition et modernité pour offrir à notre clientèle des tapis uniques, véritables œuvres d'art.",
-                    "button": "Découvrir nos services",
-                    "buttonColor": "black",
-                    "buttonHref": "/services",
-                    "position": "left"
+                    "type": "grid-presentation",
+                    "services": [
+                        {
+                            "icon": "https://img.icons8.com/c9a456/dotty/80/consultation.png",
+                            "title": "Expertise",
+                            "description": "Des décennies d'expérience dans l'identification et l'évaluation de tapis uniques.",
+                            "link": "/contact"
+                        },
+                        {
+                            "icon": "https://img.icons8.com/c9a456/ios/50/needle.png",
+                            "title": "Restoration",
+                            "description": "Restauration de tapis anciens et précieux grâce à des techniques traditionnelles.",
+                            "link": "/restoration"
+                        },
+                        {
+                            "icon": "https://img.icons8.com/c9a456/ios/50/cleaning-a-surface.png",
+                            "title": "Entretien",
+                            "description": "Nettoyage professionnel pour préserver l'éclat et la durabilité de vos tapis.",
+                            "link": "/cleaning"
+                        }
+                    ],
+                    "contactInfo": {
+                        "icon": "https://img.icons8.com/c9a456/ios-filled/50/phone-message.png",
+                        "title": "Contactez-nous",
+                        "address": "217 rue du Faubourg Saint-Honoré, 75008 Paris",
+                        "phone": "+33 1 23 45 67 89",
+                        "email": "contact@francksabet.fr",
+                        "mapImage": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735765506/contactBg_fhcloz.webp",
+                        "href": "/contact",
+                        "button": "Nous contacter"
+                    }
                 },
                 {
                     "type": "horizontal-text-card",
                     "backgroundGradient": "linear-gradient(to right, white, white)",
                     "title": "Notre héritage",
-                    "description": "Depuis trente ans, la Galerie Franck Sabet allie tradition et modernité pour offrir des tapis uniques, véritables œuvres d'art. Chaque pièce est minutieusement sélectionnée pour son raffinement, son élégance et sa qualité exceptionnelle.",
+                    "description": "Chaque tapis de notre collection est une œuvre d'art. Nous collaborons avec des artisans et designers du monde entier pour vous offrir des pièces uniques, faites pour durer et sublimer vos intérieurs.",
                     "button": "En savoir plus",
                     "buttonColor": "black",
                     "buttonHref": "/about#heritage"
+                },
+                {
+                    "type": "testimonial-carousel",
+                    "testimonials": [
+                        {
+                            "quote": "Un service impeccable et des tapis d'une qualité exceptionnelle. Je recommande vivement.",
+                            "author": "Marie Dupont"
+                        },
+                        {
+                            "quote": "Le nettoyage de mon tapis ancien a redonné vie à ma pièce. Merci pour ce travail remarquable.",
+                            "author": "Jean-Paul Martin"
+                        },
+                        {
+                            "quote": "Une équipe passionnée qui a su répondre à toutes mes attentes. Bravo !",
+                            "author": "Claire Lefèvre"
+                        }
+                    ]
+                },
+                {
+                    "type": "title",
+                    "title": "Une question ? N'hésitez pas à nous contacter"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Nous sommes à votre disposition pour répondre à toutes vos questions. Contactez-nous par téléphone, email ou rendez-vous en boutique.",
+                    "size": "normal",
+                    "justify": "center"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Par téléphone : +33 1 23 45 67 89 ou en boutique : 217 rue du Faubourg Saint-Honoré, Paris",
+                    "size": "small",
+                    "justify": "center"
                 }
             ]
         },
         "products": {
             "title": "Décrouvrez tous nos produits",
-            "search": "Trouvez le tapis de vos rêves en recherchant un produit"
+            "search": "Trouvez le tapis de vos rêves en recherchant un produit",
+            "headerCard": {
+                "type": "horizontal-image-card",
+                "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859310/optimized_image_specific_mjvn6n.webp",
+                "backgroundGradient": "linear-gradient(to right, white, white)",
+                "title": "Découvrez notre collection exceptionnelle",
+                "description": "Chaque tapis de notre collection est une véritable œuvre d’art, soigneusement sélectionnée pour son raffinement et sa qualité exceptionnelle. Que vous soyez à la recherche d’un tapis contemporain, d’une pièce traditionnelle ou d’une création sur mesure, Franck Sabet met à votre disposition une expertise unique pour embellir vos espaces avec élégance et distinction. Parcourez notre sélection et trouvez le tapis qui raconte votre histoire.",
+                "position": "right"
+            }
         },
         "articles": {
             "title": "Décrouvrez tous nos articles & conseils",
@@ -263,22 +752,22 @@
                     "type": "square-card-list",
                     "data": [
                         {
-                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp",
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_colors_kywzxl.webp",
                             "title": "Vente de tapis",
                             "description": "Vente de tapis d'exception, du moderne au traditonnel.",
                             "link": "/products"
                         },
                         {
-                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp",
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859307/optimized_image_restoration_htozwa.webp",
                             "title": "Restauration",
                             "description": "Expert de la restauration pour les tapis de luxe.",
-                            "link": "/services/carpet-restoration"
+                            "link": "/restoration"
                         },
                         {
-                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp",
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859307/optimized_image_vacuum_f04kck.webp",
                             "title": "Nettoyage",
                             "description": "Nettoyage et entretien des tapis",
-                            "link": "/services/carpet-cleaning"
+                            "link": "/cleaning"
                         }
                     ]
                 },
@@ -341,6 +830,171 @@
                     "type": "cards-carousel",
                     "title": "Produits en vue cette saison",
                     "cardData": "products"
+                }
+            ]
+        },
+        "cgu": {
+            "link": "/cgu-cgv",
+            "label": "Conditions Générales d'Utilisation et de Vente",
+            "title": "CGU & CGV",
+            "slices": [
+                {
+                    "type": "homepage-banner",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "alt": "Franck sabet - Conditions générales d'utilisation",
+                    "title": "Conditions générales d'utilisation",
+                    "subtitle": "Conditions générales d'utilisation et de vente"
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "title",
+                    "title": "Conditions Générales d'Utilisation (CGU)"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Bienvenue sur le site de Franck Sabet. En accédant à ce site, vous acceptez de respecter les présentes conditions générales d'utilisation, qui définissent les règles applicables à l'utilisation de nos services en ligne."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Le contenu de ce site, y compris les textes, images et vidéos, est protégé par les lois sur la propriété intellectuelle. Toute reproduction ou utilisation non autorisée est interdite."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Le site est accessible aux personnes majeures et capables de contracter selon la législation française."
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "Conditions Générales de Vente (CGV)"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Les présentes CGV s'appliquent à toutes les commandes passées sur notre site. En validant une commande, vous acceptez sans réserve ces conditions générales de vente."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Les prix sont affichés en euros et incluent toutes les taxes applicables. Les frais de livraison sont indiqués avant la validation de la commande."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Vous avez la possibilité de retourner les produits sous 14 jours à compter de leur réception, à condition qu'ils soient en parfait état et dans leur emballage d'origine."
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "Création de compte utilisateur"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Pour passer une commande, vous devez créer un compte en fournissant des informations précises, telles que votre nom, votre adresse email et un mot de passe sécurisé. Toute information incorrecte ou incomplète pourrait entraîner la suspension de votre compte."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "En cas de perte ou d'utilisation frauduleuse de vos identifiants, veuillez contacter notre service client pour les réinitialiser."
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "Paiement et Sécurisation"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Les paiements sont sécurisés grâce à un système de cryptage SSL. Nous acceptons les cartes Visa, MasterCard et American Express. Les données bancaires ne sont pas stockées sur nos serveurs."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Les transactions sont effectuées via une plateforme de paiement sécurisée. En utilisant cette plateforme, vous acceptez leurs conditions générales d'utilisation."
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "Responsabilité"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Franck Sabet ne pourra être tenu responsable des dommages résultant de l'utilisation de ce site ou de l'achat de produits, sauf disposition légale contraire."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Nous nous efforçons de maintenir le site accessible en permanence, mais des interruptions peuvent survenir pour des raisons techniques ou de maintenance."
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "Données Personnelles"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Vos données personnelles sont collectées et utilisées conformément à notre politique de confidentialité. Vous avez le droit d'accéder, de modifier ou de supprimer vos données à tout moment."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Pour toute demande concernant vos données personnelles, veuillez nous contacter à l'adresse email : contact@francksabet.fr."
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "Force Majeure"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Franck Sabet ne pourra être tenu responsable en cas de force majeure, incluant mais non limité à des catastrophes naturelles, grèves ou interruptions des réseaux de télécommunication."
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "Contact"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Pour toute question ou réclamation, vous pouvez nous contacter par email à contact@francksabet.fr ou par téléphone au +33 1 23 45 67 89."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Adresse : 217 rue du Faubourg Saint-Honoré, 75008 Paris."
+                },
+                {
+                    "type": "space"
                 }
             ]
         }

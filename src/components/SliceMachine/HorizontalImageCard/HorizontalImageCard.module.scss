@@ -23,10 +23,13 @@
     }
 
     img {
+        max-height: 300px;
         width: 100%;
         height: auto;
         border-radius: 8px;
         object-fit: cover;
+        border: 2px solid rgb(255, 255, 255);
+        box-shadow: 1px 0px 8px 0px #0000007d;
     }
 }
 

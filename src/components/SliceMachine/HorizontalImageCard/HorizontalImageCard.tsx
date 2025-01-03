@@ -8,9 +8,9 @@ type HorizontalImageCardProps = {
     title: string;
     description: string;
     backgroundGradient: string;
-    button: string;
-    buttonColor: string;
-    buttonHref: string;
+    button?: string;
+    buttonColor?: string;
+    buttonHref?: string;
     position: "left" | "right";
     src: string; // URL for the image
 };
@@ -39,15 +39,15 @@ export const HorizontalImageCard = ({ data }: { data: HorizontalImageCardProps }
                     <Grid.Col span={{ base: 12, sm: 6 }} className={classes.textCol}>
                         <h2 className={classes.title}>{title}</h2>
                         <p className={classes.description}>{description}</p>
-                        <Button
+                        {button && <Button
                             color={buttonColor}
                             component={Link}
-                            href={buttonHref}
+                            href={buttonHref ?? ''}
                             size="md"
                             className={classes.button}
                         >
                             {button}
-                        </Button>
+                        </Button>}
                     </Grid.Col>
 
                     {position !== "left" && <Grid.Col span={{ base: 12, sm: 6, }} className={classes.imageCol}>

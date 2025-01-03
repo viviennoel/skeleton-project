@@ -19,7 +19,7 @@ export const HorizontalTextCard = ({ data }: { data: HorizontalTextCardProps }) 
         <div style={{ backgroundImage: backgroundGradient }} className={classes.fullWidthWrapper}>
             <Container>
                 <section className={classes.horizontalSection}>
-                    <h1 className='mt-1 text-center text-white'>
+                    <h1 className={classes.title}>
                         {title}
                     </h1>
                     <img
@@ -30,7 +30,7 @@ export const HorizontalTextCard = ({ data }: { data: HorizontalTextCardProps }) 
                     <p>
                         {description}
                     </p>
-                    <Button color={buttonColor} component={Link} href={buttonHref}>
+                    <Button color={buttonColor} component={Link} href={buttonHref} my='lg'>
                         {button}
                     </Button>
                 </section>
