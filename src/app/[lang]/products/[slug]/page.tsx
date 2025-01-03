@@ -7,6 +7,8 @@ import { WebsiteData } from '@/src/types/dictionaries';
 import { getDictionary } from '../../dictionaries';
 import { Locale } from '@/src/types/Header';
 import { EditionProductModale } from '@/src/components/EditionProductModale/EditionProductModale';
+import Cookies from 'js-cookie';
+import { cookies } from 'next/headers';
 
 async function getProductBySlug(slug: any) {
     const uri = process.env.MONGODB_URI ?? "";
@@ -50,7 +52,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     const product = await getProductBySlug(slug) as any;
     // @ts-ignore
     const dictionary: WebsiteData = await getDictionary(lang);
-
+    const cookieStore = await cookies();
+    const token = cookieStore.get('authToken')?.value;
 
     if (!product) {
         return <Error404 />
@@ -58,7 +61,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
     return (
         <Container my="md">
-            <EditionProductModale product={product} />
+            {token && <EditionProductModale product={product} />}
             <Group justify="space-between">
                 <h1>{product.seoTitle || product.title}</h1>
                 <Badge color="grey">{product.category || 'Uncategorized'}</Badge>

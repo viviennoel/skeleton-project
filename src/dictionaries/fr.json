@@ -144,6 +144,12 @@
         ]
     },
     "pages": {
+        "admin": {
+            "title": "Votre espace Admionistrateur",
+            "description": "Cet espace est tres fonctionnel. Je vous ai préparé deux services: l'ajout de produits et d'articles. L'ajout d'articles vous permettra d'améliorer le référencement du site et de permettre aux utilisateurs de vous trouver, avec du temps et des posts réguliers (et de qualité). La page produits vous permettra de montrer vos produits et permettra de mesurer la traction de la vente en ligne. Si un besoin est détecté, il sera facile d'ajouter un systeme de payement en ligne.",
+            "addArticles": "Ajouter un article",
+            "addProducts": "Ajouter un produit"
+        },
         "services": {
             "link": "/services",
             "label": "Services",

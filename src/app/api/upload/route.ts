@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { v2 as cloudinary } from 'cloudinary';
 import { Readable } from 'stream';
+import jwt from 'jsonwebtoken';
+import { cookies } from 'next/headers';
 
 // Cloudinary config
 cloudinary.config({
@@ -11,6 +13,24 @@ cloudinary.config({
 });
 
 export const POST = async (req: Request) => {
+    // TODO - REMOVE DUPLICATION
+    const SECRET_KEY = process.env.JWT_SECRET_KEY || 'default_secret';
+    const cookieStore = await cookies();
+    const token = cookieStore.get('authToken')?.value;
+
+    // Validate token
+    if (!token) {
+        return NextResponse.json({ message: 'Unauthorized: Token not provided' }, { status: 401 });
+    }
+
+    try {
+        jwt.verify(token, SECRET_KEY); // Verifies the token, throws an error if invalid
+    } catch (error) {
+        cookieStore.delete('authToken');
+        return NextResponse.json({ message: 'Unauthorized: Invalid token' }, { status: 401 });
+    }
+    // UNITL HERE SEVERAL FILES
+
     try {
         const form = await req.formData();
         const image = form.get("file") as File;

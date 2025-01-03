@@ -27,7 +27,7 @@ export default async function RootLayout({ children, params }: { children: React
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
       </head>
-      <body style={{ backgroundImage: 'linear-gradient(to right, #cdc8c8, white, white, white, white, white, white, white, white, #cdc8c8);' }}>
+      <body style={{ backgroundImage: 'linear-gradient(to right, #cdc8c8, white, white, white, white, white, white, white, white, #cdc8c8)' }}>
         <DictionaryProvider dictionary={dictionary}>
           <MantineProvider theme={theme}>
             <HeaderMenu />{children}<Footer />

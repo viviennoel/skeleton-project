@@ -1,5 +1,9 @@
 import { MongoClient, ObjectId } from 'mongodb';
 import { NextResponse } from 'next/server';
+import jwt from 'jsonwebtoken';
+import { cookies } from 'next/headers';
+
+const SECRET_KEY = process.env.JWT_SECRET_KEY || 'default_secret';
 const PAGE_SIZE = 9;
 
 const uri = process.env.MONGODB_URI || '';
@@ -22,6 +26,22 @@ if (!global._mongoClientPromise) {
 clientPromise = global._mongoClientPromise;
 
 export async function POST(req: Request) {
+    const SECRET_KEY = process.env.JWT_SECRET_KEY || 'default_secret';
+    const cookieStore = await cookies();
+    const token = cookieStore.get('authToken')?.value;
+
+    // Validate token
+    if (!token) {
+        return NextResponse.json({ message: 'Unauthorized: Token not provided' }, { status: 401 });
+    }
+
+    try {
+        jwt.verify(token, SECRET_KEY); // Verifies the token, throws an error if invalid
+    } catch (error) {
+        cookieStore.delete('authToken');
+        return NextResponse.json({ message: 'Unauthorized: Invalid token' }, { status: 401 });
+    }
+
     const body = await req.json();
     const { title,
         date,

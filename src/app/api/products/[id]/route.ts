@@ -1,8 +1,27 @@
 import { MongoClient, ObjectId } from "mongodb";
 import { NextResponse } from "next/server";
+import jwt from 'jsonwebtoken';
+import { cookies } from "next/headers";
+
 
 // @ts-ignore
 export async function PUT(req, { params }) {
+    const SECRET_KEY = process.env.JWT_SECRET_KEY || 'default_secret';
+    const cookieStore = await cookies();
+    const token = cookieStore.get('authToken')?.value;
+
+    // Validate token
+    if (!token) {
+        return NextResponse.json({ message: 'Unauthorized: Token not provided' }, { status: 401 });
+    }
+
+    try {
+        jwt.verify(token, SECRET_KEY); // Verifies the token, throws an error if invalid
+    } catch (error) {
+        cookieStore.delete('authToken');
+        return NextResponse.json({ message: 'Unauthorized: Invalid token' }, { status: 401 });
+    }
+
     const uri = process.env.MONGODB_URI || '';
     let client: MongoClient;
     let clientPromise: Promise<MongoClient>;
@@ -44,6 +63,21 @@ export async function PUT(req, { params }) {
 export async function DELETE(req: any, { params }: any) {
     const uri = process.env.MONGODB_URI || '';
     let client;
+
+    const SECRET_KEY = process.env.JWT_SECRET_KEY || 'default_secret';
+    const cookieStore = await cookies();
+    const token = cookieStore.get('authToken')?.value;
+
+    // Validate token
+    if (!token) {
+        return NextResponse.json({ message: 'Unauthorized: Token not provided' }, { status: 401 });
+    }
+
+    try {
+        jwt.verify(token, SECRET_KEY); // Verifies the token, throws an error if invalid
+    } catch (error) {
+        return NextResponse.json({ message: 'Unauthorized: Invalid token' }, { status: 401 });
+    }
 
     try {
         // Initialize MongoDB client

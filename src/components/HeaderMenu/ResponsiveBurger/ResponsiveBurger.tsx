@@ -18,15 +18,15 @@ export const ResponsiveBurger = () => {
             </Menu.Target>
             <Menu.Dropdown hiddenFrom="sm">
                 {dictionary.header.header.map(item => !item.links && item.link ?
-                    <Menu.Item>
+                    <Menu.Item key={item.label}>
                         <Link className={classes.link} href={item.link} onClick={toggle}>{item.label}</Link>
                     </Menu.Item>
                     : item.links?.map((subItem, index) =>
-                        <>
+                        <div key={item.link}>
                             {index === 0 && <Text px='md' pt='md' c="dimmed" size="sm">{item.label}</Text>}
                             <Menu.Item leftSection={<IconArrowRight style={{ width: rem(14), height: rem(14) }} />}>
                                 <Link href={subItem.link} className={classes.link} onClick={toggle}>{subItem.label}</Link>
-                            </Menu.Item></>
+                            </Menu.Item></div>
                     )
                 )}
             </Menu.Dropdown>

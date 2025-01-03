@@ -5,9 +5,9 @@ import Link from "next/link";
 type TextCardProps = {
     title: string,
     description: string,
-    button: string,
-    buttonColor: string,
-    buttonHref: string
+    button?: string,
+    buttonColor?: string,
+    buttonHref?: string
 }
 
 export const TextCard = ({ data }: { data: TextCardProps }) => {
@@ -28,9 +28,9 @@ export const TextCard = ({ data }: { data: TextCardProps }) => {
                     <p>
                         {description}
                     </p>
-                    <Button color={buttonColor} component={Link} href={buttonHref}>
+                    {button && <Button color={buttonColor} component={Link} href={buttonHref ?? ''}>
                         {button}
-                    </Button>
+                    </Button>}
                 </section>
             </Container>
         </div>

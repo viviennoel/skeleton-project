@@ -31,8 +31,13 @@ export const EditionModale = ({ content, id }: { content: any, id: string }) => 
     };
 
     const deleteArticle = async (id: string) => {
+        const token = localStorage.getItem('authToken');
+
         const response = await fetch(`/api/articles/${id}`, {
             method: 'DELETE',
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
         });
 
         if (!response.ok) {

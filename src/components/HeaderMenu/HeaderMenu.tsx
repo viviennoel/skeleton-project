@@ -9,6 +9,7 @@ import Image from 'next/image';
 import { ResponsiveBurger } from './ResponsiveBurger/ResponsiveBurger';
 import { LanguageSelector } from './LanguageSelector/LanguageSelector';
 import { useDictionary } from '@/src/dictionaries/dictionary-provider';
+import LogoutButton from '../EditionModale/LogoutButton/LogoutButton';
 
 export function HeaderMenu() {
     const dictionary = useDictionary()
@@ -32,6 +33,7 @@ export function HeaderMenu() {
                             <Button color='#94783b' visibleFrom="sm" component={Link} href={dictionary.pages.contact.link} className={classes.contact}>
                                 {dictionary.pages.contact.label}
                             </Button>
+                            <LogoutButton />
                             <LanguageSelector />
                             <ResponsiveBurger />
                         </Group>

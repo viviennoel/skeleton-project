@@ -3,6 +3,8 @@ import { Container } from '@mantine/core';
 import { Image } from '@mantine/core';
 import { EditionModale } from '@/src/components/EditionModale/EditionModale';
 import Error404 from '@/src/components/Error/Error404';
+import Cookies from 'js-cookie';
+import { cookies } from 'next/headers';
 
 async function getArticleBySlug(slug: any) {
     const uri = process.env.MONGODB_URI ?? "";
@@ -44,6 +46,8 @@ async function getArticleBySlug(slug: any) {
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
     const article = await getArticleBySlug(slug) as any;
+    const cookieStore = await cookies();
+    const token = cookieStore.get('authToken')?.value;
 
     if (!article) {
         <Error404 />
@@ -51,7 +55,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
     return (
         <Container my='md'>
-            <EditionModale content={article.content} id={article._id} />
+            {token && <EditionModale content={article.content} id={article._id} />}
             <h1>{article.title}</h1>
             <p>{new Date(article.date).toLocaleDateString()}</p>
             {article.mainImage && (
