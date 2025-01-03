@@ -51,7 +51,7 @@ function Card({ cardData }: { cardData: CardData }) {
                             </Text>
                         </div>
                     )}
-                    <Space />
+                    <Space h="lg" />
 
                     {/* @ts-ignore */}
                     <Button radius="sm" color='white' variant="outline" fullWidth={!cardData?.price} style={{ flex: 1 }}>
@@ -78,14 +78,14 @@ export function CardsCarousel({ data }: { data: CardProps }) {
     }, []);
 
     const slides = dataToDisplay.map((item) => (
-        <div key={item.title}>
+        <Carousel.Slide key={item.title}>
             {/* @ts-ignore */}
+
             <Link href={`/${data.cardData ? data.cardData + '/' : ''}${item.url ?? item.title.replaceAll(' ', '-')}`} className={classes.link}>
-                <Carousel.Slide>
-                    {/* @ts-ignore */}
-                    <Card cardData={item} />
-                </Carousel.Slide>
-            </Link></div>
+                {/* @ts-ignore */}
+                <Card cardData={item} />
+            </Link>
+        </Carousel.Slide>
     ));
 
     return (
@@ -100,12 +100,10 @@ export function CardsCarousel({ data }: { data: CardProps }) {
                     />
                 </div>
                 <Carousel
-                    withIndicators
-                    dragFree
-                    slideSize={{ base: '50%', md: '33.333333%' }}
-                    slideGap={{ base: 3, sm: 'xl' }}
+                    slideSize={{ base: '100%', sm: '50%' }}
+                    slideGap={{ base: 'xl', sm: 2 }}
                     align="start"
-                    slidesToScroll={mobile ? 1 : 3}
+                    slidesToScroll={mobile ? 1 : 2}
                 >
                     {slides}
                 </Carousel>
