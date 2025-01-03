@@ -102,7 +102,7 @@ export function CardsCarousel({ data }: { data: CardProps }) {
                 <Carousel
                     withIndicators
                     dragFree
-                    slideSize={{ base: '100%', sm: '50%', md: '33.333333%' }}
+                    slideSize={{ base: '50%', md: '33.333333%' }}
                     slideGap={{ base: 3, sm: 'xl' }}
                     align="start"
                     slidesToScroll={mobile ? 1 : 3}
