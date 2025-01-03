@@ -66,7 +66,7 @@ function Card({ cardData }: { cardData: CardData }) {
 
 export function CardsCarousel({ data }: { data: CardProps }) {
     const theme = useMantineTheme();
-    const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
+    const mobile = useMediaQuery(`(max-width: 48em)`);
     const [dataToDisplay, setDataToDisplay] = useState<Product[] | CardData[]>([]);
 
     useEffect(() => {
