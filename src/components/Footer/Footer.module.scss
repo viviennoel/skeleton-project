@@ -12,6 +12,7 @@
 
     // TODO: implement a 48em variable
     @media (max-width: 48em) {
+        max-width: none;
         display: flex;
         flex-direction: column;
         align-items: center;
