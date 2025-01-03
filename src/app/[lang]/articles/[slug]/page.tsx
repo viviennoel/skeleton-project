@@ -18,7 +18,7 @@ async function getArticleBySlug(slug: any) {
         client = await MongoClient.connect(uri);
 
         const db = client.db('blogDB');
-        const title = slug.replace(/-/g, ' ');
+        const title = decodeURIComponent(slug.replace(/-/g, ' '));
 
         const article = await db.collection('articles').findOne({ title: title });
 

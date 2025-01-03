@@ -15,6 +15,7 @@ interface CardData {
     image: string;
     title: string;
     category: string;
+    typeContent?: 'products' | 'articles',
 }
 
 interface CardProps {
@@ -76,11 +77,10 @@ export function CardsCarousel({ data }: { data: CardProps }) {
         fetchData();
     }, []);
 
-
     const slides = dataToDisplay.map((item) => (
         <div key={item.title}>
             {/* @ts-ignore */}
-            <Link href={item.url ?? item.title.replaceAll(' ', '-')} className={classes.link}>
+            <Link href={`/${data.cardData ? data.cardData + '/' : ''}${item.url ?? item.title.replaceAll(' ', '-')}`} className={classes.link}>
                 <Carousel.Slide>
                     {/* @ts-ignore */}
                     <Card cardData={item} />
@@ -101,6 +101,7 @@ export function CardsCarousel({ data }: { data: CardProps }) {
                 </div>
                 <Carousel
                     withIndicators
+                    dragFree
                     slideSize={{ base: '100%', sm: '50%', md: '33.333333%' }}
                     slideGap={{ base: 3, sm: 'xl' }}
                     align="start"
