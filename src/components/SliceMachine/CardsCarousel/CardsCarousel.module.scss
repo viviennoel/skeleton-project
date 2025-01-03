@@ -17,7 +17,9 @@
     color: white; // Ensure text is readable
     overflow: hidden;
     transition: transform 0.3s ease;
-    min-height: 400px;
+    height: 400px;
+    min-width: 300px;
+    overflow: hidden;
 
     // Add dark filter overlay
     &::before {
@@ -70,6 +72,9 @@
     }
 }
 
+.slide {
+    min-width: 33%;
+}
 
 .title {
     font-family:

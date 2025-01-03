@@ -41,23 +41,21 @@ function Card({ cardData }: { cardData: CardData }) {
                 <p>{cardData.description}</p>
 
                 <div className={`${classes.section} ${classes.bottomCard}`}>
-                    <Group gap={30}>
-                        {/* @ts-ignore */}
-                        {cardData?.price && (
-                            <div>
-                                <Text fz="xl" fw={700} style={{ lineHeight: 1 }}>
-                                    {/* @ts-ignore */}
-                                    {cardData?.price} {dictionary.products.priceLabel}
-                                </Text>
-                            </div>
-                        )}
+                    {/* @ts-ignore */}
+                    {cardData?.price && (
+                        <div>
+                            <Text fz="xl" fw={700} style={{ lineHeight: 1 }}>
+                                {/* @ts-ignore */}
+                                {cardData?.price} {dictionary.products.priceLabel}
+                            </Text>
+                        </div>
+                    )}
 
+                    {/* @ts-ignore */}
+                    <Button radius="sm" color='white' variant="outline" fullWidth={!cardData?.price} style={{ flex: 1 }}>
                         {/* @ts-ignore */}
-                        <Button radius="sm" color='white' variant="outline" fullWidth={!cardData?.price} style={{ flex: 1 }}>
-                            {/* @ts-ignore */}
-                            {cardData?.price ? dictionary.products.readMore : dictionary.articles.readMore}
-                        </Button>
-                    </Group>
+                        {cardData?.price ? dictionary.products.readMore : dictionary.articles.readMore}
+                    </Button>
                 </div>
             </div>
         </Paper>
@@ -79,13 +77,14 @@ export function CardsCarousel({ data }: { data: CardProps }) {
 
 
     const slides = dataToDisplay.map((item) => (
-        // @ts-ignore
-        <Link href={item.url ?? item.title.replaceAll(' ', '-')} className={classes.link} key={item.title}>
-            <Carousel.Slide>
-                {/* @ts-ignore */}
-                <Card cardData={item} />
-            </Carousel.Slide>
-        </Link>
+        <div key={item.title}>
+            {/* @ts-ignore */}
+            <Link href={item.url ?? item.title.replaceAll(' ', '-')} className={classes.link}>
+                <Carousel.Slide>
+                    {/* @ts-ignore */}
+                    <Card cardData={item} />
+                </Carousel.Slide>
+            </Link></div>
     ));
 
     return (
@@ -101,7 +100,7 @@ export function CardsCarousel({ data }: { data: CardProps }) {
                 </div>
                 <Carousel
                     withIndicators
-                    slideSize={{ base: '100%', sm: '33%' }}
+                    slideSize={{ base: '100%', sm: '50%', md: '33.333333%' }}
                     slideGap={{ base: 3, sm: 'xl' }}
                     align="start"
                     slidesToScroll={mobile ? 1 : 3}
