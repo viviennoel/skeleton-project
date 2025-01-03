@@ -103,7 +103,7 @@ export function CardsCarousel({ data }: { data: CardProps }) {
                     slideSize={{ base: '100%', sm: '50%' }}
                     slideGap={{ base: 'xl', sm: 2 }}
                     align="start"
-                    slidesToScroll={mobile ? 1 : 2}
+                    slidesToScroll={1}
                 >
                     {slides}
                 </Carousel>
