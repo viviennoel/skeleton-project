@@ -8,9 +8,10 @@ import { HeaderMenu } from '@/src/components/HeaderMenu/HeaderMenu';
 import DictionaryProvider from '@/src/dictionaries/dictionary-provider';
 import { Footer } from '@/src/components/Footer/Footer';
 
+// TODO : make this translated & dynamic
 export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
+  title: 'Franck sabet',
+  description: "Vente de tapis d'excellence | nettoyage | Restauration",
 };
 
 export default async function RootLayout({ children, params }: { children: ReactElement, params: Promise<{ lang: 'en' | 'fr' }> }) {
