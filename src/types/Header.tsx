@@ -15,6 +15,7 @@ export interface Article {
     seoTitle?: string;
     seoDescription?: string;
     seoKeywords?: string[];
+    lang?: string;
 }
 
 export interface Product {

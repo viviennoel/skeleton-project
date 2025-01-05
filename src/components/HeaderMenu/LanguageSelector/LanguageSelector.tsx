@@ -9,6 +9,7 @@ import classes from './LanguageSelector.module.scss'
 import { usePathname, useRouter } from "next/navigation";
 import { i18n } from "@/i18n-config";
 import { Locale } from "@/src/types/Header";
+import Cookies from "js-cookie";
 
 export const LanguageSelector = () => {
     const [opened, { toggle }] = useDisclosure(false);
@@ -17,6 +18,8 @@ export const LanguageSelector = () => {
     const locale = pathname.split("/")[1] as Locale;
 
     const redirectToPathname = (locale: 'en' | 'fr') => {
+        Cookies.set('NEXT_LOCALE', locale);
+
         if (!pathname) return "/";
         const segments = pathname.split("/");
         segments[1] = locale;

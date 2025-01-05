@@ -57,7 +57,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <Container my='md'>
             {token && <EditionModale content={article.content} id={article._id} />}
             <h1>{article.title}</h1>
-            <p>{new Date(article.date).toLocaleDateString()}</p>
+            {/* To do - check date */}
+            {/* <p>{new Date(article.date).toLocaleDateString()}</p> */}
             {article.mainImage && (
                 <Image
                     radius="md"

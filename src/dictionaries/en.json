@@ -1,184 +1,1014 @@
 {
-    "compagnyName": "hestia innovation web developpeur",
-    "logoUrl": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735340153/logo_eltt6f.webp",
+    "compagnyName": "hestia innovation web developer",
+    "logoUrl": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735756439/logo_franck_sabet_jwqadt.webp",
     "header": {
         "metaHeader": [
             {
-                "link": "/about",
-                "label": "Livraison gratuite à partir de 50€"
+                "icon": "https://img.icons8.com/c9a456/ios/50/delivery--v1.png",
+                "link": "/contact",
+                "label": "Free delivery from \u20ac50"
             },
             {
+                "icon": "https://img.icons8.com/c9a456/ios/50/phone--v1.png",
                 "link": "/contact",
-                "label": "01 00 00 00 00"
+                "label": "(+33) 1 45 61 12 95"
             },
             {
+                "icon": "https://img.icons8.com/c9a456/ios/50/marker--v1.png",
                 "link": "/contact",
-                "label": "21 avenue du raincy, 75016 Paris"
+                "label": "217 rue du Faubourg Saint Honor\u00e9, 75008 Paris"
             }
         ],
         "header": [
             {
                 "link": "/about",
-                "label": "Notre expertise"
+                "label": "Our Expertise"
             },
             {
                 "link": "#1",
-                "label": "Nos Produits",
+                "label": "Products",
                 "links": [
                     {
-                        "link": "/products/modern",
-                        "label": "Moderne"
+                        "link": "/products/category/modern",
+                        "label": "Modern"
                     },
                     {
-                        "link": "/products/traditions",
-                        "label": "Traditionnels"
+                        "link": "/products/category/traditional",
+                        "label": "Traditional"
                     },
                     {
-                        "link": "/products/personnalisés",
-                        "label": "Personnalisés"
+                        "link": "/products/category/personalised",
+                        "label": "Personalized"
                     },
                     {
                         "link": "/products",
-                        "label": "Tous les produits"
+                        "label": "All Products"
                     }
                 ]
             },
             {
                 "link": "#2",
-                "label": "Nos services",
+                "label": "Services",
                 "links": [
                     {
-                        "link": "/services/cleaning",
-                        "label": "Nettoyage de tapis"
+                        "link": "/services",
+                        "label": "All Our Services"
                     },
                     {
-                        "link": "/services/restauration",
-                        "label": "Restauration de tapis"
+                        "link": "/cleaning",
+                        "label": "Carpet Cleaning"
                     },
                     {
-                        "link": "/faq",
-                        "label": "FAQ"
+                        "link": "/restoration",
+                        "label": "Carpet Restoration"
                     },
                     {
                         "link": "/contact",
-                        "label": "Prendre un RDV"
+                        "label": "Make an Appointment"
                     }
                 ]
             },
             {
                 "link": "/articles",
-                "label": "Nos Conseils"
+                "label": "Our Tips"
+            }
+        ]
+    },
+    "footer": {
+        "description": "The story of the gallery begins with an ambition: to preserve and transmit ancestral craftsmanship while meeting the expectations of a demanding and international clientele. Since its inception, the company has collaborated with renowned designers to offer unique rugs, incorporating superior quality materials and contemporary style. Today, it continues to establish itself as a reference in the luxury rug industry, combining tradition, modernity, and ethical responsibility.",
+        "copyright": "\u00a9 2024 Hestia-innovation. All rights reserved.",
+        "instagram": "https://www.instagram.com/francksabet",
+        "twitter": "",
+        "tiktok": "",
+        "facebook": "",
+        "links": [
+            {
+                "title": "About",
+                "links": [
+                    {
+                        "label": "Our Expertise",
+                        "link": "/expertise"
+                    },
+                    {
+                        "label": "Products",
+                        "link": "/products"
+                    },
+                    {
+                        "label": "Articles",
+                        "link": "/articles"
+                    },
+                    {
+                        "label": "Contact",
+                        "link": "/contact"
+                    },
+                    {
+                        "label": "Terms & Conditions",
+                        "link": "/cgu"
+                    }
+                ]
+            },
+            {
+                "title": "Products",
+                "links": [
+                    {
+                        "label": "Traditional",
+                        "link": "/products/category/traditional"
+                    },
+                    {
+                        "label": "Contemporary",
+                        "link": "/products/category/modern"
+                    },
+                    {
+                        "label": "Personalized",
+                        "link": "/products/category/personalised"
+                    }
+                ]
+            },
+            {
+                "title": "Services",
+                "links": [
+                    {
+                        "label": "Restoration",
+                        "link": "/restoration"
+                    },
+                    {
+                        "label": "Maintenance",
+                        "link": "/cleaning"
+                    },
+                    {
+                        "label": "Follow us on Instagram",
+                        "link": "https://www.instagram.com/francksabet"
+                    }
+                ]
             }
         ]
     },
     "pages": {
-        "contact": {
-            "link": "/contact",
-            "label": "Contact us",
-            "title": "Contact form"
+        "admin": {
+            "title": "Your Administrator Area",
+            "description": "This area is very functional. I have prepared two services for you: adding products and articles. Adding articles will help improve the site's SEO and allow users to find you over time with regular (and quality) posts. The products page will let you showcase your products and measure online sales traction. If a need is detected, it will be easy to add an online payment system.",
+            "addArticles": "Add an Article",
+            "addProducts": "Add a Product"
         },
-        "about": {
-            "link": "/about-us",
-            "label": "About us",
-            "title": "Three generations of expertise"
-        },
-        "home": {
-            "link": "/",
-            "label": "Homepage",
-            "title": "Home sweet home",
+        "services": {
+            "link": "/services",
+            "label": "Services",
+            "title": "Our Services",
             "slices": [
                 {
                     "type": "homepage-banner",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp",
-                    "alt": "Web developpeur in paris de confiance"
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "alt": "Franck Sabet Services",
+                    "title": "Discover Our Services",
+                    "subtitle": "Expertise, Tradition, and Excellence"
                 },
                 {
-                    "type": "text-card"
+                    "type": "text-card",
+                    "title": "Our Commitment",
+                    "description": "Franck Sabet accompanies you with passion in the sale, cleaning, and restoration of your rugs. We are committed to preserving their brilliance and authenticity through our unique expertise.",
+                    "button": "Contact Us",
+                    "buttonColor": "black",
+                    "buttonHref": "/contact"
                 },
                 {
-                    "type": "square-card-list",
-                    "data": [
-                        {
-                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp",
-                            "title": "Custom Carpet Design",
-                            "description": "Create unique carpets tailored to your space.",
-                            "link": "/services/custom-carpet-design"
-                        },
-                        {
-                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp",
-                            "title": "Carpet Restoration",
-                            "description": "Expert restoration services for your precious carpets.",
-                            "link": "/services/carpet-restoration"
-                        },
-                        {
-                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp",
-                            "title": "Carpet Cleaning",
-                            "description": "Professional cleaning for all types of carpets.",
-                            "link": "/services/carpet-cleaning"
-                        }
-                    ]
-                },
-                {
-                    "type": "horizontal-text-card"
+                    "type": "divider"
                 },
                 {
                     "type": "grid-presentation",
                     "services": [
                         {
-                            "title": "Custom Carpet Design",
-                            "description": "Create unique carpets tailored to your space."
+                            "icon": "https://img.icons8.com/c9a456/dotty/80/consultation.png",
+                            "title": "Rug Sales",
+                            "description": "A wide selection of modern, traditional, and exceptional rugs to suit all tastes.",
+                            "link": "/products"
                         },
                         {
-                            "title": "Carpet Restoration",
-                            "description": "Expert restoration services for your precious carpets."
+                            "icon": "https://img.icons8.com/c9a456/ios/50/needle.png",
+                            "title": "Restoration",
+                            "description": "Bring your antique rugs back to life with our artisanal restoration techniques.",
+                            "link": "/restoration"
                         },
                         {
-                            "title": "Carpet Cleaning",
-                            "description": "Professional cleaning for all types of carpets."
+                            "icon": "https://img.icons8.com/c9a456/ios/50/cleaning-a-surface.png",
+                            "title": "Cleaning",
+                            "description": "Professional cleaning to maintain the beauty and longevity of your rugs.",
+                            "link": "/cleaning"
                         }
                     ],
                     "contactInfo": {
-                        "address": "123 Main Street, Paris, France",
-                        "phone": "+33 1 23 45 67 89",
-                        "email": "contact@carpets.fr",
-                        "mapImage": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735546680/placeholder-image_ixippm.webp"
+                        "icon": "https://img.icons8.com/c9a456/ios-filled/50/phone-message.png",
+                        "title": "Contact Us",
+                        "address": "217 Rue du Faubourg Saint-Honoré, 75008 Paris",
+                        "phone": "(+33) 1 45 61 12 95",
+                        "email": "francksabet@yahoo.fr",
+                        "mapImage": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735765506/contactBg_fhcloz.webp",
+                        "href": "/contact",
+                        "button": "Contact Us"
                     }
                 },
                 {
-                    "type": "vertical-card-list"
+                    "type": "horizontal-image-card",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_carpeting_dvxzoq.webp",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Rug Restoration",
+                    "description": "Our craftsmen carefully and precisely restore your rugs so they regain their original brilliance.",
+                    "button": "Learn More",
+                    "buttonColor": "black",
+                    "buttonHref": "/restoration",
+                    "position": "right"
                 },
                 {
-                    "type": "horizontal-text-card"
+                    "type": "divider"
                 },
                 {
-                    "type": "cards-carousel"
+                    "type": "square-card-list",
+                    "data": [
+                        {
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_rugs_gvrqh4.webp",
+                            "title": "Exceptional Rug Sales",
+                            "description": "Discover our collection of exceptional rugs.",
+                            "link": "/products"
+                        },
+                        {
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859307/optimized_image_restoration_htozwa.webp",
+                            "title": "Restoration",
+                            "description": "We bring your antique rugs back to life.",
+                            "link": "/restoration"
+                        },
+                        {
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859307/optimized_image_vacuum_f04kck.webp",
+                            "title": "Cleaning",
+                            "description": "Professional cleaning for like-new rugs.",
+                            "link": "/cleaning"
+                        }
+                    ]
+                }
+            ]
+        },
+        "restoration": {
+            "link": "/restoration",
+            "label": "Restoration",
+            "title": "Rug Restoration",
+            "slices": [
+                {
+                    "type": "homepage-banner",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "alt": "Rug Restoration - Franck Sabet",
+                    "title": "The Art of Restoration",
+                    "subtitle": "Preserving Authenticity and Elegance"
+                },
+                {
+                    "type": "text-card",
+                    "title": "Why Restore Your Rugs?",
+                    "description": "Rug restoration is essential for preserving their beauty and value. Whether it's an antique or contemporary rug, our expertise guarantees meticulous and faithful repair to the original.",
+                    "button": "Contact Us",
+                    "buttonColor": "black",
+                    "buttonHref": "/contact"
+                },
+                {
+                    "type": "horizontal-text-card",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Our Restoration Techniques",
+                    "description": "We use artisanal techniques passed down through generations to repair damaged rugs. Our services include fringe replacement, patching, recoloring, and edge repairs.",
+                    "button": "Schedule an Appointment",
+                    "buttonColor": "black",
+                    "buttonHref": "/contact"
+                },
+                {
+                    "type": "quote",
+                    "text": "Each restored rug is a masterpiece that regains its original splendor."
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "grid-presentation",
+                    "services": [
+                        {
+                            "icon": "https://img.icons8.com/c9a456/ios/50/needle.png",
+                            "title": "Patching",
+                            "description": "Repairing holes and tears with traditional techniques.",
+                            "link": "/contact"
+                        },
+                        {
+                            "icon": "https://img.icons8.com/c9a456/ios/50/paint.png",
+                            "title": "Recoloring",
+                            "description": "Restoring colors to bring back their original vibrancy.",
+                            "link": "/contact"
+                        },
+                        {
+                            "icon": "https://img.icons8.com/c9a456/ios/50/scissors.png",
+                            "title": "Fringe Repairs",
+                            "description": "Replacing or repairing fringes for a flawless finish.",
+                            "link": "/contact"
+                        }
+                    ],
+                    "contactInfo": {
+                        "icon": "https://img.icons8.com/c9a456/ios-filled/50/phone-message.png",
+                        "title": "Schedule an Appointment",
+                        "address": "217 Rue du Faubourg Saint-Honoré, 75008 Paris",
+                        "phone": "(+33) 1 45 61 12 95",
+                        "email": "francksabet@yahoo.fr",
+                        "mapImage": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735765506/contactBg_fhcloz.webp",
+                        "href": "/contact",
+                        "button": "Contact Us"
+                    }
+                },
+                {
+                    "type": "horizontal-image-card",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_colors_kywzxl.webp",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Why Trust Us?",
+                    "description": "With decades of experience, our craftsmen master every detail of restoration. Each intervention is carried out with care to respect the authenticity and integrity of your rug.",
+                    "button": "See Our Services",
+                    "buttonColor": "black",
+                    "buttonHref": "/services",
+                    "position": "right"
+                },
+                {
+                    "type": "testimonial-carousel",
+                    "testimonials": [
+                        {
+                            "quote": "My antique rug was restored to perfection. I'm impressed by the level of detail and care given.",
+                            "author": "Pierre Lemoine"
+                        },
+                        {
+                            "quote": "Thanks to the recoloring, my rug has regained its vibrant original colors. Thank you to the Franck Sabet team!",
+                            "author": "Sophie Martin"
+                        },
+                        {
+                            "quote": "The fringes of my rug were replaced with incredible precision. I am thrilled with the result!",
+                            "author": "Jacques Dupuis"
+                        }
+                    ]
+                },
+                {
+                    "type": "title",
+                    "title": "Ready to Bring Your Rug Back to Life?"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Don't wait any longer! Contact us today for a personalized diagnosis and a free quote.",
+                    "size": "normal",
+                    "justify": "center"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "By phone: (+33) 1 45 61 12 95 or visit our store: 217 Rue du Faubourg Saint-Honoré, Paris",
+                    "size": "small",
+                    "justify": "center"
+                }
+            ]
+        },
+        "cleaning": {
+            "link": "/cleaning",
+            "label": "Cleaning Services",
+            "title": "Rug Cleaning",
+            "slices": [
+                {
+                    "type": "homepage-banner",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "alt": "Professional Rug Cleaning",
+                    "title": "Professional Cleaning",
+                    "subtitle": "Preserve the beauty and durability of your rugs"
+                },
+                {
+                    "type": "text-card",
+                    "title": "Why Clean Your Rugs With Us?",
+                    "description": "With years of experience, we use cleaning techniques tailored to the fibers and materials of your rugs. Our process ensures deep cleanliness while preserving their shine and structure.",
+                    "button": "Contact Us",
+                    "buttonColor": "black",
+                    "buttonHref": "/contact"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "horizontal-image-card",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859307/optimized_image_vacuum_f04kck.webp",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Modern and Traditional Techniques",
+                    "description": "We combine traditional hand-cleaning techniques with modern innovations. Each rug is individually treated to ensure optimal results.",
+                    "button": "Discover Our Techniques",
+                    "buttonColor": "black",
+                    "buttonHref": "/articles",
+                    "position": "right"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "A well-maintained rug is essential for preserving its lifespan and shine. We offer custom cleaning services for every type of rug, whether antique, wool, or silk.",
+                    "size": "normal",
+                    "justify": "center"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "We use gentle, non-aggressive products to remove stains, dust, and allergens while preserving the quality of the fibers.",
+                    "size": "normal",
+                    "justify": "center"
+                },
+                {
+                    "type": "quote",
+                    "text": "Professional cleaning brings life back to your rugs and enhances your interior."
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "grid-presentation",
+                    "services": [
+                        {
+                            "icon": "https://img.icons8.com/c9a456/ios/50/cleaning-a-surface.png",
+                            "title": "Deep Cleaning",
+                            "description": "Removing stubborn stains and allergens with proven techniques.",
+                            "link": "/contact"
+                        },
+                        {
+                            "icon": "https://img.icons8.com/external-others-pike-picture/c9a456/50/external-Bubbles-oxygen-others-pike-picture-2.png",
+                            "title": "Regular Maintenance",
+                            "description": "Preserve your rugs' quality with periodic professional maintenance.",
+                            "link": "/contact"
+                        },
+                        {
+                            "icon": "https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/c9a456/96/external-feather-thanksgiving-tanah-basah-basic-outline-tanah-basah-2.png",
+                            "title": "Delicate Cleaning",
+                            "description": "Tailored for silk or antique rugs that require special attention.",
+                            "link": "/contact"
+                        }
+                    ],
+                    "contactInfo": {
+                        "icon": "https://img.icons8.com/c9a456/ios-filled/50/phone-message.png",
+                        "title": "Contact Us",
+                        "address": "217 Rue du Faubourg Saint-Honoré, 75008 Paris",
+                        "phone": "(+33) 1 45 61 12 95",
+                        "email": "francksabet@yahoo.fr",
+                        "mapImage": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735765506/contactBg_fhcloz.webp",
+                        "href": "/contact",
+                        "button": "Schedule an Appointment"
+                    }
+                },
+                {
+                    "type": "horizontal-text-card",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Our Commitments",
+                    "description": "We guarantee an environmentally friendly, effective cleaning service tailored to all types of rugs.",
+                    "button": "Learn More",
+                    "buttonColor": "black",
+                    "buttonHref": "/about#commitments"
+                },
+                {
+                    "type": "horizontal-image-card",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859307/optimized_image_pattern_bbsocz.webp",
+                    "backgroundGradient": "linear-gradient(to right, #f3f4f6, #ffffff)",
+                    "title": "A Five-Step Cleaning Process",
+                    "description": "Our method combines manual expertise with modern tools to ensure deep cleaning. Each rug is carefully inspected, dusted, washed, and dried with precision to preserve its beauty and durability.",
+                    "button": "Discover Our Methods",
+                    "buttonColor": "black",
+                    "buttonHref": "/articles",
+                    "position": "right"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "Ready to Revitalize Your Rugs?"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Entrust us with your rugs for professional and custom cleaning. Contact us today for an appointment or personalized advice.",
+                    "size": "normal",
+                    "justify": "center"
+                }
+            ]
+        },
+        "contact": {
+            "link": "/contact",
+            "label": "Contact",
+            "title": "Contact Us",
+            "slices": [
+                {
+                    "type": "homepage-banner",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "alt": "Contact Franck Sabet - Luxury and Expertise",
+                    "title": "We Are Here to Help",
+                    "subtitle": "Need advice? Have a question? We are here to assist you."
+                },
+                {
+                    "type": "text-card",
+                    "title": "Our Commitment to You",
+                    "description": "At Franck Sabet, every client is unique. Whether you need advice on choosing a rug, want to learn more about our services, or wish to schedule a cleaning or restoration appointment, our team is ready to assist you.",
+                    "button": "Schedule an Appointment",
+                    "buttonColor": "black",
+                    "buttonHref": "/appointment"
+                },
+                {
+                    "type": "horizontal-image-card",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1689929637/hestia/adobe13Compressed_bfrbxj.webp",
+                    "backgroundGradient": "linear-gradient(to right, white, #f9f9f9)",
+                    "title": "A Customer Service That Listens",
+                    "description": "Our team of experts is available to answer all your questions, whether by phone, email, or directly in-store. Share your needs with us, and we will find the perfect solution for you.",
+                    "button": "Contact Us",
+                    "buttonColor": "black",
+                    "buttonHref": "/contact",
+                    "position": "right"
+                },
+                {
+                    "type": "quote",
+                    "text": "Your satisfaction is our priority."
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "horizontal-text-card",
+                    "backgroundGradient": "linear-gradient(to right, white, #f7f7f7)",
+                    "title": "Our Showroom is Open",
+                    "description": "We would be delighted to welcome you to our Paris boutique, located in the prestigious Faubourg Saint-Honoré district. Come discover our collection of rugs and speak with our experts.",
+                    "button": "Find Us",
+                    "buttonColor": "black",
+                    "buttonHref": "https://www.google.com/maps?q=217+rue+du+Faubourg+Saint-Honoré,+75008+Paris"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "Our Contact Information"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "217 Rue du Faubourg Saint-Honoré, 75008 Paris",
+                    "size": "normal",
+                    "justify": "center"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Phone: (+33) 1 45 61 12 95",
+                    "size": "normal",
+                    "justify": "center"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Email: francksabet@yahoo.fr",
+                    "size": "normal",
+                    "justify": "center"
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "text-card",
+                    "title": "A Team of Passionate Experts",
+                    "description": "At Franck Sabet, our mission is to provide you with personalized and high-quality service. Our experts are here to guide you every step of the way, whether it’s choosing the perfect rug for your home or restoring a valuable piece.",
+                    "button": "Learn More",
+                    "buttonColor": "black",
+                    "buttonHref": "/about"
+                }
+            ]
+        },
+        "about": {
+            "link": "/about",
+            "label": "About Us",
+            "title": "About",
+            "slices": [
+                {
+                    "type": "homepage-banner",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "alt": "Franck Sabet - Tradition and Excellence",
+                    "title": "About Us",
+                    "subtitle": "Heritage, Craftsmanship, and Passion"
+                },
+                {
+                    "type": "text-card",
+                    "title": "Our Story",
+                    "description": "For three generations, Franck Sabet has been preserving and passing on a unique heritage in the world of luxury rugs. Each piece is the result of exquisite craftsmanship, woven through centuries and cultures. Located in the heart of Paris, we collaborate with renowned designers and artisans to bring you exceptional rugs.",
+                    "button": "Learn More",
+                    "buttonColor": "black",
+                    "buttonHref": "/contact"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "horizontal-image-card",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_carpeting_dvxzoq.webp",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Why Choose Us?",
+                    "description": "At Franck Sabet, we combine age-old traditions with modern innovations to meet the expectations of a demanding clientele. Whether you're looking for a custom rug or advice on maintaining your pieces, we guarantee exceptional service.",
+                    "button": "See Our Services",
+                    "buttonColor": "black",
+                    "buttonHref": "/services",
+                    "position": "right"
+                },
+                {
+                    "type": "text-section",
+                    "title": "A Legacy Passed Down Through Generations",
+                    "content": "Since its inception, the Franck Sabet house has stood out for its passion for quality craftsmanship. Our rugs, whether antique or contemporary, tell a unique story. We firmly believe that every detail, every fiber, deserves special attention to ensure a timeless masterpiece.",
+                    "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "quote",
+                    "text": "Each rug tells a story, woven through time and cultures."
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "grid-presentation",
+                    "services": [
+                        {
+                            "icon": "https://img.icons8.com/c9a456/dotty/80/consultation.png",
+                            "title": "Expertise",
+                            "description": "Decades of experience in identifying and evaluating unique rugs.",
+                            "link": "/contact"
+                        },
+                        {
+                            "icon": "https://img.icons8.com/c9a456/ios/50/needle.png",
+                            "title": "Restoration",
+                            "description": "Restoration of antique and valuable rugs using traditional techniques.",
+                            "link": "/restoration"
+                        },
+                        {
+                            "icon": "https://img.icons8.com/c9a456/ios/50/cleaning-a-surface.png",
+                            "title": "Maintenance",
+                            "description": "Professional cleaning to preserve the brilliance and durability of your rugs.",
+                            "link": "/cleaning"
+                        }
+                    ],
+                    "contactInfo": {
+                        "icon": "https://img.icons8.com/c9a456/ios-filled/50/phone-message.png",
+                        "title": "Contact Us",
+                        "address": "217 Rue du Faubourg Saint-Honoré, 75008 Paris",
+                        "phone": "(+33) 1 45 61 12 95",
+                        "email": "francksabet@yahoo.fr",
+                        "mapImage": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735765506/contactBg_fhcloz.webp",
+                        "href": "/contact",
+                        "button": "Contact Us"
+                    }
+                },
+                {
+                    "type": "horizontal-text-card",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Our Heritage",
+                    "description": "Each rug in our collection is a work of art. We collaborate with artisans and designers from around the world to bring you unique pieces made to last and elevate your interiors.",
+                    "button": "Learn More",
+                    "buttonColor": "black",
+                    "buttonHref": "/products"
+                },
+                {
+                    "type": "testimonial-carousel",
+                    "testimonials": [
+                        {
+                            "quote": "Impeccable service and rugs of exceptional quality. Highly recommend.",
+                            "author": "Marie Dupont"
+                        },
+                        {
+                            "quote": "Cleaning my antique rug brought new life to my room. Thank you for the remarkable work.",
+                            "author": "Jean-Paul Martin"
+                        },
+                        {
+                            "quote": "A passionate team that met all my expectations. Bravo!",
+                            "author": "Claire Lefèvre"
+                        }
+                    ]
+                },
+                {
+                    "type": "title",
+                    "title": "Any Questions? Don't Hesitate to Contact Us"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "We are available to answer all your questions. Contact us by phone, email, or visit our store.",
+                    "size": "normal",
+                    "justify": "center"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "By phone: (+33) 1 45 61 12 95 or in-store: 217 Rue du Faubourg Saint-Honoré, Paris",
+                    "size": "small",
+                    "justify": "center"
+                }
+            ]
+        },
+        "products": {
+            "title": "Discover All Our Products",
+            "search": "Find the rug of your dreams by searching for a product",
+            "headerCard": {
+                "type": "horizontal-image-card",
+                "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859310/optimized_image_specific_mjvn6n.webp",
+                "backgroundGradient": "linear-gradient(to right, white, white)",
+                "title": "Discover Our Exceptional Collection",
+                "description": "Each rug in our collection is a true masterpiece, carefully selected for its refinement and exceptional quality. Whether you are looking for a contemporary rug, a traditional piece, or a custom creation, Franck Sabet offers unparalleled expertise to enhance your spaces with elegance and distinction. Browse our selection and find the rug that tells your story.",
+                "position": "right"
+            }
+        },
+        "articles": {
+            "title": "Discover All Our Articles & Tips",
+            "search": "Looking for expert advice? Use our search!"
+        },
+        "home": {
+            "link": "/",
+            "label": "Homepage",
+            "title": "Home",
+            "slices": [
+                {
+                    "type": "homepage-banner",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "alt": "Franck Sabet - Luxury Rugs Restoration - Cleaning",
+                    "title": "Unique and Exceptional Rugs",
+                    "subtitle": "Tradition, Expertise, and Excellence"
+                },
+                {
+                    "type": "text-card",
+                    "title": "Three Generations of Expertise and Excellence",
+                    "description": "For three generations, our house has embodied excellence in the art of rugs. From advice to maintenance, we accompany you in all your steps to enhance your interiors.",
+                    "button": "Learn More",
+                    "buttonColor": "black",
+                    "buttonHref": "/about"
+                },
+                {
+                    "type": "square-card-list",
+                    "data": [
+                        {
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_colors_kywzxl.webp",
+                            "title": "Rug Sales",
+                            "description": "Exceptional rug sales, from modern to traditional.",
+                            "link": "/products"
+                        },
+                        {
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859307/optimized_image_restoration_htozwa.webp",
+                            "title": "Restoration",
+                            "description": "Luxury rug restoration expertise.",
+                            "link": "/restoration"
+                        },
+                        {
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859307/optimized_image_vacuum_f04kck.webp",
+                            "title": "Cleaning",
+                            "description": "Professional rug cleaning and maintenance.",
+                            "link": "/cleaning"
+                        }
+                    ]
+                },
+                {
+                    "type": "horizontal-text-card",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Why Trust Us?",
+                    "description": "For two generations, our house has embodied excellence in the art of rugs. Each piece in our collection is meticulously selected for its refinement, elegance, and exceptional quality. Thanks to a rich family heritage and a deep love for craftsmanship, we combine tradition and modernity to offer our customers unique rugs, true works of art, that enhance the beauty of every interior. Each rug tells a story, woven through time and cultures.",
+                    "button": "Learn More",
+                    "buttonColor": "black",
+                    "buttonHref": "/about"
+                },
+                {
+                    "type": "grid-presentation",
+                    "services": [
+                        {
+                            "icon": "https://img.icons8.com/c9a456/dotty/80/consultation.png",
+                            "title": "Consultation",
+                            "description": "We offer our expertise in luxury rug sales, maintenance, or valuation.",
+                            "link": "/contact"
+                        },
+                        {
+                            "icon": "https://img.icons8.com/c9a456/ios/50/needle.png",
+                            "title": "Restoration",
+                            "description": "Expert in restoring antique and high-quality rugs, our artisans are ready to assist. Book your appointment now!",
+                            "link": "/contact"
+                        },
+                        {
+                            "icon": "https://img.icons8.com/c9a456/ios/50/cleaning-a-surface.png",
+                            "title": "Maintenance",
+                            "description": "Professional cleaning for all types of rugs, at home or in-store. A fast and high-quality service!",
+                            "link": "/contact"
+                        }
+                    ],
+                    "contactInfo": {
+                        "icon": "https://img.icons8.com/c9a456/ios-filled/50/phone-message.png",
+                        "title": "Contact Us",
+                        "address": "217 Rue du Faubourg Saint-Honoré, 75008 Paris",
+                        "phone": "(+33) 1 45 61 12 95",
+                        "email": "francksabet@yahoo.fr",
+                        "mapImage": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735765506/contactBg_fhcloz.webp",
+                        "href": "/contact",
+                        "button": "Contact Us"
+                    }
+                },
+                {
+                    "type": "vertical-card-list",
+                    "title": "Our Articles & Advice"
+                },
+                {
+                    "type": "horizontal-text-card",
+                    "backgroundGradient": "linear-gradient(to right, white, white)",
+                    "title": "Our Heritage",
+                    "description": "The Franck Sabet Gallery embodies a rich family history rooted in the world of luxury and artisanal craftsmanship. For thirty years, this business has been dedicated to creating and restoring high-end rugs. Located on the prestigious Rue du Faubourg Saint-Honoré, the gallery is distinguished by its custom creations and high-precision restorations. Franck Sabet offers a wide range of hand-knotted contemporary rugs crafted from the finest Yak wool, sourced from regions like Nepal, Tibet, and India.",
+                    "button": "Learn More",
+                    "buttonColor": "black",
+                    "buttonHref": "/about"
+                },
+                {
+                    "type": "cards-carousel",
+                    "title": "Featured Products This Season",
+                    "cardData": "products"
+                }
+            ]
+        },
+        "cgu": {
+            "link": "/cgu-cgv",
+            "label": "Terms and Conditions",
+            "title": "Terms and Conditions",
+            "slices": [
+                {
+                    "type": "homepage-banner",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "alt": "Franck Sabet - Terms and Conditions",
+                    "title": "General Terms of Use",
+                    "subtitle": "Terms of Use and Sales"
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "title",
+                    "title": "General Terms of Use (GTU)"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Welcome to Franck Sabet's website. By accessing this site, you agree to comply with these terms of use, which define the rules for using our online services."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "The content of this site, including texts, images, and videos, is protected by intellectual property laws. Any unauthorized reproduction or use is prohibited."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "The site is accessible to individuals of legal age and capable of entering into contracts under French law."
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "General Terms of Sale (GTS)"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "These GTS apply to all orders placed on our site. By validating an order, you unreservedly accept these terms of sale."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Prices are displayed in euros and include all applicable taxes. Delivery fees are indicated before the order is validated."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "You can return products within 14 days of receipt, provided they are in perfect condition and in their original packaging."
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "Creating a User Account"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "To place an order, you must create an account by providing accurate information, such as your name, email address, and a secure password. Any incorrect or incomplete information may result in your account being suspended."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "In case of lost or fraudulent use of your credentials, please contact our customer service to reset them."
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "Payment and Security"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Payments are secured using SSL encryption. We accept Visa, MasterCard, and American Express cards. Banking data is not stored on our servers."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Transactions are carried out via a secure payment platform. By using this platform, you agree to their terms of use."
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "Liability"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Franck Sabet shall not be held liable for damages resulting from the use of this site or the purchase of products, unless otherwise provided by law."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "We strive to keep the site accessible at all times, but interruptions may occur due to technical reasons or maintenance."
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "Personal Data"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Your personal data is collected and used in accordance with our privacy policy. You have the right to access, modify, or delete your data at any time."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "For any requests regarding your personal data, please contact us at: francksabet@yahoo.fr."
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "Force Majeure"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Franck Sabet shall not be held liable in case of force majeure, including but not limited to natural disasters, strikes, or interruptions in telecommunications networks."
+                },
+                {
+                    "type": "space"
+                },
+                {
+                    "type": "divider"
+                },
+                {
+                    "type": "title",
+                    "title": "Contact"
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "For any questions or complaints, you can contact us by email at francksabet@yahoo.fr or by phone at (+33) 1 45 61 12 95."
+                },
+                {
+                    "type": "paragraph",
+                    "paragraph": "Address: 217 Rue du Faubourg Saint-Honoré, 75008 Paris."
+                },
+                {
+                    "type": "space"
                 }
             ]
         }
     },
     "articles": {
-        "readMore": "Lire l'article",
+        "readMore": "Read the article",
         "label": "Article"
     },
     "products": {
-        "label": "Produit",
-        "readMore": "Découvrir",
+        "label": "Product",
+        "readMore": "Discover",
         "priceLabel": "€",
-        "redirectionTitle": "Vous ne trouvez pas votre bonheur?",
-        "redirectionSubtitle": "Repassez voir notre collection de tapis et trouvez la perle rare!",
-        "qualityFranckSabet": "Les tapis Franck Sabet sont fait à la main et respectent de hauts standards de qualité"
+        "redirectionTitle": "Can't find what you're looking for?",
+        "redirectionSubtitle": "Check out our carpet collection again and find the hidden gem!",
+        "qualityFranckSabet": "Franck Sabet carpets are handmade and meet high-quality standards"
     },
     "error404": {
-        "title": "Cette page n'existe pas",
-        "subtitle": "Mais pas d'inquiétude, nous en avons pleins d'autres!",
-        "returnArticles": "Voir les articles",
-        "returnHomepage": "Retour à l'accueil",
-        "returnProducts": "Voir les produits"
+        "title": "This page does not exist",
+        "subtitle": "But don't worry, we have plenty of others!",
+        "returnArticles": "View articles",
+        "returnHomepage": "Back to homepage",
+        "returnProducts": "View products"
     },
     "seoTags": [
-        "tapis",
-        "nettoyage de tapis",
-        "restauration de tapis",
-        "vente de tapis"
+        "carpet",
+        "carpet cleaning",
+        "carpet restoration",
+        "carpet sales"
     ]
 }

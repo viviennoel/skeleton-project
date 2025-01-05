@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { DropzoneCloudinary } from '@/src/components/EditorText/Dropzone';
 import { Editor } from '@/src/components/EditorText/Editor';
 import { Button, Input, Group, Container, MultiSelect, Textarea } from '@mantine/core';
-import { useRouter } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import { Article } from '@/src/types/Header';
 import { useDictionary } from '@/src/dictionaries/dictionary-provider';
 import Cookies from 'js-cookie';
@@ -25,6 +25,7 @@ const ArticleEditorPage = () => {
     const [seoKeywords, setSeoKeywords] = useState<string[]>(dictionary.seoTags);
     const router = useRouter();
     const token = Cookies.get('authToken');
+    const params = useParams<{ lang: string }>()
 
     // Handle form submission
     const handleSubmit = async (e: React.FormEvent) => {
@@ -43,6 +44,7 @@ const ArticleEditorPage = () => {
             seoTitle,
             seoDescription,
             seoKeywords,
+            lang: params.lang
         };
 
         try {

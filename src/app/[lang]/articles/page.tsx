@@ -5,6 +5,7 @@ import { Container, Input, Pagination, Group } from '@mantine/core';
 import VerticalCardList from '@/src/components/SliceMachine/VerticalCardList/VerticalCardList';
 import { useDictionary } from '@/src/dictionaries/dictionary-provider';
 import Image from 'next/image';
+import { useParams } from 'next/navigation';
 
 interface Article {
     id: string;
@@ -18,9 +19,9 @@ interface Article {
     category?: string;
 }
 
-async function fetchArticles(page: number, searchQuery: string): Promise<Article[]> {
+async function fetchArticles(page: number, searchQuery: string, lang?: string): Promise<Article[]> {
     try {
-        const response = await fetch(`/api/articles?page=${page}&query=${encodeURIComponent(searchQuery)}`);
+        const response = await fetch(`/api/articles?page=${page}&query=${encodeURIComponent(searchQuery)}&lang=${lang}`);
         if (!response.ok) {
             throw new Error('Failed to fetch articles');
         }
@@ -37,10 +38,12 @@ const ArticlesPage = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [totalPages, setTotalPages] = useState(1);
     const dictionary = useDictionary();
+    const params = useParams();
 
     useEffect(() => {
         const fetchData = async () => {
-            const result: any = await fetchArticles(page, searchQuery);
+            //@ts-ignore
+            const result: any = await fetchArticles(page, searchQuery, params.lang);
             setArticles(result.articles);
             setTotalPages(result.totalPages);
         };

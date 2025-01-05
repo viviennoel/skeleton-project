@@ -2,6 +2,8 @@ import { MongoClient, ObjectId } from 'mongodb';
 import { NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
 import { cookies } from 'next/headers';
+import { ResolveLocale } from '@formatjs/intl-localematcher';
+import { useParams } from 'next/navigation';
 
 const SECRET_KEY = process.env.JWT_SECRET_KEY || 'default_secret';
 const PAGE_SIZE = 9;
@@ -53,7 +55,8 @@ export async function POST(req: Request) {
         tags,
         seoTitle,
         seoDescription,
-        seoKeywords
+        seoKeywords,
+        lang
     } = body;
 
     try {
@@ -74,6 +77,7 @@ export async function POST(req: Request) {
             seoTitle,
             seoDescription,
             seoKeywords,
+            lang,
         });
 
         return NextResponse.json({ message: 'Article added successfully', data: result });
@@ -87,22 +91,24 @@ export async function GET(req: any) {
     const { searchParams } = new URL(req.url);
     const page = parseInt(searchParams.get("page") || "1", 10);
     const query = searchParams.get("query") || "";
+    const lang = searchParams.get("lang") || "";
 
     try {
         const client = await clientPromise;
         const db = client.db('blogDB'); // Remplacez `blogDB` par le nom de votre base
         const collection = db.collection('articles'); // Remplacez `articles` par le nom de votre collection
 
+        const searchQuery: any = {};
+        const effectiveLang = lang || 'fr';
 
-        // Build the search query
-        const searchQuery = query
-            ? {
-                $or: [
-                    { title: { $regex: query, $options: "i" } },
-                    { tags: { $regex: query, $options: "i" } },
-                ],
-            }
-            : {};
+        if (query) {
+            searchQuery.$or = [
+                { title: { $regex: query, $options: "i" } },
+                { tags: { $regex: query, $options: "i" } },
+            ];
+        }
+
+        searchQuery.lang = { $regex: effectiveLang, $options: "i" };
 
         // Count total documents matching the query
         const totalDocuments = await collection.countDocuments(searchQuery);
