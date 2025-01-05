@@ -24,17 +24,19 @@ export function VerticalCard({ article, product }: { article?: Article, product?
     const link = article
         ? `/articles/${article?.title?.replaceAll(' ', '-')}`
         // @ts-ignore
-        : `/products/${product?.title[lang]?.replaceAll(' ', '-')}`;
+        : `/products/${product?.title[lang] ? product?.title[lang]?.replaceAll(' ', '-') : product?.title.replaceAll(' ', '-')}`;
 
     return (
         <Card withBorder radius="md" className={classes.card}>
             <Card.Section className={classes.imageSection}>
                 {article && <Badge color='grey' className={classes.date}>{formattedDate}</Badge>}
-                <Image src={cardData?.mainImage ?? ''} alt={cardData?.title ?? ''} fill={true} style={{ objectFit: "cover" }} />
+                {/* @ts-ignore */}
+                <Image src={cardData?.mainImage ?? ''} alt={cardData?.title[lang] ?? cardData?.title} fill={true} sizes='cover' style={{ objectFit: "cover" }} />
             </Card.Section>
 
             <Group justify="space-between" mt="md" w='100%'>
                 <div className={classes.title}>
+                    {/* @ts-ignore */}
                     <Text fw={500}>{cardData?.title[lang] ?? cardData?.title}</Text>
                     <Text fz="xs" c="dimmed">
                         {article ? dictionary.articles.label : dictionary.products.label}
@@ -44,6 +46,7 @@ export function VerticalCard({ article, product }: { article?: Article, product?
 
             <Card.Section className={classes.section} mt="md">
                 <Text fz="sm" c="dimmed" className={classes.label}>
+                    {/* @ts-ignore */}
                     {cardData?.description[lang] ?? cardData?.description}
                 </Text>
             </Card.Section>

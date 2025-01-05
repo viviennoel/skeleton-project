@@ -10,7 +10,7 @@ import { EditionProductModale } from '@/src/components/EditionProductModale/Edit
 import Cookies from 'js-cookie';
 import { cookies } from 'next/headers';
 
-async function getProductBySlug(slug: any) {
+async function getProductBySlug(slug: any, lang: any) {
     const uri = process.env.MONGODB_URI ?? "";
     if (!uri) {
         console.error("MongoDB URI is not defined in environment variables.");
@@ -23,8 +23,12 @@ async function getProductBySlug(slug: any) {
 
         const db = client.db('blogDB');
         const title = slug.replace(/-/g, ' ');
+        const request = lang ? { [`title.${lang}`]: title } : { title: title };
 
-        const product = await db.collection('products').findOne({ title: title });
+        console.log(request)
+        console.log(lang)
+
+        const product = await db.collection('products').findOne(request);
 
         if (!product) {
             console.warn("No product found with the title:", title);
@@ -49,7 +53,7 @@ async function getProductBySlug(slug: any) {
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string, lang: Locale }> }) {
     const { slug, lang } = await params;
-    const product = await getProductBySlug(slug) as any;
+    const product = await getProductBySlug(slug, lang) as any;
     // @ts-ignore
     const dictionary: WebsiteData = await getDictionary(lang);
     const cookieStore = await cookies();
@@ -86,7 +90,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                     <Divider /></>
             )}
 
-            <p>{product.description}</p>
+            <p>{product.description[lang]}</p>
 
             <Group gap="xs">
                 <Text size="sm">Dimensions:</Text>

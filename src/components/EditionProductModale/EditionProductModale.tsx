@@ -11,9 +11,11 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
     const [opened, { open, close }] = useDisclosure(false);
     const { lang } = useParams();
     // @ts-ignore
-    const [title, setTitle] = useState(product.title[lang]);
+    const [titleEn, setTitleEn] = useState(product.title.en ?? product.title);
+    const [titleFr, setTitleFr] = useState(product.title.fr ?? product.title);
     const [mainImage, setMainImage] = useState<string | null>(product.mainImage);
-    const [description, setDescription] = useState(product.description);
+    const [descriptionEn, setDescriptionEn] = useState(product.description.fr ?? product.description);
+    const [descriptionFr, setDescriptionFr] = useState(product.description.en ?? product.description);
     const [price, setPrice] = useState(product.price.toString());
     const [length, setLength] = useState(product.dimentions.length.toString());
     const [width, setWidth] = useState(product.dimentions.width.toString());
@@ -27,9 +29,9 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
     const saveProduct = async () => {
         const updatedProduct: Product = {
             ...product,
-            title,
+            title: { en: titleEn, fr: titleFr },
             mainImage: mainImage || '',
-            description,
+            description: { en: descriptionEn, fr: descriptionFr },
             price: parseFloat(price),
             dimentions: {
                 length: parseFloat(length),
@@ -56,6 +58,7 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
         } else {
             console.log('Product saved successfully.');
             close();
+            router.push('/products')
             router.refresh();
         }
     };
@@ -88,9 +91,18 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
             <Modal opened={opened} onClose={close} title="Edit Product">
                 <Input
                     name="Title"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                    placeholder="Enter product title"
+                    value={titleFr}
+                    onChange={(e) => setTitleFr(e.target.value)}
+                    required
+                    placeholder="Enter le titre du produit - Français"
+                    mb="sm"
+                />
+                <Input
+                    name="Title"
+                    value={titleEn}
+                    onChange={(e) => setTitleEn(e.target.value)}
+                    required
+                    placeholder="Enter product title - Anglais"
                     mb="sm"
                 />
 
@@ -100,15 +112,24 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
                     name="Price (€)"
                     value={price}
                     onChange={(e) => setPrice(e.target.value)}
+                    required
                     placeholder="Enter product price"
                     mb="sm"
                 />
-
                 <Textarea
                     label="Description"
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                    placeholder="Enter product description"
+                    value={descriptionFr}
+                    onChange={(e) => setDescriptionFr(e.target.value)}
+                    required
+                    placeholder="Enter la description du produit - Français"
+                    mb="sm"
+                />
+                <Textarea
+                    label="Description"
+                    value={descriptionEn}
+                    onChange={(e) => setDescriptionEn(e.target.value)}
+                    required
+                    placeholder="Enter product description - Anglais"
                     mb="sm"
                 />
 
@@ -117,12 +138,14 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
                         name="Length (cm)"
                         value={length}
                         onChange={(e) => setLength(e.target.value)}
+                        required
                         placeholder="Enter length"
                     />
                     <Input
                         name="Width (cm)"
                         value={width}
                         onChange={(e) => setWidth(e.target.value)}
+                        required
                         placeholder="Enter width"
                     />
                 </Group>
@@ -131,6 +154,7 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
                     name="Category"
                     value={category}
                     onChange={(e) => setCategory(e.target.value)}
+                    required
                     placeholder="Enter product category"
                     mb="sm"
                 />
@@ -140,6 +164,7 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
                     data={tags}
                     value={tags}
                     onChange={setTags}
+                    required
                     placeholder="Add tags"
                     mb="sm"
                 />
@@ -148,6 +173,7 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
                     name="SEO Title"
                     value={seoTitle}
                     onChange={(e) => setSeoTitle(e.target.value)}
+                    required
                     placeholder="Enter SEO title"
                     mb="sm"
                 />
@@ -156,6 +182,7 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
                     label="SEO Description"
                     value={seoDescription}
                     onChange={(e) => setSeoDescription(e.target.value)}
+                    required
                     placeholder="Enter SEO description"
                     mb="sm"
                 />
@@ -165,6 +192,7 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
                     data={seoKeywords}
                     value={seoKeywords}
                     onChange={setSeoKeywords}
+                    required
                     placeholder="Add SEO keywords"
                     mb="sm"
                 />
