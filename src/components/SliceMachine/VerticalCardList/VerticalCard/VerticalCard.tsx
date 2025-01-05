@@ -6,11 +6,14 @@ import Image from 'next/image';
 import { useDictionary } from '@/src/dictionaries/dictionary-provider';
 import Link from 'next/link';
 import { Article, Product } from '@/src/types/Header';
+import { useParams } from 'next/navigation';
 
 export function VerticalCard({ article, product }: { article?: Article, product?: Product }) {
     const dictionary = useDictionary();
     const cardData = article ? article : product;
     const date = new Date(article ? (cardData as Article)?.createdAt : '');
+    const params = useParams();
+    const lang = params.lang ?? 'fr';
 
     const formattedDate = article ? new Intl.DateTimeFormat('en-GB', {
         day: '2-digit',  // Two-digit day
@@ -19,8 +22,9 @@ export function VerticalCard({ article, product }: { article?: Article, product?
     }).format(date) : '';
 
     const link = article
-        ? `/articles/${article?.title.replaceAll(' ', '-')}`
-        : `/products/${product?.title?.replaceAll(' ', '-')}`;
+        ? `/articles/${article?.title?.replaceAll(' ', '-')}`
+        // @ts-ignore
+        : `/products/${product?.title[lang]?.replaceAll(' ', '-')}`;
 
     return (
         <Card withBorder radius="md" className={classes.card}>

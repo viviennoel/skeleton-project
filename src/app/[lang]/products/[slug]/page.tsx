@@ -63,7 +63,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <Container my="md">
             {token && <EditionProductModale product={product} />}
             <Group justify="space-between">
-                <h1>{product.seoTitle || product.title}</h1>
+                <h1>{product.seoTitle || product.title[lang]}</h1>
                 <Badge color="grey">{product.category || 'Uncategorized'}</Badge>
                 <Text c="dimmed">{dictionary.products.qualityFranckSabet}</Text>
             </Group>
@@ -78,7 +78,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                         height={300}
                         style={{ boxShadow: 'black 0 0 0 0' }}
                         src={product.mainImage}
-                        alt={product.title}
+                        alt={product.title[lang]}
                         fit="contain"
                         mb="xl"
                         mt="xl" />

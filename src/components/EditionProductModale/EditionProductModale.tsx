@@ -3,13 +3,15 @@
 import { useState } from 'react';
 import { Button, Modal, Group, Input, Textarea, MultiSelect } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { useRouter } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import { DropzoneCloudinary } from '@/src/components/EditorText/Dropzone';
 import { Product } from '@/src/types/Header';
 
 export const EditionProductModale = ({ product }: { product: Product }) => {
     const [opened, { open, close }] = useDisclosure(false);
-    const [title, setTitle] = useState(product.title);
+    const { lang } = useParams();
+    // @ts-ignore
+    const [title, setTitle] = useState(product.title[lang]);
     const [mainImage, setMainImage] = useState<string | null>(product.mainImage);
     const [description, setDescription] = useState(product.description);
     const [price, setPrice] = useState(product.price.toString());

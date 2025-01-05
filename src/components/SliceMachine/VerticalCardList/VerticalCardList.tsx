@@ -4,8 +4,10 @@ import { Container, Grid } from "@mantine/core";
 import { VerticalCard } from "./VerticalCard/VerticalCard";
 import classes from './VerticalCardList.module.scss'
 import { Article, Product } from "@/src/types/Header";
+import { useParams } from "next/navigation";
 
 export default function VerticalCardList({ articles, products, data }: { articles: Article[], products: Product[], data: any }) {
+    const { lang } = useParams();
     return (
         <section className={classes.section}>
             <Container>
@@ -26,7 +28,8 @@ export default function VerticalCardList({ articles, products, data }: { article
                         ))
                         : Array.isArray(products) && products.length > 0
                             ? products.map((product: any) => (
-                                <Grid.Col span={{ base: 12, xs: 4 }} key={product.title}>
+                                // @ts-ignore
+                                <Grid.Col span={{ base: 12, xs: 4 }} key={product.title[lang]}>
                                     <VerticalCard product={product} />
                                 </Grid.Col>
                             ))
