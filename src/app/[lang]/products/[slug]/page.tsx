@@ -23,7 +23,8 @@ async function getProductBySlug(slug: any, lang: any) {
 
         const db = client.db('blogDB');
         const title = slug.replace(/-/g, ' ');
-        const request = lang ? { [`title.${lang}`]: title } : { title: title };
+
+        const request = lang ? { [`title.${lang}`]: decodeURIComponent(title) } : { title: decodeURIComponent(title) };
 
         console.log(request)
         console.log(lang)
