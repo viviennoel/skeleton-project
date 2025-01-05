@@ -35,7 +35,7 @@ export function VerticalCard({ article, product }: { article?: Article, product?
 
             <Group justify="space-between" mt="md" w='100%'>
                 <div className={classes.title}>
-                    <Text fw={500}>{cardData?.title ?? ''}</Text>
+                    <Text fw={500}>{cardData?.title[lang] ?? cardData?.title}</Text>
                     <Text fz="xs" c="dimmed">
                         {article ? dictionary.articles.label : dictionary.products.label}
                     </Text>
@@ -44,7 +44,7 @@ export function VerticalCard({ article, product }: { article?: Article, product?
 
             <Card.Section className={classes.section} mt="md">
                 <Text fz="sm" c="dimmed" className={classes.label}>
-                    {cardData?.description}
+                    {cardData?.description[lang] ?? cardData?.description}
                 </Text>
             </Card.Section>
 

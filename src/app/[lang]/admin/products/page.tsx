@@ -12,10 +12,12 @@ import Link from 'next/link';
 
 const ProductEditorPage = () => {
     const dictionary = useDictionary();
-    const [title, setTitle] = useState<string>('');
+    const [titleEn, setTitleEn] = useState<string>('');
+    const [titleFr, setTitleFr] = useState<string>('');
     const [mainImage, setMainImage] = useState<string | null>(null);
     const [createdAt, setCreatedAt] = useState<string>(new Date().toISOString().split('T')[0]);
-    const [description, setDescription] = useState<string>('');
+    const [descriptionEn, setDescriptionEn] = useState<string>('');
+    const [descriptionFr, setDescriptionFr] = useState<string>('');
     const [price, setPrice] = useState<string>('');
     const [width, setWidth] = useState<string>('');
     const [length, setLength] = useState<string>('');
@@ -34,9 +36,9 @@ const ProductEditorPage = () => {
 
         const productData: Product = {
             id: crypto.randomUUID(),
-            title,
+            title: { en: titleEn, fr: titleFr },
             mainImage: mainImage || '',
-            description,
+            description: { en: descriptionEn, fr: descriptionFr },
             category,
             price: Number(price),
             dimentions: { width: Number(width), length: Number(length) },
@@ -58,6 +60,7 @@ const ProductEditorPage = () => {
                 router.push('/products');
             } else {
                 console.error('Failed to save the product');
+                response.status === 400 ? alert("Le produit n'est pas enregistré. Avez vous bien rempli tous les champs?") : alert('une erreur est survenue. Produit non enregistré, veuillez réessayer.')
             }
         } catch (error) {
             console.error('Error submitting the product:', error);
@@ -73,10 +76,19 @@ const ProductEditorPage = () => {
                     {/* Title Input */}
                     <Input
                         name="Title"
-                        value={title}
-                        onChange={(e) => setTitle(e.target.value)}
+                        value={titleFr}
+                        onChange={(e) => setTitleFr(e.target.value)}
                         required
-                        placeholder="Enter product title"
+                        placeholder="Enter titre du produit - Français"
+                        mb="md"
+                    />
+
+                    <Input
+                        name="Title"
+                        value={titleEn}
+                        onChange={(e) => setTitleEn(e.target.value)}
+                        required
+                        placeholder="Enter titre du produit - Anglais"
                         mb="md"
                     />
 
@@ -97,10 +109,18 @@ const ProductEditorPage = () => {
                     {/* Description Input */}
                     <Textarea
                         name="Description"
-                        value={description}
-                        onChange={(e) => setDescription(e.target.value)}
+                        value={descriptionFr}
+                        onChange={(e) => setDescriptionFr(e.target.value)}
                         required
-                        placeholder="Enter product description"
+                        placeholder="Enter la description du produit - Français"
+                        mb="md"
+                    />
+                    <Textarea
+                        name="Description"
+                        value={descriptionEn}
+                        onChange={(e) => setDescriptionEn(e.target.value)}
+                        required
+                        placeholder="Enter product description - Anglais"
                         mb="md"
                     />
 
@@ -110,6 +130,7 @@ const ProductEditorPage = () => {
                             name="length"
                             value={length}
                             onChange={(e) => setLength(e.target.value)}
+                            required
                             placeholder="Enter length in cm"
                             mb="md"
                         />
@@ -118,6 +139,7 @@ const ProductEditorPage = () => {
                             name="width"
                             value={width}
                             onChange={(e) => setWidth(e.target.value)}
+                            required
                             placeholder="Enter width in cm"
                             mb="md"
                         />
@@ -130,6 +152,7 @@ const ProductEditorPage = () => {
                         data={['traditional', 'modern', 'personalised']}
                         //@ts-ignore
                         onChange={setCategory}
+                        required
                         placeholder="Enter product category"
                         mb="md"
                     />
@@ -141,6 +164,7 @@ const ProductEditorPage = () => {
                         onChange={setTags}
                         placeholder="Add tags"
                         label="Tags"
+                        required
                         mb="md"
                     />
 
@@ -150,6 +174,7 @@ const ProductEditorPage = () => {
                         value={seoTitle}
                         onChange={(e) => setSeoTitle(e.target.value)}
                         placeholder="Enter SEO title"
+                        required
                         mb="md"
                     />
 
@@ -159,6 +184,7 @@ const ProductEditorPage = () => {
                         value={seoDescription}
                         onChange={(e) => setSeoDescription(e.target.value)}
                         placeholder="Enter SEO description"
+                        required
                         mb="md"
                     />
 
@@ -169,6 +195,7 @@ const ProductEditorPage = () => {
                         onChange={setSeoKeywords}
                         placeholder="Add SEO keywords"
                         label="SEO Keywords"
+                        required
                         mb="md"
                     />
 

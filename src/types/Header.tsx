@@ -20,14 +20,14 @@ export interface Article {
 
 export interface Product {
     id: string;
-    title: string;
+    title: { en: string, fr: string }; // TODO: update with record
     mainImage: string;
     dimentions: {
         length: number,
         width: number
     }
     price: number;
-    description: string;
+    description: { en: string, fr: string }; // TODO: update with record;
     category?: string;
     tags?: string[];
     stock?: number;

@@ -59,6 +59,7 @@ const ArticleEditorPage = () => {
                 router.push('/articles');
             } else {
                 console.error('Failed to save the article');
+                response.status === 400 ? alert("Le produit n'est pas enregistré. Avez vous bien rempli tous les champs?") : alert('une erreur est survenue. Produit non enregistré, veuillez réessayer.')
             }
         } catch (error) {
             console.error('Error submitting the article:', error);
@@ -117,6 +118,7 @@ const ArticleEditorPage = () => {
                         <Input
                             name="Category"
                             value={category}
+                            required
                             onChange={(e) => setCategory(e.target.value)}
                             placeholder="Enter article category"
                             mb="md"
@@ -127,6 +129,7 @@ const ArticleEditorPage = () => {
                             data={tags}
                             value={tags}
                             onChange={setTags}
+                            required
                             placeholder="Add tags"
                             label="Tags"
                             mb="md"
@@ -136,6 +139,7 @@ const ArticleEditorPage = () => {
                         <Input
                             name="SeoTitle"
                             value={seoTitle}
+                            required
                             onChange={(e) => setSeoTitle(e.target.value)}
                             placeholder="Enter SEO title"
                             mb="md"
@@ -145,6 +149,7 @@ const ArticleEditorPage = () => {
                         <Textarea
                             name="SeoDescription"
                             value={seoDescription}
+                            required
                             onChange={(e) => setSeoDescription(e.target.value)}
                             placeholder="Enter SEO description"
                             mb="md"
@@ -155,6 +160,7 @@ const ArticleEditorPage = () => {
                             data={seoKeywords}
                             value={seoKeywords}
                             onChange={setSeoKeywords}
+                            required
                             placeholder="Add SEO keywords"
                             label="SEO Keywords"
                             mb="md"
