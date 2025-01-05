@@ -84,7 +84,7 @@ export function CardsCarousel({ data }: { data: CardProps }) {
         <Carousel.Slide key={item.title}>
             {/* @ts-ignore */}
 
-            <Link href={`/${data.cardData ? data.cardData + '/' : ''}${item.url ?? item.title.replaceAll(' ', '-')}`} className={classes.link}>
+            <Link href={`/${data.cardData ? data.cardData + '/' : ''}${item.url ?? item.title[lang] ? item.title[lang].replaceAll(' ', '-') : item.title.replaceAll(' ', '-')}`} className={classes.link}>
                 {/* @ts-ignore */}
                 <Card cardData={item} />
             </Link>
