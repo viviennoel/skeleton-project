@@ -23,7 +23,7 @@ export default async function HomePage({
       // Fetch the 3 latest articles with only required fields
       const articles = await db
         .collection("articles")
-        .find({})
+        .find({ lang })
         .sort({ createdAt: -1 }) // Sort by `createdAt` in descending order
         .limit(3) // Limit to 3 results
         .toArray();

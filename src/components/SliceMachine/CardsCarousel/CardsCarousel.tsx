@@ -6,10 +6,11 @@ import { useMediaQuery } from '@mantine/hooks';
 import classes from './CardsCarousel.module.scss';
 import '@mantine/carousel/styles.css';
 import { useEffect, useState } from 'react';
-import { Product } from '@/src/types/Header';
+import { Locale, Product } from '@/src/types/Header';
 import Link from 'next/link';
 import { useDictionary } from '@/src/dictionaries/dictionary-provider';
 import { fetchProducts } from '@/src/helpers/fetch-products';
+import { useParams } from 'next/navigation';
 
 interface CardData {
     image: string;
@@ -25,6 +26,7 @@ interface CardProps {
 
 function Card({ cardData }: { cardData: CardData }) {
     const dictionary = useDictionary();
+    const { locale } = useParams();
 
     return (
         <Paper
@@ -36,10 +38,11 @@ function Card({ cardData }: { cardData: CardData }) {
             className={classes.card}
         >
             <div className={classes.content}>
-                <h2>{cardData.title}</h2>
+                {/* @ts-ignore */}
+                <h2>{cardData.title[locale] ? cardData.title[locale] : cardData.title}</h2>
                 {/* @ts-ignore */}
 
-                <p>{cardData.description}</p>
+                <p>{cardData.description[locale] ? cardData.description[locale] : cardData.description}</p>
 
                 <div className={`${classes.section} ${classes.bottomCard}`}>
                     {/* @ts-ignore */}
