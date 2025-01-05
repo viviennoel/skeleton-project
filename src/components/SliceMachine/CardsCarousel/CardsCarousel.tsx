@@ -71,6 +71,7 @@ export function CardsCarousel({ data }: { data: CardProps }) {
     const theme = useMantineTheme();
     const mobile = useMediaQuery(`(max-width: 48em)`);
     const [dataToDisplay, setDataToDisplay] = useState<Product[] | CardData[]>([]);
+    const { locale } = useParams();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -83,8 +84,7 @@ export function CardsCarousel({ data }: { data: CardProps }) {
     const slides = dataToDisplay.map((item) => (
         <Carousel.Slide key={item.title}>
             {/* @ts-ignore */}
-
-            <Link href={`/${data.cardData ? data.cardData + '/' : ''}${item.url ?? item.title[lang] ? item.title[lang].replaceAll(' ', '-') : item.title.replaceAll(' ', '-')}`} className={classes.link}>
+            <Link href={`/${data.cardData ? data.cardData + '/' : ''}${item.url ?? item.title[locale] ? item.title[locale].replaceAll(' ', '-') : item.title.replaceAll(' ', '-')}`} className={classes.link}>
                 {/* @ts-ignore */}
                 <Card cardData={item} />
             </Link>
