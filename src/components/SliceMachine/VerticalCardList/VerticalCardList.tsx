@@ -29,7 +29,7 @@ export default function VerticalCardList({ articles, products, data }: { article
                         : Array.isArray(products) && products.length > 0
                             ? products.map((product: any) => (
                                 // @ts-ignore
-                                <Grid.Col span={{ base: 12, xs: 4 }} key={product.title[lang]}>
+                                <Grid.Col span={{ base: 12, xs: 4 }} key={product.title[lang] ? product.title[lang] : product.title}>
                                     <VerticalCard product={product} />
                                 </Grid.Col>
                             ))

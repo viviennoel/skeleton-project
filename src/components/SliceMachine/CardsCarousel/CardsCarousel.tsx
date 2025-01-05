@@ -26,7 +26,7 @@ interface CardProps {
 
 function Card({ cardData }: { cardData: CardData }) {
     const dictionary = useDictionary();
-    const { locale } = useParams();
+    const { lang } = useParams();
 
     return (
         <Paper
@@ -39,10 +39,10 @@ function Card({ cardData }: { cardData: CardData }) {
         >
             <div className={classes.content}>
                 {/* @ts-ignore */}
-                <h2>{cardData.title[locale] ? cardData.title[locale] : cardData.title}</h2>
+                <h2>{cardData.title[lang] ? cardData.title[lang] : cardData.title}</h2>
                 {/* @ts-ignore */}
 
-                <p>{cardData.description[locale] ? cardData.description[locale] : cardData.description}</p>
+                <p>{cardData.description[lang] ? cardData.description[lang] : cardData.description}</p>
 
                 <div className={`${classes.section} ${classes.bottomCard}`}>
                     {/* @ts-ignore */}
@@ -71,7 +71,7 @@ export function CardsCarousel({ data }: { data: CardProps }) {
     const theme = useMantineTheme();
     const mobile = useMediaQuery(`(max-width: 48em)`);
     const [dataToDisplay, setDataToDisplay] = useState<Product[] | CardData[]>([]);
-    const { locale } = useParams();
+    const { lang } = useParams();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -81,15 +81,21 @@ export function CardsCarousel({ data }: { data: CardProps }) {
         fetchData();
     }, []);
 
-    const slides = dataToDisplay.map((item) => (
-        <Carousel.Slide key={item.title}>
-            {/* @ts-ignore */}
-            <Link href={`/${data.cardData ? data.cardData + '/' : ''}${item.url ?? item.title[locale] ? item.title[locale].replaceAll(' ', '-') : item.title.replaceAll(' ', '-')}`} className={classes.link}>
+    const slides = dataToDisplay.map((item) => {
+        //@ts-ignore
+        const titleToDisplay = item.title[lang] ? item.title[lang].replaceAll(' ', '-') : item.title?.replaceAll(' ', '-')
+
+        return (
+            //@ts-ignore
+            <Carousel.Slide key={titleToDisplay}>
                 {/* @ts-ignore */}
-                <Card cardData={item} />
-            </Link>
-        </Carousel.Slide>
-    ));
+                <Link href={`/${data.cardData ? data.cardData + '/' : ''}${item.url ?? titleToDisplay}`} className={classes.link}>
+                    {/* @ts-ignore */}
+                    <Card cardData={item} />
+                </Link>
+            </Carousel.Slide>
+        )
+    });
 
     return (
         <section className={classes.section}>
