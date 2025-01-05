@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { DropzoneCloudinary } from '@/src/components/EditorText/Dropzone';
 import { Editor } from '@/src/components/EditorText/Editor';
-import { Button, Input, Group, Container, MultiSelect, Textarea, Select } from '@mantine/core';
+import { Button, Input, Group, Container, MultiSelect, Textarea, Select, InputLabel } from '@mantine/core';
 import { useRouter } from 'next/navigation';
 import { Product } from '@/src/types/Header';
 import { useDictionary } from '@/src/dictionaries/dictionary-provider';
@@ -74,6 +74,7 @@ const ProductEditorPage = () => {
 
                 <form onSubmit={handleSubmit}>
                     {/* Title Input */}
+                    <InputLabel>Titre Français</InputLabel>
                     <Input
                         name="Title"
                         value={titleFr}
@@ -82,7 +83,7 @@ const ProductEditorPage = () => {
                         placeholder="Enter titre du produit - Français"
                         mb="md"
                     />
-
+                    <InputLabel>Titre Anglais</InputLabel>
                     <Input
                         name="Title"
                         value={titleEn}
@@ -96,6 +97,7 @@ const ProductEditorPage = () => {
                     <DropzoneCloudinary setImageUrl={setMainImage} imageUrl={mainImage} />
 
                     {/* Creation Date Input */}
+                    <InputLabel>Prix</InputLabel>
                     <Input
                         name="Price"
                         type="number"
@@ -108,7 +110,7 @@ const ProductEditorPage = () => {
 
                     {/* Description Input */}
                     <Textarea
-                        name="Description"
+                        label="Description Française"
                         value={descriptionFr}
                         onChange={(e) => setDescriptionFr(e.target.value)}
                         required
@@ -116,7 +118,7 @@ const ProductEditorPage = () => {
                         mb="md"
                     />
                     <Textarea
-                        name="Description"
+                        label="Description Anglaise"
                         value={descriptionEn}
                         onChange={(e) => setDescriptionEn(e.target.value)}
                         required
@@ -126,6 +128,7 @@ const ProductEditorPage = () => {
 
                     {/* dimentions Input */}
                     <Group >
+                        <InputLabel>longueur</InputLabel>
                         <Input
                             name="length"
                             value={length}
@@ -135,6 +138,7 @@ const ProductEditorPage = () => {
                             mb="md"
                         />
                         {/* Length Input */}
+                        <InputLabel>largeur</InputLabel>
                         <Input
                             name="width"
                             value={width}
@@ -146,6 +150,7 @@ const ProductEditorPage = () => {
                     </Group>
 
                     {/* Category Input */}
+                    <InputLabel>categorie</InputLabel>
                     <Select
                         name="Category"
                         value={category}
@@ -169,6 +174,7 @@ const ProductEditorPage = () => {
                     />
 
                     {/* SEO Title Input */}
+                    <InputLabel>Titre SEO</InputLabel>
                     <Input
                         name="SeoTitle"
                         value={seoTitle}
@@ -180,7 +186,7 @@ const ProductEditorPage = () => {
 
                     {/* SEO Description Input */}
                     <Textarea
-                        name="SeoDescription"
+                        label="description seo"
                         value={seoDescription}
                         onChange={(e) => setSeoDescription(e.target.value)}
                         placeholder="Enter SEO description"

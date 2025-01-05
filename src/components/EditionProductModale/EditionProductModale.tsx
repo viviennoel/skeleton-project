@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Button, Modal, Group, Input, Textarea, MultiSelect } from '@mantine/core';
+import { Button, Modal, Group, Input, Textarea, MultiSelect, InputLabel } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { useParams, useRouter } from 'next/navigation';
 import { DropzoneCloudinary } from '@/src/components/EditorText/Dropzone';
@@ -89,6 +89,7 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
             </Group>
 
             <Modal opened={opened} onClose={close} title="Edit Product">
+                <InputLabel>Titre Français</InputLabel>
                 <Input
                     name="Title"
                     value={titleFr}
@@ -97,6 +98,7 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
                     placeholder="Enter le titre du produit - Français"
                     mb="sm"
                 />
+                <InputLabel>Titre Anglais</InputLabel>
                 <Input
                     name="Title"
                     value={titleEn}
@@ -108,6 +110,7 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
 
                 <DropzoneCloudinary setImageUrl={setMainImage} imageUrl={mainImage} />
 
+                <InputLabel>Prix</InputLabel>
                 <Input
                     name="Price (€)"
                     value={price}
@@ -117,7 +120,7 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
                     mb="sm"
                 />
                 <Textarea
-                    label="Description"
+                    label="Description Française"
                     value={descriptionFr}
                     onChange={(e) => setDescriptionFr(e.target.value)}
                     required
@@ -125,7 +128,7 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
                     mb="sm"
                 />
                 <Textarea
-                    label="Description"
+                    label="Description Anglaise"
                     value={descriptionEn}
                     onChange={(e) => setDescriptionEn(e.target.value)}
                     required
@@ -134,6 +137,7 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
                 />
 
                 <Group mb="sm">
+                    <InputLabel>Longueur</InputLabel>
                     <Input
                         name="Length (cm)"
                         value={length}
@@ -141,6 +145,7 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
                         required
                         placeholder="Enter length"
                     />
+                    <InputLabel>Largeur</InputLabel>
                     <Input
                         name="Width (cm)"
                         value={width}
@@ -149,7 +154,7 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
                         placeholder="Enter width"
                     />
                 </Group>
-
+                <InputLabel>Catégorie</InputLabel>
                 <Input
                     name="Category"
                     value={category}
@@ -169,6 +174,7 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
                     mb="sm"
                 />
 
+                <InputLabel>Titre SEO</InputLabel>
                 <Input
                     name="SEO Title"
                     value={seoTitle}
