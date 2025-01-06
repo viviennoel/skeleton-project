@@ -22,7 +22,7 @@ export function VerticalCard({ article, product }: { article?: Article, product?
     }).format(date) : '';
 
     const link = article
-        ? `/articles/${article?.title?.replaceAll(' ', '-')}`
+        ? `/articles/${encodeURIComponent(article?.title?.replaceAll(' ', '-'))}`
         // @ts-ignore
         : `/products/${product?.title[lang] ? product?.title[lang]?.replaceAll(' ', '-') : product?.title.replaceAll(' ', '-')}`;
 
