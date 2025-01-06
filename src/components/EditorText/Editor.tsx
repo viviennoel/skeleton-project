@@ -24,6 +24,7 @@ export const Editor = ({ setEditorContent, content }: { setEditorContent?: (cont
     const [editorImageUrl, setEditorImageUrl] = useState<string | null>(null);
 
     const editor = useEditor({
+        immediatelyRender: false,
         extensions: [
             StarterKit,
             Image.configure({ inline: false }),
