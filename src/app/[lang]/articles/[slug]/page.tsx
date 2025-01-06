@@ -7,6 +7,7 @@ import DOMPurify from 'dompurify';
 import { cookies } from 'next/headers';
 import { JSDOM } from "jsdom";
 import Link from 'next/link';
+import { RedirectUpdate } from '@/src/components/EditionModale/RedirectUpdate';
 
 async function getArticleBySlug(slug: any) {
     const uri = process.env.MONGODB_URI ?? "";
@@ -59,7 +60,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
     return (
         <Container my='md'>
-            {token && <Button component={Link} href={`/admin/articles/${slug.replace(/-/g, ' ')}`}>Modifier sur l'espace administrateur</Button>}
+            {token && <RedirectUpdate slug={slug} />}
             <h1>{article.title}</h1>
             {/* To do - check date */}
             {/* <p>{new Date(article.date).toLocaleDateString()}</p> */}
