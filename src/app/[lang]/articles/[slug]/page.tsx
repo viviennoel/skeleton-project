@@ -3,8 +3,9 @@ import { Container } from '@mantine/core';
 import { Image } from '@mantine/core';
 import { EditionModale } from '@/src/components/EditionModale/EditionModale';
 import Error404 from '@/src/components/Error/Error404';
-import Cookies from 'js-cookie';
+import DOMPurify from 'dompurify';
 import { cookies } from 'next/headers';
+
 
 async function getArticleBySlug(slug: any) {
     const uri = process.env.MONGODB_URI ?? "";
@@ -50,7 +51,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     const token = cookieStore.get('authToken')?.value;
 
     if (!article) {
-        <Error404 />
+        return <Error404 />
     }
 
     return (
@@ -63,14 +64,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 <Image
                     radius="md"
                     h={300}
-                    src={article.mainImage}
-                    alt={article.title}
+                    src={article.mainImage || '/fallback-image.jpg'}
+                    alt={article.title || 'image'}
                     fit='cover'
                 />
             )}
 
 
-            <div dangerouslySetInnerHTML={{ __html: article.content }} />
+            <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.content) }} />
         </Container>
     );
 }

@@ -36,6 +36,7 @@
     "@tiptap/react": "^2.10.4",
     "@tiptap/starter-kit": "^2.10.4",
     "cloudinary": "^1.41.3",
+    "dompurify": "^3.2.3",
     "embla-carousel-react": "^7.1.0",
     "formatjs": "^0.1.1",
     "i18next": "^24.2.0",
