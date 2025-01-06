@@ -509,16 +509,16 @@
                     "type": "homepage-banner",
                     "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
                     "alt": "Contactez Franck Sabet - Luxe et Expertise",
-                    "title": "Nous sommes à votre écoute",
+                    "title": "Contact",
                     "subtitle": "Un conseil ? Une question ? Nous sommes là pour vous aider."
                 },
                 {
                     "type": "text-card",
                     "title": "Notre engagement envers vous",
                     "description": "Chez Franck Sabet, chaque client est unique. Que vous souhaitiez obtenir des conseils sur le choix d'un tapis, en savoir plus sur nos services, ou prendre rendez-vous pour un nettoyage ou une restauration, notre équipe est prête à vous accompagner.",
-                    "button": "Prenez rendez-vous",
+                    "button": "En savoir plus",
                     "buttonColor": "black",
-                    "buttonHref": "/appointment"
+                    "buttonHref": "/about"
                 },
                 {
                     "type": "horizontal-image-card",

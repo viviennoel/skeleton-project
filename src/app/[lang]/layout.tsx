@@ -1,6 +1,5 @@
 import '@mantine/core/styles.css';
 import { getDictionary } from './dictionaries';
-import '@/src/styles/global.scss'
 
 import React, { ReactElement } from 'react';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';

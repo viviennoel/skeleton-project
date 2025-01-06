@@ -497,9 +497,9 @@
                     "type": "text-card",
                     "title": "Our Commitment to You",
                     "description": "At Franck Sabet, every client is unique. Whether you need advice on choosing a rug, want to learn more about our services, or wish to schedule a cleaning or restoration appointment, our team is ready to assist you.",
-                    "button": "Schedule an Appointment",
+                    "button": "Learn more",
                     "buttonColor": "black",
-                    "buttonHref": "/appointment"
+                    "buttonHref": "/about"
                 },
                 {
                     "type": "horizontal-image-card",
