@@ -61,7 +61,7 @@ export const Editor = ({ setEditorContent, content }: { setEditorContent?: (cont
         <div style={{ marginBottom: '20px' }}>
             {/* <CustomMenu editor={editor} open={open} />
             <BubbleCustomMenu editor={editor} /> */}
-            <EditorContent editor={editor} />
+            {editor && <EditorContent editor={editor} />}
             {/* <Modal opened={false} onClose={close} title="Upload image">
                 <DropzoneCloudinary setImageUrl={setEditorImageUrl} imageUrl={editorImageUrl} />
             </Modal> */}
