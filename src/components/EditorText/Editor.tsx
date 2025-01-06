@@ -20,7 +20,7 @@ import { useEffect, useState } from 'react';
 import CustomImage from './CustomImage';
 
 export const Editor = ({ setEditorContent, content }: { setEditorContent?: (content: string) => void, content?: any }) => {
-    const [opened, { open, close }] = useDisclosure(false);
+    // const [opened, { open, close }] = useDisclosure(false);
     const [editorImageUrl, setEditorImageUrl] = useState<string | null>(null);
 
     const editor = useEditor({
@@ -62,7 +62,7 @@ export const Editor = ({ setEditorContent, content }: { setEditorContent?: (cont
             <CustomMenu editor={editor} open={open} />
             <BubbleCustomMenu editor={editor} />
             <EditorContent editor={editor} />
-            <Modal opened={opened} onClose={close} title="Upload image">
+            <Modal opened={false} onClose={close} title="Upload image">
                 <DropzoneCloudinary setImageUrl={setEditorImageUrl} imageUrl={editorImageUrl} />
             </Modal>
         </div>
