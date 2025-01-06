@@ -20,41 +20,41 @@ import { useEffect, useState } from 'react';
 // import CustomImage from './CustomImage';
 
 export const Editor = ({ setEditorContent, content }: { setEditorContent?: (content: string) => void, content?: any }) => {
-    const [opened, { open, close }] = useDisclosure(false);
-    const [editorImageUrl, setEditorImageUrl] = useState<string | null>(null);
+    // const [opened, { open, close }] = useDisclosure(false);
+    // const [editorImageUrl, setEditorImageUrl] = useState<string | null>(null);
 
-    const editor = useEditor({
-        extensions: [
-            StarterKit,
-            Image.configure({ inline: false }),
-            // CustomImage,
-            Blockquote,
-            Underline,
-            HardBreak,
-            BulletList,
-            OrderedList,
-            ListItem,
-            Mention,
-        ],
-        content: content ?? '',
-        onUpdate: ({ editor }) => {
-            try {
-                setEditorContent && setEditorContent(editor.getHTML());
-            } catch (error) {
-                console.error('Error updating editor content:', error);
-            }
-        },
-    });
+    // const editor = useEditor({
+    //     extensions: [
+    //         StarterKit,
+    //         Image.configure({ inline: false }),
+    //         // CustomImage,
+    //         Blockquote,
+    //         Underline,
+    //         HardBreak,
+    //         BulletList,
+    //         OrderedList,
+    //         ListItem,
+    //         Mention,
+    //     ],
+    //     content: content ?? '',
+    //     onUpdate: ({ editor }) => {
+    //         try {
+    //             setEditorContent && setEditorContent(editor.getHTML());
+    //         } catch (error) {
+    //             console.error('Error updating editor content:', error);
+    //         }
+    //     },
+    // });
 
-    useEffect(() => {
-        try {
-            if (editorImageUrl && editor) {
-                editor.chain().focus().setImage({ src: editorImageUrl }).run();
-            }
-        } catch (error) {
-            console.error('Error setting image:', error);
-        }
-    }, [editorImageUrl])
+    // useEffect(() => {
+    //     try {
+    //         if (editorImageUrl && editor) {
+    //             editor.chain().focus().setImage({ src: editorImageUrl }).run();
+    //         }
+    //     } catch (error) {
+    //         console.error('Error setting image:', error);
+    //     }
+    // }, [editorImageUrl])
 
     return (
         <div style={{ marginBottom: '20px' }}>
