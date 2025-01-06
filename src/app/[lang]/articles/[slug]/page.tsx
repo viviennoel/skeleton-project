@@ -1,11 +1,12 @@
 import { MongoClient } from 'mongodb';
-import { Container } from '@mantine/core';
+import { Button, Container } from '@mantine/core';
 import { Image } from '@mantine/core';
 import { EditionModale } from '@/src/components/EditionModale/EditionModale';
 import Error404 from '@/src/components/Error/Error404';
 import DOMPurify from 'dompurify';
 import { cookies } from 'next/headers';
 import { JSDOM } from "jsdom";
+import Link from 'next/link';
 
 async function getArticleBySlug(slug: any) {
     const uri = process.env.MONGODB_URI ?? "";
@@ -58,6 +59,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
     return (
         <Container my='md'>
+            {token && <Button component={Link} href={`/admin/articles/${slug.replace(/-/g, ' ')}`}>Modifier sur l'espace administrateur</Button>}
             <h1>{article.title}</h1>
             {/* To do - check date */}
             {/* <p>{new Date(article.date).toLocaleDateString()}</p> */}
