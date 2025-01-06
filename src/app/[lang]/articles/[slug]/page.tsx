@@ -7,8 +7,6 @@ import DOMPurify from 'dompurify';
 import { cookies } from 'next/headers';
 import { JSDOM } from "jsdom";
 
-
-
 async function getArticleBySlug(slug: any) {
     const uri = process.env.MONGODB_URI ?? "";
     if (!uri) {
