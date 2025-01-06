@@ -3,13 +3,14 @@
 import { useState } from "react"
 import { Editor } from "../EditorText/Editor"
 import { Button, Modal } from "@mantine/core"
-import { useDisclosure } from "@mantine/hooks"
+import { useDisclosure, useMediaQuery } from "@mantine/hooks"
 import { useRouter } from "next/navigation"
 
 export const EditionModale = ({ content, id }: { content: any, id: string }) => {
     const [opened, { open, close }] = useDisclosure(false);
     const [editorContent, setEditorContent] = useState(null)
     const router = useRouter();
+    const mobile = useMediaQuery(`(max-width: 48em)`);
 
     const saveArticle = async (id: string) => {
         const response = await fetch(`/api/articles/${id}`, {
@@ -42,6 +43,10 @@ export const EditionModale = ({ content, id }: { content: any, id: string }) => 
             router.push('/articles');
         }
     };
+
+    if (mobile) {
+        return <></>
+    }
 
     return (
         <>
