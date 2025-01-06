@@ -45,7 +45,7 @@ export const EditionModale = ({ content, id }: { content: any, id: string }) => 
     };
 
     if (mobile) {
-        return <></>
+        return;
     }
 
     return (
@@ -56,7 +56,7 @@ export const EditionModale = ({ content, id }: { content: any, id: string }) => 
             <Button onClick={() => deleteArticle(id)} color='red'>Supprimer l'article</Button>
             <Modal opened={opened} onClose={close} title="Edit the article">
                 {/* @ts-ignore */}
-                <Editor content={content} setEditorContent={setEditorContent} />
+                {!mobile && <Editor content={content} setEditorContent={setEditorContent} />}
                 <Button onClick={() => saveArticle(id)} color="green">Save the changes</Button>
             </Modal>
         </>

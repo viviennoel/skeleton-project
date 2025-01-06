@@ -17,7 +17,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { Modal } from '@mantine/core';
 import { DropzoneCloudinary } from './Dropzone';
 import { useEffect, useState } from 'react';
-import CustomImage from './CustomImage';
+// import CustomImage from './CustomImage';
 
 export const Editor = ({ setEditorContent, content }: { setEditorContent?: (content: string) => void, content?: any }) => {
     const [opened, { open, close }] = useDisclosure(false);
@@ -27,7 +27,7 @@ export const Editor = ({ setEditorContent, content }: { setEditorContent?: (cont
         extensions: [
             StarterKit,
             Image.configure({ inline: false }),
-            CustomImage,
+            // CustomImage,
             Blockquote,
             Underline,
             HardBreak,
