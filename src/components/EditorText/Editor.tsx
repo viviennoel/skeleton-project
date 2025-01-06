@@ -38,14 +38,21 @@ export const Editor = ({ setEditorContent, content }: { setEditorContent?: (cont
         ],
         content: content ?? '',
         onUpdate: ({ editor }) => {
-            // Call setEditorContent when the editor's content changes
-            setEditorContent && setEditorContent(editor.getHTML());
+            try {
+                setEditorContent && setEditorContent(editor.getHTML());
+            } catch (error) {
+                console.error('Error updating editor content:', error);
+            }
         },
     });
 
     useEffect(() => {
-        if (editorImageUrl && editor) {
-            editor.chain().focus().setImage({ src: editorImageUrl }).run();
+        try {
+            if (editorImageUrl && editor) {
+                editor.chain().focus().setImage({ src: editorImageUrl }).run();
+            }
+        } catch (error) {
+            console.error('Error setting image:', error);
         }
     }, [editorImageUrl])
 
