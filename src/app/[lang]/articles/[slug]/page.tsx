@@ -5,6 +5,8 @@ import { EditionModale } from '@/src/components/EditionModale/EditionModale';
 import Error404 from '@/src/components/Error/Error404';
 import DOMPurify from 'dompurify';
 import { cookies } from 'next/headers';
+import { JSDOM } from "jsdom";
+
 
 
 async function getArticleBySlug(slug: any) {
@@ -49,6 +51,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     const article = await getArticleBySlug(slug) as any;
     const cookieStore = await cookies();
     const token = cookieStore.get('authToken')?.value;
+    const window = new JSDOM("").window;
+    const DOMPurifyServer = DOMPurify(window);
+
 
     if (!article) {
         return <Error404 />
@@ -71,7 +76,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             )}
 
 
-            <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.content) }} />
+            <div dangerouslySetInnerHTML={{ __html: DOMPurifyServer.sanitize(article.content) }} />
         </Container>
     );
 }
