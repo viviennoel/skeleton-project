@@ -58,6 +58,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
     return (
         <Container my='md'>
+            {token && <EditionModale content={article.content} id={article._id} />}
             <h1>{article.title}</h1>
             {/* To do - check date */}
             {/* <p>{new Date(article.date).toLocaleDateString()}</p> */}

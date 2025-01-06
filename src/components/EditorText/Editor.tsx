@@ -20,11 +20,10 @@ import { useEffect, useState } from 'react';
 import CustomImage from './CustomImage';
 
 export const Editor = ({ setEditorContent, content }: { setEditorContent?: (content: string) => void, content?: any }) => {
-    // const [opened, { open, close }] = useDisclosure(false);
+    const [opened, { open, close }] = useDisclosure(false);
     const [editorImageUrl, setEditorImageUrl] = useState<string | null>(null);
 
     const editor = useEditor({
-        immediatelyRender: false,
         extensions: [
             StarterKit,
             Image.configure({ inline: false }),
@@ -37,32 +36,32 @@ export const Editor = ({ setEditorContent, content }: { setEditorContent?: (cont
             ListItem,
             Mention,
         ],
-        // content: content ?? '',
-        // onUpdate: ({ editor }) => {
-        //     try {
-        //         setEditorContent && setEditorContent(editor.getHTML());
-        //     } catch (error) {
-        //         console.error('Error updating editor content:', error);
-        //     }
-        // },
+        content: content ?? '',
+        onUpdate: ({ editor }) => {
+            try {
+                setEditorContent && setEditorContent(editor.getHTML());
+            } catch (error) {
+                console.error('Error updating editor content:', error);
+            }
+        },
     });
 
-    // useEffect(() => {
-    //     try {
-    //         if (editorImageUrl && editor) {
-    //             editor.chain().focus().setImage({ src: editorImageUrl }).run();
-    //         }
-    //     } catch (error) {
-    //         console.error('Error setting image:', error);
-    //     }
-    // }, [editorImageUrl])
+    useEffect(() => {
+        try {
+            if (editorImageUrl && editor) {
+                editor.chain().focus().setImage({ src: editorImageUrl }).run();
+            }
+        } catch (error) {
+            console.error('Error setting image:', error);
+        }
+    }, [editorImageUrl])
 
     return (
         <div style={{ marginBottom: '20px' }}>
             {/* <CustomMenu editor={editor} open={open} />
-            <BubbleCustomMenu editor={editor} /> */}
-            {editor && <EditorContent editor={editor} />}
-            {/* <Modal opened={false} onClose={close} title="Upload image">
+            <BubbleCustomMenu editor={editor} />
+            <EditorContent editor={editor} />
+            <Modal opened={opened} onClose={close} title="Upload image">
                 <DropzoneCloudinary setImageUrl={setEditorImageUrl} imageUrl={editorImageUrl} />
             </Modal> */}
         </div>
