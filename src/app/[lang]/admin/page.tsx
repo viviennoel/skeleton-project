@@ -17,11 +17,11 @@ const Admin = () => {
         <Space h="xl" />
         <Group justify="center">
             {/* @ts-ignore */}
-            {!mobile && <Button component={Link} color='black' href='/admin/products'>{dictionary.pages.admin.addProducts}</Button>}
+            <Button component={Link} color='black' href='/admin/products'>{dictionary.pages.admin.addProducts}</Button>
             {/* @ts-ignore */}
-            <Button component={Link} color='black' href='/admin/articles'>{dictionary.pages.admin.addArticles}</Button>
+            {!mobile && <Button component={Link} color='black' href='/admin/articles'>{dictionary.pages.admin.addArticles}</Button>}
         </Group>
-        {mobile && <p>La création d'articles n'est possible que depuis un ordinateur - utilisation de TipTap richText editor</p>}
+        {mobile && <Container><Space h='lg' /><Text c='dimmed'>La création d'articles n'est possible que depuis un ordinateur car l'éditeur de rich text ne supporte pas l'édition mobile</Text></Container>}
 
     </Container>
 }
