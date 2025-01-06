@@ -50,7 +50,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     const { slug } = await params;
     const article = await getArticleBySlug(slug) as any;
     const cookieStore = await cookies();
-    const token = cookieStore.get('authToken')?.value;
+    // const token = cookieStore.get('authToken')?.value;
     const window = new JSDOM("").window;
     const DOMPurifyServer = DOMPurify(window);
 
@@ -61,7 +61,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
     return (
         <Container my='md'>
-            {token && <EditionModale content={article.content} id={article._id} />}
+            {/* {token && <EditionModale content={article.content} id={article._id} />} */}
             <h1>{article.title}</h1>
             {/* To do - check date */}
             {/* <p>{new Date(article.date).toLocaleDateString()}</p> */}
