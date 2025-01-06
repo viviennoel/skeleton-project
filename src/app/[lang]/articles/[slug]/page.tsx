@@ -52,8 +52,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     const window = new JSDOM("").window;
     const DOMPurifyServer = DOMPurify(window);
 
-    console.log(token);
-
     if (!article) {
         return <Error404 />
     }
