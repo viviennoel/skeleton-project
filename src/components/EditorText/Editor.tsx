@@ -26,7 +26,7 @@ export const Editor = ({ setEditorContent, content }: { setEditorContent?: (cont
     const editor = useEditor({
         extensions: [
             StarterKit,
-            Image.configure({ inline: true }),
+            Image.configure({ inline: false }),
             // CustomImage,
             Blockquote,
             Underline,
@@ -55,7 +55,7 @@ export const Editor = ({ setEditorContent, content }: { setEditorContent?: (cont
             <BubbleCustomMenu editor={editor} />
             <EditorContent editor={editor} />
             <Modal opened={opened} onClose={close} title="Upload image">
-                <DropzoneCloudinary setImageUrl={setEditorImageUrl} imageUrl={editorImageUrl} />
+                {/* <DropzoneCloudinary setImageUrl={setEditorImageUrl} imageUrl={editorImageUrl} /> */}
             </Modal>
         </div>
     );

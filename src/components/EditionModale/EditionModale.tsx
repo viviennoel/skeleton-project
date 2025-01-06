@@ -31,13 +31,8 @@ export const EditionModale = ({ content, id }: { content: any, id: string }) => 
     };
 
     const deleteArticle = async (id: string) => {
-        const token = localStorage.getItem('authToken');
-
         const response = await fetch(`/api/articles/${id}`, {
             method: 'DELETE',
-            headers: {
-                Authorization: `Bearer ${token}`,
-            },
         });
 
         if (!response.ok) {
@@ -56,7 +51,7 @@ export const EditionModale = ({ content, id }: { content: any, id: string }) => 
             <Button onClick={() => deleteArticle(id)} color='red'>Supprimer l'article</Button>
             <Modal opened={opened} onClose={close} title="Edit the article">
                 {/* @ts-ignore */}
-                {/* <Editor content={content} setEditorContent={setEditorContent} /> */}
+                <Editor content={content} setEditorContent={setEditorContent} />
                 <Button onClick={() => saveArticle(id)} color="green">Save the changes</Button>
             </Modal>
         </>
