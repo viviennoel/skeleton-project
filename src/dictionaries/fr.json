@@ -72,7 +72,9 @@
                 "link": "/articles",
                 "label": "Nos Conseils"
             }
-        ]
+        ],
+        "login": "connexion",
+        "logout": "déconnexion"
     },
     "footer": {
         "description": "L’histoire de la galerie commence avec une ambition : préserver et transmettre un savoir-faire ancestral, tout en répondant aux attentes d’une clientèle exigeante et internationale. Depuis ses débuts, la maison a collaboré avec des designers de renom pour offrir des tapis uniques, intégrant des matériaux de qualité supérieure et un style contemporain. Aujourd’hui, elle continue de s’imposer comme une référence dans le domaine des tapis de luxe, en alliant tradition, modernité et responsabilité éthique",
@@ -80,7 +82,7 @@
         "instagram": "https://www.instagram.com/francksabet",
         "twitter": "",
         "tiktok": "",
-        "facebook": "",
+        "facebook": "https://www.facebook.com/GalerieFranckSabet",
         "links": [
             {
                 "title": "A propos",
@@ -157,7 +159,7 @@
             "slices": [
                 {
                     "type": "homepage-banner",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1737312807/francksabetbg_sharpened_optimized_150kb_jnhoxb.webp",
                     "alt": "Services Franck Sabet",
                     "title": "Découvrez nos Services",
                     "subtitle": "Expertise, tradition et excellence"
@@ -271,7 +273,7 @@
             "slices": [
                 {
                     "type": "homepage-banner",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1737312807/francksabetbg_sharpened_optimized_150kb_jnhoxb.webp",
                     "alt": "Restauration de tapis - Franck Sabet",
                     "title": "L'art de la restauration",
                     "subtitle": "Préserver l'authenticité et l'élégance"
@@ -386,7 +388,7 @@
             "slices": [
                 {
                     "type": "homepage-banner",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1737312807/francksabetbg_sharpened_optimized_150kb_jnhoxb.webp",
                     "alt": "Nettoyage professionnel des tapis",
                     "title": "Nettoyage professionnel",
                     "subtitle": "Préservez la beauté et la durabilité de vos tapis"
@@ -507,7 +509,7 @@
             "slices": [
                 {
                     "type": "homepage-banner",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1737312807/francksabetbg_sharpened_optimized_150kb_jnhoxb.webp",
                     "alt": "Contactez Franck Sabet - Luxe et Expertise",
                     "title": "Contact",
                     "subtitle": "Un conseil ? Une question ? Nous sommes là pour vous aider."
@@ -526,9 +528,9 @@
                     "backgroundGradient": "linear-gradient(to right, white, #f9f9f9)",
                     "title": "Un service client à votre écoute",
                     "description": "Notre équipe d'experts est disponible pour répondre à toutes vos questions, que ce soit par téléphone, par email ou directement en boutique. Faites-nous part de vos besoins, nous trouverons la solution idéale pour vous.",
-                    "button": "Nous contacter",
+                    "button": "La confiance de l'expertise",
                     "buttonColor": "black",
-                    "buttonHref": "/contact",
+                    "buttonHref": "/about",
                     "position": "right"
                 },
                 {
@@ -598,7 +600,7 @@
             "slices": [
                 {
                     "type": "homepage-banner",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1737312807/francksabetbg_sharpened_optimized_150kb_jnhoxb.webp",
                     "alt": "Franck Sabet - Tradition et Excellence",
                     "title": "À propos de nous",
                     "subtitle": "Héritage, savoir-faire et passion"
@@ -629,7 +631,7 @@
                     "type": "text-section",
                     "title": "Un héritage transmis de génération en génération",
                     "content": "Depuis ses débuts, la maison Franck Sabet se distingue par sa passion pour l'artisanat de qualité. Nos tapis, qu'ils soient anciens ou contemporains, racontent une histoire unique. Nous croyons fermement que chaque détail, chaque fibre, mérite une attention particulière pour garantir une œuvre intemporelle.",
-                    "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp"
+                    "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1737312807/francksabetbg_sharpened_optimized_150kb_jnhoxb.webp"
                 },
                 {
                     "type": "divider"
@@ -741,7 +743,7 @@
             "slices": [
                 {
                     "type": "homepage-banner",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1737312807/francksabetbg_sharpened_optimized_150kb_jnhoxb.webp",
                     "alt": "Franck sabet - tapis restauration - nettoyage - luxe",
                     "title": "Tapis uniques et d'exception",
                     "subtitle": "Tradition, expertise et excellence"
@@ -846,7 +848,7 @@
             "slices": [
                 {
                     "type": "homepage-banner",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1737312807/francksabetbg_sharpened_optimized_150kb_jnhoxb.webp",
                     "alt": "Franck sabet - Conditions générales d'utilisation",
                     "title": "Conditions générales d'utilisation",
                     "subtitle": "Conditions générales d'utilisation et de vente"
@@ -1015,7 +1017,8 @@
         "priceLabel": "€",
         "redirectionTitle": "Vous ne trouvez pas votre bonheur?",
         "redirectionSubtitle": "Repassez voir notre collection de tapis et trouvez la perle rare!",
-        "qualityFranckSabet": "Les tapis Franck Sabet sont fait à la main et respectent de hauts standards de qualité"
+        "qualityFranckSabet": "Les tapis Franck Sabet sont fait à la main et respectent de hauts standards de qualité",
+        "back": "Voir tous les produits"
     },
     "error404": {
         "title": "Cette page n'existe pas",

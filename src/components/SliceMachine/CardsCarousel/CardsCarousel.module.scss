@@ -15,6 +15,7 @@
     background-size: cover;
     background-position: center;
     color: white; // Ensure text is readable
+    text-shadow: 0 0 20px black;
     overflow: hidden;
     transition: transform 0.3s ease;
     height: 400px;
@@ -29,7 +30,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5); // Dark overlay for better text contrast
+        background: rgba(0, 0, 0, 0.3); // Dark overlay for better text contrast
         z-index: 1; // Ensure it is above the image but below the content
         transition: background 0.5s ease;
     }

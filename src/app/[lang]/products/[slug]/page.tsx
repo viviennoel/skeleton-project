@@ -125,7 +125,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <Text size="md" c="dimmed" mb="md">
                 {dictionary.products.redirectionSubtitle}
             </Text>
-            <Button mt="xl" color="grey" component={Link} href="/products">Back to Products</Button>
+            <Button mt="xl" color="grey" component={Link} href="/products">{dictionary.products.back}</Button>
         </Container>
     );
 }

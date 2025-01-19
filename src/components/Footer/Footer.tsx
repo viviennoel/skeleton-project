@@ -1,6 +1,6 @@
 'use client'
 
-import { IconBrandInstagram, IconBrandTiktok, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
+import { IconBrandFacebook, IconBrandInstagram, IconBrandTiktok, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
 import { ActionIcon, Container, Group, Text } from '@mantine/core';
 import Image from 'next/image';
 import classes from './Footer.module.scss';
@@ -51,11 +51,8 @@ export function Footer() {
                 </Text>
 
                 <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap">
-                    <ActionIcon size="lg" color="gray" variant="subtle" component={Link} href={dictionary.footer.twitter}>
-                        <IconBrandTwitter size={18} stroke={1.5} />
-                    </ActionIcon>
-                    <ActionIcon size="lg" color="gray" variant="subtle" component={Link} href={dictionary.footer.tiktok}>
-                        <IconBrandTiktok size={18} stroke={1.5} />
+                    <ActionIcon size="lg" color="gray" variant="subtle" component={Link} href={dictionary.footer.facebook}>
+                        <IconBrandFacebook size={18} stroke={1.5} />
                     </ActionIcon>
                     <ActionIcon size="lg" color="gray" variant="subtle" component={Link} href={dictionary.footer.instagram}>
                         <IconBrandInstagram size={18} stroke={1.5} />

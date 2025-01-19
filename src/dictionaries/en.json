@@ -72,7 +72,9 @@
                 "link": "/articles",
                 "label": "Our Tips"
             }
-        ]
+        ],
+        "login": "login",
+        "logout": "logout"
     },
     "footer": {
         "description": "The story of the gallery begins with an ambition: to preserve and transmit ancestral craftsmanship while meeting the expectations of a demanding and international clientele. Since its inception, the company has collaborated with renowned designers to offer unique rugs, incorporating superior quality materials and contemporary style. Today, it continues to establish itself as a reference in the luxury rug industry, combining tradition, modernity, and ethical responsibility.",
@@ -80,7 +82,7 @@
         "instagram": "https://www.instagram.com/francksabet",
         "twitter": "",
         "tiktok": "",
-        "facebook": "",
+        "facebook": "https://www.facebook.com/GalerieFranckSabet",
         "links": [
             {
                 "title": "About",
@@ -157,7 +159,7 @@
             "slices": [
                 {
                     "type": "homepage-banner",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1737312807/francksabetbg_sharpened_optimized_150kb_jnhoxb.webp",
                     "alt": "Franck Sabet Services",
                     "title": "Discover Our Services",
                     "subtitle": "Expertise, Tradition, and Excellence"
@@ -252,7 +254,7 @@
             "slices": [
                 {
                     "type": "homepage-banner",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1737312807/francksabetbg_sharpened_optimized_150kb_jnhoxb.webp",
                     "alt": "Rug Restoration - Franck Sabet",
                     "title": "The Art of Restoration",
                     "subtitle": "Preserving Authenticity and Elegance"
@@ -367,7 +369,7 @@
             "slices": [
                 {
                     "type": "homepage-banner",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1737312807/francksabetbg_sharpened_optimized_150kb_jnhoxb.webp",
                     "alt": "Professional Rug Cleaning",
                     "title": "Professional Cleaning",
                     "subtitle": "Preserve the beauty and durability of your rugs"
@@ -488,7 +490,7 @@
             "slices": [
                 {
                     "type": "homepage-banner",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1737312807/francksabetbg_sharpened_optimized_150kb_jnhoxb.webp",
                     "alt": "Contact Franck Sabet - Luxury and Expertise",
                     "title": "We Are Here to Help",
                     "subtitle": "Need advice? Have a question? We are here to assist you."
@@ -507,9 +509,9 @@
                     "backgroundGradient": "linear-gradient(to right, white, #f9f9f9)",
                     "title": "A Customer Service That Listens",
                     "description": "Our team of experts is available to answer all your questions, whether by phone, email, or directly in-store. Share your needs with us, and we will find the perfect solution for you.",
-                    "button": "Contact Us",
+                    "button": "Trust our expertise",
                     "buttonColor": "black",
-                    "buttonHref": "/contact",
+                    "buttonHref": "/about",
                     "position": "right"
                 },
                 {
@@ -579,7 +581,7 @@
             "slices": [
                 {
                     "type": "homepage-banner",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1737312807/francksabetbg_sharpened_optimized_150kb_jnhoxb.webp",
                     "alt": "Franck Sabet - Tradition and Excellence",
                     "title": "About Us",
                     "subtitle": "Heritage, Craftsmanship, and Passion"
@@ -610,7 +612,7 @@
                     "type": "text-section",
                     "title": "A Legacy Passed Down Through Generations",
                     "content": "Since its inception, the Franck Sabet house has stood out for its passion for quality craftsmanship. Our rugs, whether antique or contemporary, tell a unique story. We firmly believe that every detail, every fiber, deserves special attention to ensure a timeless masterpiece.",
-                    "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp"
+                    "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1737312807/francksabetbg_sharpened_optimized_150kb_jnhoxb.webp"
                 },
                 {
                     "type": "divider"
@@ -722,7 +724,7 @@
             "slices": [
                 {
                     "type": "homepage-banner",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1737312807/francksabetbg_sharpened_optimized_150kb_jnhoxb.webp",
                     "alt": "Franck Sabet - Luxury Rugs Restoration - Cleaning",
                     "title": "Unique and Exceptional Rugs",
                     "subtitle": "Tradition, Expertise, and Excellence"
@@ -827,7 +829,7 @@
             "slices": [
                 {
                     "type": "homepage-banner",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735758309/francksabetbg_optimized_qmmlll.webp",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1737312807/francksabetbg_sharpened_optimized_150kb_jnhoxb.webp",
                     "alt": "Franck Sabet - Terms and Conditions",
                     "title": "General Terms of Use",
                     "subtitle": "Terms of Use and Sales"
@@ -996,7 +998,8 @@
         "priceLabel": "€",
         "redirectionTitle": "Can't find what you're looking for?",
         "redirectionSubtitle": "Check out our carpet collection again and find the hidden gem!",
-        "qualityFranckSabet": "Franck Sabet carpets are handmade and meet high-quality standards"
+        "qualityFranckSabet": "Franck Sabet carpets are handmade and meet high-quality standards",
+        "back": "Back to Products"
     },
     "error404": {
         "title": "This page does not exist",

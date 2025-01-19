@@ -43,7 +43,7 @@ const LoginPage = () => {
 
     return (
         <Container size="sm" style={{ marginTop: "2rem" }}>
-            <h1>Login</h1>
+            <h1>Connexion</h1>
 
             {error && (
                 <Notification color="red" title="Error" onClose={() => setError("")}>
@@ -69,7 +69,7 @@ const LoginPage = () => {
             />
 
             <Button onClick={handleLogin} color="grey">
-                Login
+                Connexion
             </Button>
         </Container>
     );

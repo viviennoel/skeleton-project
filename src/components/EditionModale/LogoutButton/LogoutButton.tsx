@@ -2,12 +2,13 @@
 
 import React from 'react';
 import { Button } from '@mantine/core';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Cookies from 'js-cookie';
+import { useDictionary } from '@/src/dictionaries/dictionary-provider';
 
 const LogoutButton = () => {
     const token = Cookies.get('authToken')
+    const dictionary = useDictionary();
 
     const handleLogout = () => {
         Cookies.remove('authToken')
@@ -17,14 +18,14 @@ const LogoutButton = () => {
     if (token) {
         return (
             <Button color="red" onClick={handleLogout}>
-                Logout
+                {dictionary.header.logout}
             </Button>
         );
     }
 
     return (
         <Button color="black" component={Link} href='/login'>
-            login
+            {dictionary.header.login}
         </Button>
     );
 };
