@@ -73,8 +73,8 @@
                 "label": "Nos Conseils"
             }
         ],
-        "login": "connexion",
-        "logout": "déconnexion"
+        "login": "Connexion",
+        "logout": "Déconnexion"
     },
     "footer": {
         "description": "L’histoire de la galerie commence avec une ambition : préserver et transmettre un savoir-faire ancestral, tout en répondant aux attentes d’une clientèle exigeante et internationale. Depuis ses débuts, la maison a collaboré avec des designers de renom pour offrir des tapis uniques, intégrant des matériaux de qualité supérieure et un style contemporain. Aujourd’hui, elle continue de s’imposer comme une référence dans le domaine des tapis de luxe, en alliant tradition, modernité et responsabilité éthique",
