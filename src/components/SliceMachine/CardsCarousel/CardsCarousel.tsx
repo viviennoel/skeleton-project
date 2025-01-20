@@ -46,14 +46,13 @@ function Card({ cardData }: { cardData: CardData }) {
 
                 <div className={`${classes.section} ${classes.bottomCard}`}>
                     {/* @ts-ignore */}
-                    {cardData?.price && (
+                    {/* {cardData?.price && (
                         <div>
                             <Text fz="xl" fw={700} style={{ lineHeight: 1 }}>
-                                {/* @ts-ignore */}
                                 {cardData?.price} {dictionary.products.priceLabel}
                             </Text>
                         </div>
-                    )}
+                    )} */}
                     <Space h="lg" />
 
                     {/* @ts-ignore */}

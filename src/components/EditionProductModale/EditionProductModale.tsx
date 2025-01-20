@@ -16,9 +16,9 @@ export const EditionProductModale = ({ product }: { product: Product }) => {
     const [mainImage, setMainImage] = useState<string | null>(product.mainImage);
     const [descriptionEn, setDescriptionEn] = useState(product.description.fr ?? product.description);
     const [descriptionFr, setDescriptionFr] = useState(product.description.en ?? product.description);
-    const [price, setPrice] = useState(product.price.toString());
-    const [length, setLength] = useState(product.dimentions.length.toString());
-    const [width, setWidth] = useState(product.dimentions.width.toString());
+    const [price, setPrice] = useState(product.price?.toString());
+    const [length, setLength] = useState(product.dimentions.length?.toString());
+    const [width, setWidth] = useState(product.dimentions.width?.toString());
     const [category, setCategory] = useState(product.category || '');
     const [tags, setTags] = useState(product.tags || []);
     const [seoTitle, setSeoTitle] = useState(product.seoTitle || '');

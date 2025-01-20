@@ -59,13 +59,12 @@ export function VerticalCard({ article, product }: { article?: Article, product?
                 <Group gap={30}>
                     {product && (
                         <div>
-                            <Text fz="xl" fw={700} style={{ lineHeight: 1 }}>
-                                {/* @ts-ignore */}
+                            {/* <Text fz="xl" fw={700} style={{ lineHeight: 1 }}>
                                 {cardData?.price} {dictionary.products.priceLabel}
                             </Text>
                             <Text fz="sm" c="dimmed" fw={500} style={{ lineHeight: 1 }} mt={3}>
                                 L'unité
-                            </Text>
+                            </Text> */}
                         </div>
                     )}
 

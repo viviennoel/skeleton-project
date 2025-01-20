@@ -106,9 +106,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 </Text>
             )}
 
-            <Text size="lg" fw={700} mb="md">
+            {/* <Text size="lg" fw={700} mb="md">
                 {product.price}€
-            </Text>
+            </Text> */}
 
             {product.rating !== undefined && (
                 <Group mt="sm">
