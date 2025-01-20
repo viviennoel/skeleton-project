@@ -21,16 +21,16 @@ export function HeaderMenu() {
         <div className={classes.header}>
             <Menu>
                 <Container size="md">
-                    {metaHeader && <Group justify="flex-end" className={classes.surHeader} visibleFrom="sm">{metaHeader}</Group>}
+                    {metaHeader && <Group justify="flex-end" className={classes.surHeader} visibleFrom="md">{metaHeader}</Group>}
                     {mainHeader && <div className={classes.inner}>
                         <Link className={classes.logoContainer} href='/'>
                             <Image src={dictionary.logoUrl} alt={`logo ${dictionary.compagnyName}`} height={45} width={45} className={classes.logo} />
                         </Link>
-                        <Group gap={5} visibleFrom="sm">
+                        <Group gap={5} visibleFrom="md">
                             {mainHeader}
                         </Group>
                         <Group>
-                            <Button color='#94783b' visibleFrom="sm" component={Link} href={dictionary.pages.contact.link} className={classes.contact}>
+                            <Button color='#94783b' visibleFrom="md" component={Link} href={dictionary.pages.contact.link} className={classes.contact}>
                                 {dictionary.pages.contact.label}
                             </Button>
                             <LogoutButton />

@@ -6,7 +6,7 @@
     top: 0;
     z-index: 100;
 
-    @media (max-width: 48em) {
+    @media (max-width: 64em) {
         padding: 16px;
     }
 }
@@ -52,15 +52,19 @@
 .logo {
     transform: scale(1.5);
 
-    @media (min-width: 48em) {
+    @media (min-width:64em) {
         transform: scale(1.5) translateY(-20%)
     }
 }
 
 .surHeader {
     padding-top: 10px;
+    overflow: scroll;
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
 
     a {
         color: #8d8c8c;
+        font-size: 0.8em;
     }
 }

@@ -14,9 +14,9 @@ export const ResponsiveBurger = () => {
     return (
         <>
             <Menu.Target>
-                <Burger opened={opened} onClick={toggle} size="lg" hiddenFrom="sm" />
+                <Burger opened={opened} onClick={toggle} size="lg" hiddenFrom="md" />
             </Menu.Target>
-            <Menu.Dropdown hiddenFrom="sm">
+            <Menu.Dropdown hiddenFrom="md">
                 {dictionary.header.header.map(item => !item.links && item.link ?
                     <Menu.Item key={item.label}>
                         <Link className={classes.link} href={item.link} onClick={toggle}>{item.label}</Link>
