@@ -60,6 +60,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     const cookieStore = await cookies();
     const token = cookieStore.get('authToken')?.value;
 
+    console.log(product.dimentions.length, product.dimentions.width)
+
     if (!product) {
         return <Error404 />
     }
@@ -96,7 +98,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <Group gap="xs">
                 <Text size="sm">Dimensions:</Text>
                 <Badge color="lightgrey" style={{ color: 'black' }}>
-                    {product.dimentions.length} x {product.dimentions.width} cm
+                    {product.dimentions.length ?? dictionary.products.custom} x {product.dimentions.width ?? dictionary.products.custom} cm
                 </Badge>
             </Group>
 
