@@ -999,7 +999,8 @@
         "redirectionTitle": "Can't find what you're looking for?",
         "redirectionSubtitle": "Check out our carpet collection again and find the hidden gem!",
         "qualityFranckSabet": "Franck Sabet carpets are handmade and meet high-quality standards",
-        "back": "Back to Products"
+        "back": "Back to Products",
+        "custom": "custom made"
     },
     "error404": {
         "title": "This page does not exist",

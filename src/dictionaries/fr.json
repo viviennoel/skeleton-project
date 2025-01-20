@@ -1018,7 +1018,8 @@
         "redirectionTitle": "Vous ne trouvez pas votre bonheur?",
         "redirectionSubtitle": "Repassez voir notre collection de tapis et trouvez la perle rare!",
         "qualityFranckSabet": "Les tapis Franck Sabet sont fait à la main et respectent de hauts standards de qualité",
-        "back": "Voir tous les produits"
+        "back": "Voir tous les produits",
+        "custom": "sur-mesure"
     },
     "error404": {
         "title": "Cette page n'existe pas",
