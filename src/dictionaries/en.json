@@ -232,7 +232,7 @@
                             "link": "/products"
                         },
                         {
-                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859307/optimized_image_restoration_htozwa.webp",
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_carpeting_dvxzoq.webp",
                             "title": "Restoration",
                             "description": "We bring your antique rugs back to life.",
                             "link": "/restoration"
@@ -261,7 +261,7 @@
                 },
                 {
                     "type": "text-card",
-                    "title": "Why Restore Your Rugs?",
+                    "title": "Why Restore Your Rugs ?",
                     "description": "Rug restoration is essential for preserving their beauty and value. Whether it's an antique or contemporary rug, our expertise guarantees meticulous and faithful repair to the original.",
                     "button": "Contact Us",
                     "buttonColor": "black",
@@ -320,7 +320,7 @@
                     "type": "horizontal-image-card",
                     "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_colors_kywzxl.webp",
                     "backgroundGradient": "linear-gradient(to right, white, white)",
-                    "title": "Why Trust Us?",
+                    "title": "Why Trust Us ?",
                     "description": "With decades of experience, our craftsmen master every detail of restoration. Each intervention is carried out with care to respect the authenticity and integrity of your rug.",
                     "button": "See Our Services",
                     "buttonColor": "black",
@@ -335,22 +335,22 @@
                             "author": "Pierre Lemoine"
                         },
                         {
-                            "quote": "Thanks to the recoloring, my rug has regained its vibrant original colors. Thank you to the Franck Sabet team!",
+                            "quote": "Thanks to the recoloring, my rug has regained its vibrant original colors. Thank you to the Franck Sabet team !",
                             "author": "Sophie Martin"
                         },
                         {
-                            "quote": "The fringes of my rug were replaced with incredible precision. I am thrilled with the result!",
+                            "quote": "The fringes of my rug were replaced with incredible precision. I am thrilled with the result !",
                             "author": "Jacques Dupuis"
                         }
                     ]
                 },
                 {
                     "type": "title",
-                    "title": "Ready to Bring Your Rug Back to Life?"
+                    "title": "Ready to Bring Your Rug Back to Life ?"
                 },
                 {
                     "type": "paragraph",
-                    "paragraph": "Don't wait any longer! Contact us today for a personalized diagnosis and a free quote.",
+                    "paragraph": "Don't wait any longer ! Contact us today for a personalized diagnosis and a free quote.",
                     "size": "normal",
                     "justify": "center"
                 },
@@ -376,7 +376,7 @@
                 },
                 {
                     "type": "text-card",
-                    "title": "Why Clean Your Rugs With Us?",
+                    "title": "Why Clean Your Rugs With Us ?",
                     "description": "With years of experience, we use cleaning techniques tailored to the fibers and materials of your rugs. Our process ensures deep cleanliness while preserving their shine and structure.",
                     "button": "Contact Us",
                     "buttonColor": "black",
@@ -473,7 +473,7 @@
                 },
                 {
                     "type": "title",
-                    "title": "Ready to Revitalize Your Rugs?"
+                    "title": "Ready to Revitalize Your Rugs ?"
                 },
                 {
                     "type": "paragraph",
@@ -493,7 +493,7 @@
                     "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1737312807/francksabetbg_sharpened_optimized_150kb_jnhoxb.webp",
                     "alt": "Contact Franck Sabet - Luxury and Expertise",
                     "title": "We Are Here to Help",
-                    "subtitle": "Need advice? Have a question? We are here to assist you."
+                    "subtitle": "Need advice ? Have a question ? We are here to assist you."
                 },
                 {
                     "type": "text-card",
@@ -592,7 +592,7 @@
                     "description": "For three generations, Franck Sabet has been preserving and passing on a unique heritage in the world of luxury rugs. Each piece is the result of exquisite craftsmanship, woven through centuries and cultures. Located in the heart of Paris, we collaborate with renowned designers and artisans to bring you exceptional rugs.",
                     "button": "Learn More",
                     "buttonColor": "black",
-                    "buttonHref": "/articles/Franck-Sabet:-A-Legacy-of-Excellence-and-Craftsmanship-in-Luxury-Carpets"
+                    "buttonHref": "/articles/Franck-Sabet-:-A-Legacy-of-Excellence-and-Craftsmanship-in-Luxury-Carpets"
                 },
                 {
                     "type": "divider"
@@ -601,7 +601,7 @@
                     "type": "horizontal-image-card",
                     "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_carpeting_dvxzoq.webp",
                     "backgroundGradient": "linear-gradient(to right, white, white)",
-                    "title": "Why Choose Us?",
+                    "title": "Why Choose Us ?",
                     "description": "At Franck Sabet, we combine age-old traditions with modern innovations to meet the expectations of a demanding clientele. Whether you're looking for a custom rug or advice on maintaining your pieces, we guarantee exceptional service.",
                     "button": "See Our Services",
                     "buttonColor": "black",
@@ -678,14 +678,14 @@
                             "author": "Jean-Paul Martin"
                         },
                         {
-                            "quote": "A passionate team that met all my expectations. Bravo!",
+                            "quote": "A passionate team that met all my expectations. Bravo !",
                             "author": "Claire Lefèvre"
                         }
                     ]
                 },
                 {
                     "type": "title",
-                    "title": "Any Questions? Don't Hesitate to Contact Us"
+                    "title": "Any Questions ? Don't Hesitate to Contact Us"
                 },
                 {
                     "type": "paragraph",
@@ -715,7 +715,7 @@
         },
         "articles": {
             "title": "Discover All Our Articles & Tips",
-            "search": "Looking for expert advice? Use our search!"
+            "search": "Looking for expert advice ? Use our search !"
         },
         "home": {
             "link": "/",
@@ -747,7 +747,7 @@
                             "link": "/products"
                         },
                         {
-                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859307/optimized_image_restoration_htozwa.webp",
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_carpeting_dvxzoq.webp",
                             "title": "Restoration",
                             "description": "Luxury rug restoration expertise.",
                             "link": "/restoration"
@@ -763,7 +763,7 @@
                 {
                     "type": "horizontal-text-card",
                     "backgroundGradient": "linear-gradient(to right, white, white)",
-                    "title": "Why Trust Us?",
+                    "title": "Why Trust Us ?",
                     "description": "For two generations, our house has embodied excellence in the art of rugs. Each piece in our collection is meticulously selected for its refinement, elegance, and exceptional quality. Thanks to a rich family heritage and a deep love for craftsmanship, we combine tradition and modernity to offer our customers unique rugs, true works of art, that enhance the beauty of every interior. Each rug tells a story, woven through time and cultures.",
                     "button": "Learn More",
                     "buttonColor": "black",
@@ -781,13 +781,13 @@
                         {
                             "icon": "https://img.icons8.com/c9a456/ios/50/needle.png",
                             "title": "Restoration",
-                            "description": "Expert in restoring antique and high-quality rugs, our artisans are ready to assist. Book your appointment now!",
+                            "description": "Expert in restoring antique and high-quality rugs, our artisans are ready to assist. Book your appointment now !",
                             "link": "/contact"
                         },
                         {
                             "icon": "https://img.icons8.com/c9a456/ios/50/cleaning-a-surface.png",
                             "title": "Maintenance",
-                            "description": "Professional cleaning for all types of rugs, at home or in-store. A fast and high-quality service!",
+                            "description": "Professional cleaning for all types of rugs, at home or in-store. A fast and high-quality service !",
                             "link": "/contact"
                         }
                     ],
@@ -996,15 +996,15 @@
         "label": "Product",
         "readMore": "Discover",
         "priceLabel": "€",
-        "redirectionTitle": "Can't find what you're looking for?",
-        "redirectionSubtitle": "Check out our carpet collection again and find the hidden gem!",
+        "redirectionTitle": "Can't find what you're looking for ?",
+        "redirectionSubtitle": "Check out our carpet collection again and find the hidden gem !",
         "qualityFranckSabet": "Franck Sabet carpets are handmade and meet high-quality standards",
         "back": "Back to Products",
         "custom": "custom made"
     },
     "error404": {
         "title": "This page does not exist",
-        "subtitle": "But don't worry, we have plenty of others!",
+        "subtitle": "But don't worry, we have plenty of others !",
         "returnArticles": "View articles",
         "returnHomepage": "Back to homepage",
         "returnProducts": "View products"

@@ -148,7 +148,7 @@
     "pages": {
         "admin": {
             "title": "Votre espace Administrateur",
-            "description": "Cet espace est tres fonctionnel. Je vous ai préparé deux services: l'ajout de produits et d'articles. L'ajout d'articles vous permettra d'améliorer le référencement du site et de permettre aux utilisateurs de vous trouver, avec du temps et des posts réguliers (et de qualité). La page produits vous permettra de montrer vos produits et permettra de mesurer la traction de la vente en ligne. Si un besoin est détecté, il sera facile d'ajouter un systeme de payement en ligne.",
+            "description": "Cet espace est tres fonctionnel. Je vous ai préparé deux services: l'ajout de produits et d'articles. L'ajout d'articles vous permettra d'améliorer le référencement du site et de permettre aux utilisateurs de vous trouver, avec du temps et des posts réguliers (et de qualité). La page produits vous permettra de montrer vos produits et permettra de mesurer la traction de la vente en ligne. Si un besoin est détecté, il sera facile d'ajouter un systeme de paiement en ligne.",
             "addArticles": "Ajouter un article",
             "addProducts": "Ajouter un produit"
         },
@@ -232,7 +232,7 @@
                             "link": "/products"
                         },
                         {
-                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859307/optimized_image_restoration_htozwa.webp",
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_carpeting_dvxzoq.webp",
                             "title": "Restauration",
                             "description": "Nous redonnons vie à vos tapis anciens.",
                             "link": "/restoration"
@@ -248,7 +248,7 @@
                 {
                     "type": "horizontal-text-card",
                     "backgroundGradient": "linear-gradient(to right, white, white)",
-                    "title": "Pourquoi choisir nos services?",
+                    "title": "Pourquoi choisir nos services ?",
                     "description": "Chez Franck Sabet, chaque service est réalisé avec le plus grand soin pour répondre à vos attentes. Notre équipe d'experts s'assure que chaque tapis reçoive l'attention qu'il mérite.",
                     "button": "Découvrir notre histoire",
                     "buttonColor": "black",
@@ -268,7 +268,7 @@
         },
         "restoration": {
             "link": "/restoration",
-            "label": "Restoration",
+            "label": "Restauration",
             "title": "Restauration de tapis",
             "slices": [
                 {
@@ -280,7 +280,7 @@
                 },
                 {
                     "type": "text-card",
-                    "title": "Pourquoi restaurer vos tapis?",
+                    "title": "Pourquoi restaurer vos tapis ?",
                     "description": "La restauration de tapis est essentielle pour préserver leur beauté et leur valeur. Qu'il s'agisse d'un tapis ancien ou contemporain, notre expertise garantit une réparation minutieuse et fidèle à l'original.",
                     "button": "Nous contacter",
                     "buttonColor": "black",
@@ -290,7 +290,7 @@
                     "type": "horizontal-text-card",
                     "backgroundGradient": "linear-gradient(to right, white, white)",
                     "title": "Nos techniques de restauration",
-                    "description": "Nous utilisons des techniques artisanales transmises depuis des générations pour réparer les tapis endommagés. Nos services incluent le remplacement de franges, le rapiéçage, la recoloration et la réparation des bords.",
+                    "description": "Nous utilisons des techniques artisanales transmises depuis des générations pour réparer les tapis endommagés. Nos services incluent le remplacement de franges, le rapiéçage, la recoloration et la réparation des lisières.",
                     "button": "Prendre rendez-vous",
                     "buttonColor": "black",
                     "buttonHref": "/contact"
@@ -339,7 +339,7 @@
                     "type": "horizontal-image-card",
                     "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_colors_kywzxl.webp",
                     "backgroundGradient": "linear-gradient(to right, white, white)",
-                    "title": "Pourquoi nous faire confiance?",
+                    "title": "Pourquoi nous faire confiance ?",
                     "description": "Forts de décennies d'expérience, nos artisans maîtrisent toutes les subtilités de la restauration. Chaque intervention est réalisée avec soin pour respecter l'authenticité et l'intégrité du tapis.",
                     "button": "Voir nos services",
                     "buttonColor": "black",
@@ -354,22 +354,22 @@
                             "author": "Pierre Lemoine"
                         },
                         {
-                            "quote": "Grâce à la recoloration, mon tapis a retrouvé ses couleurs vibrantes d'origine. Merci à l'équipe Franck Sabet!",
+                            "quote": "Grâce à la recoloration, mon tapis a retrouvé ses couleurs vibrantes d'origine. Merci à l'équipe Franck Sabet !",
                             "author": "Sophie Martin"
                         },
                         {
-                            "quote": "Les franges de mon tapis ont été remplacées avec une précision incroyable. Je suis ravi du résultat!",
+                            "quote": "Les franges de mon tapis ont été remplacées avec une précision incroyable. Je suis ravi du résultat !",
                             "author": "Jacques Dupuis"
                         }
                     ]
                 },
                 {
                     "type": "title",
-                    "title": "Prêt à redonner vie à votre tapis?"
+                    "title": "Prêt à redonner vie à votre tapis ?"
                 },
                 {
                     "type": "paragraph",
-                    "paragraph": "N'attendez plus! Contactez-nous dès aujourd'hui pour un diagnostic personnalisé et un devis gratuit.",
+                    "paragraph": "N'attendez plus ! Contactez-nous dès aujourd'hui pour un diagnostic personnalisé et un devis gratuit.",
                     "size": "normal",
                     "justify": "center"
                 },
@@ -611,7 +611,7 @@
                     "description": "Depuis trois générations, Franck Sabet préserve et transmet un héritage unique dans l'univers des tapis de luxe. Chaque pièce est le fruit d'un artisanat d'excellence, tissé à travers les siècles et les cultures. Installés au cœur de Paris, nous collaborons avec des designers et artisans renommés pour vous offrir des tapis d'exception.",
                     "button": "En savoir plus",
                     "buttonColor": "black",
-                    "buttonHref": "/articles/Franck-Sabet:-trois-Générations-d'Expertise"
+                    "buttonHref": "/articles/Franck-Sabet-:-trois-Générations-d'Expertise"
                 },
                 {
                     "type": "divider"
@@ -620,7 +620,7 @@
                     "type": "horizontal-image-card",
                     "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_carpeting_dvxzoq.webp",
                     "backgroundGradient": "linear-gradient(to right, white, white)",
-                    "title": "Pourquoi nous choisir?",
+                    "title": "Pourquoi nous choisir ?",
                     "description": "Chez Franck Sabet, nous combinons traditions séculaires et innovations modernes pour répondre aux attentes d'une clientèle exigeante. Que vous recherchiez un tapis sur mesure ou des conseils pour préserver vos pièces, nous vous garantissons un service exceptionnel.",
                     "button": "Voir nos services",
                     "buttonColor": "black",
@@ -654,7 +654,7 @@
                         },
                         {
                             "icon": "https://img.icons8.com/c9a456/ios/50/needle.png",
-                            "title": "Restoration",
+                            "title": "Restauration",
                             "description": "Restauration de tapis anciens et précieux grâce à des techniques traditionnelles.",
                             "link": "/restoration"
                         },
@@ -734,7 +734,7 @@
         },
         "articles": {
             "title": "Décrouvrez tous nos articles & conseils",
-            "search": "Vous cherchez un conseil d'expert? Utilisez notre recherche!"
+            "search": "Vous cherchez un conseil d'expert ? Utilisez notre recherche !"
         },
         "home": {
             "link": "/",
@@ -766,7 +766,7 @@
                             "link": "/products"
                         },
                         {
-                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859307/optimized_image_restoration_htozwa.webp",
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_carpeting_dvxzoq.webp",
                             "title": "Restauration",
                             "description": "Expert de la restauration pour les tapis de luxe.",
                             "link": "/restoration"
@@ -782,8 +782,8 @@
                 {
                     "type": "horizontal-text-card",
                     "backgroundGradient": "linear-gradient(to right, white, white)",
-                    "title": "Pourquoi nous faire confiance?",
-                    "description": "Depuis deux générations, notre maison incarne l’excellence dans l’art du tapis. Chaque pièce de notre collection est minutieusement sélectionnée pour son raffinement, son élégance et sa qualité exceptionnelle. Forts d’un héritage familial et d’un amour profond pour l’artisanat, nous avons su allier tradition et modernité pour offrir à notre clientèle des tapis uniques, véritables œuvres d'art, qui rehaussent la beauté de chaque intérieur. Chez nous, chaquetapis raconte une histoire, tissée à travers le temps et les cultures.",
+                    "title": "Pourquoi nous faire confiance ?",
+                    "description": "Depuis deux générations, notre maison incarne l’excellence dans l’art du tapis. Chaque pièce de notre collection est minutieusement sélectionnée pour son raffinement, son élégance et sa qualité exceptionnelle. Forts d’un héritage familial et d’un amour profond pour l’artisanat, nous avons su allier tradition et modernité pour offrir à notre clientèle des tapis uniques, véritables œuvres d'art, qui rehaussent la beauté de chaque intérieur. Chez nous, chaque tapis raconte une histoire, tissée à travers le temps et les cultures.",
                     "button": "En savoir plus",
                     "buttonColor": "black",
                     "buttonHref": "/about"
@@ -799,14 +799,14 @@
                         },
                         {
                             "icon": "https://img.icons8.com/c9a456/ios/50/needle.png",
-                            "title": "Restoration",
-                            "description": "Expert dans la restoration de tapis anciens et de qualité, nos artisants restent à votre écoute. Prenez rendez-vous dès maintenant!",
+                            "title": "Restauration",
+                            "description": "Expert dans la restauration de tapis anciens et de qualité, nos artisants restent à votre écoute. Prenez rendez-vous dès maintenant !",
                             "link": "/contact"
                         },
                         {
                             "icon": "https://img.icons8.com/c9a456/ios/50/cleaning-a-surface.png",
                             "title": "Entretien",
-                            "description": "Nettoyage professionel pour tous types de tapis, à domicile ou en boutique. Un service rapide et de qualité!",
+                            "description": "Nettoyage professionel pour tous types de tapis, à domicile ou en boutique. Un service rapide et de qualité !",
                             "link": "/contact"
                         }
                     ],
@@ -1015,15 +1015,15 @@
         "label": "Produit",
         "readMore": "Découvrir",
         "priceLabel": "€",
-        "redirectionTitle": "Vous ne trouvez pas votre bonheur?",
-        "redirectionSubtitle": "Repassez voir notre collection de tapis et trouvez la perle rare!",
+        "redirectionTitle": "Vous ne trouvez pas votre bonheur ?",
+        "redirectionSubtitle": "Repassez voir notre collection de tapis et trouvez la perle rare !",
         "qualityFranckSabet": "Les tapis Franck Sabet sont fait à la main et respectent de hauts standards de qualité",
         "back": "Voir tous les produits",
         "custom": "sur-mesure"
     },
     "error404": {
         "title": "Cette page n'existe pas",
-        "subtitle": "Mais pas d'inquiétude, nous en avons pleins d'autres!",
+        "subtitle": "Mais pas d'inquiétude, nous en avons pleins d'autres !",
         "returnArticles": "Voir les articles",
         "returnHomepage": "Retour à l'accueil",
         "returnProducts": "Voir les produits"
