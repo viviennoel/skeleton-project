@@ -15,7 +15,7 @@ export function VerticalCard({ article, product }: { article?: Article, product?
     const params = useParams();
     const lang = params.lang ?? 'fr';
 
-    const formattedDate = article ? new Intl.DateTimeFormat('en-GB', {
+    const formattedDate = article ? new Intl.DateTimeFormat(lang === 'en' ? 'en-GB' : 'fr-FR', {
         day: '2-digit',  // Two-digit day
         month: 'long',   // Full month name
         year: 'numeric', // Full year
