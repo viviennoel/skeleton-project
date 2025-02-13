@@ -238,7 +238,7 @@
                             "link": "/restoration"
                         },
                         {
-                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1739297727/cropped_compressed_optimized_image_bigotc.jpg",
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1739297135/compressed_optimized_image_asny6i.jpg",
                             "title": "Nettoyage",
                             "description": "Un nettoyage professionnel pour des tapis comme neufs.",
                             "link": "/cleaning"
@@ -406,7 +406,7 @@
                 },
                 {
                     "type": "horizontal-image-card",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1739297727/cropped_compressed_optimized_image_bigotc.jpg",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1739297135/compressed_optimized_image_asny6i.jpg",
                     "backgroundGradient": "linear-gradient(to right, white, white)",
                     "title": "Techniques modernes et traditionnelles",
                     "description": "Nous combinons les techniques traditionnelles de nettoyage manuel avec des innovations modernes. Chaque tapis est traité individuellement pour assurer un résultat optimal.",
@@ -760,7 +760,7 @@
                     "type": "square-card-list",
                     "data": [
                         {
-                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_colors_kywzxl.webp",
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1739475953/compressed_image_100K_eggt5m.jpg",
                             "title": "Vente de tapis",
                             "description": "Vente de tapis d'exception, du moderne au traditonnel.",
                             "link": "/products"
@@ -772,7 +772,7 @@
                             "link": "/restoration"
                         },
                         {
-                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1739297727/cropped_compressed_optimized_image_bigotc.jpg",
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1739297135/compressed_optimized_image_asny6i.jpg",
                             "title": "Nettoyage",
                             "description": "Nettoyage et entretien des tapis",
                             "link": "/cleaning"

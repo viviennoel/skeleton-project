@@ -238,7 +238,7 @@
                             "link": "/restoration"
                         },
                         {
-                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1739297727/cropped_compressed_optimized_image_bigotc.jpg",
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1739297135/compressed_optimized_image_asny6i.jpg",
                             "title": "Cleaning",
                             "description": "Professional cleaning for like-new rugs.",
                             "link": "/cleaning"
@@ -387,7 +387,7 @@
                 },
                 {
                     "type": "horizontal-image-card",
-                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1739297727/cropped_compressed_optimized_image_bigotc.jpg",
+                    "src": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1739297135/compressed_optimized_image_asny6i.jpg",
                     "backgroundGradient": "linear-gradient(to right, white, white)",
                     "title": "Modern and Traditional Techniques",
                     "description": "We combine traditional hand-cleaning techniques with modern innovations. Each rug is individually treated to ensure optimal results.",
@@ -741,7 +741,7 @@
                     "type": "square-card-list",
                     "data": [
                         {
-                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1735859308/optimized_image_colors_kywzxl.webp",
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1739475953/compressed_image_100K_eggt5m.jpg",
                             "title": "Rug Sales",
                             "description": "Exceptional rug sales, from modern to traditional.",
                             "link": "/products"
@@ -753,7 +753,7 @@
                             "link": "/restoration"
                         },
                         {
-                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1739297727/cropped_compressed_optimized_image_bigotc.jpg",
+                            "image": "https://res.cloudinary.com/djlwtz7qw/image/upload/v1739297135/compressed_optimized_image_asny6i.jpg",
                             "title": "Cleaning",
                             "description": "Professional rug cleaning and maintenance.",
                             "link": "/cleaning"
