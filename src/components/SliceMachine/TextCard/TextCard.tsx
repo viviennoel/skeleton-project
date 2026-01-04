@@ -21,7 +21,7 @@ export const TextCard = ({ data }: { data: TextCardProps }) => {
                         {title}
                     </h1>
                     <img
-                        src='https://lesthesdemilie.com/assets/IMAGES/HOME/Separation.png'
+                        src='https://ik.imagekit.io/lindahestia/articles/gold_separator_premium%20copy.tiff?updatedAt=1767540175744'
                         alt='Separation'
                         className={`${classes.horizontalSectionDivider} mb-5`}
                     />

@@ -14,7 +14,7 @@ export default function VerticalCardList({ articles, products, data }: { article
                 <div className={classes.title}>
                     <h1>{data.title}</h1>
                     <img
-                        src='https://lesthesdemilie.com/assets/IMAGES/HOME/Separation.png'
+                        src='https://ik.imagekit.io/lindahestia/articles/gold_separator_premium%20copy.tiff?updatedAt=1767540175744'
                         alt='Separation'
                         className={`${classes.horizontalSectionDivider} mb-5`}
                     />
